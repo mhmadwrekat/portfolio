@@ -78,7 +78,7 @@ const projects = () => {
                 <section className='pt-20'>
                     <div class="max-w-md mx-auto bg-white rounded-xl shadow-2xl overflow-hidden md:max-w-2xl">
                         <div class="md:flex">
-                            <div class="px-9 ml-2 md:px-0 md:shrink-0">
+                            <div class="px-10 ml-2 md:px-0 md:shrink-0">
                                 <img class="h-60 w-72 object-cover md:h-72 md:w-72"
                                     src="https://i.nextmedia.com.au/Utils/ImageResizer.ashx?n=https%3A%2F%2Fi.nextmedia.com.au%2FFeatures%2FPG_20190519_day1_536.jpg&w=1600&c=0" alt="Bike" />
                             </div>
@@ -110,7 +110,7 @@ const projects = () => {
                 <section className='pt-20'>
                     <div class="max-w-md mx-auto bg-white rounded-xl shadow-2xl overflow-hidden md:max-w-2xl">
                         <div class="md:flex">
-                            <div class="px-9 ml-2 md:px-0 md:shrink-0">
+                            <div class="px-10 ml-2 md:px-0 md:shrink-0">
                                 <img class="h-60 w-72 object-cover md:h-72 md:w-72"
                                     src="https://github.com/mhmadwrekat/wrekat-Portfolio/blob/main/src/assets/img/theme/img-1-1200x1000.jpg?raw=true" alt="Man looking at item at a store" />
                             </div>
@@ -137,7 +137,7 @@ const projects = () => {
                 <section className='pt-20'>
                     <div class="max-w-md mx-auto bg-white rounded-xl shadow-2xl overflow-hidden md:max-w-2xl">
                         <div class="md:flex">
-                            <div class="px-9 ml-2 md:px-0 md:shrink-0">
+                            <div class="px-10 ml-2 md:px-0 md:shrink-0">
                                 <img class="h-60 w-72 object-cover md:h-72 md:w-72"
                                     src="https://i0.wp.com/aipsafrica.com/wp-content/uploads/2017/05/khalifa-stadium-586x418.jpg?resize=534%2C450" alt="Man looking at item at a store" />
                             </div>
