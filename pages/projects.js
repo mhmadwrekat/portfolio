@@ -125,7 +125,7 @@ const projects = () => {
                                 <br></br>
                                 <span class="inline-flex items-center justify-center px-2 py-1 mr-1 text-xs font-bold leading-none text-red-100 bg-green-600 rounded-full">React</span>
                                 <span class="inline-flex items-center justify-center px-2 py-1 text-xs mr-1 font-bold leading-none text-red-100 bg-green-600 rounded-full">JSON</span>
-                                <span class="inline-flex items-center justify-center px-2 py-1 text-xs font-bold leading-none text-red-100 bg-green-600 rounded-full">Bootstrap</span>
+                                <span class="inline-flex items-center justify-center px-2 py-1 text-xs font-bold leading-none text-red-100 bg-green-600 mr-1 rounded-full">Bootstrap</span>
                                 <span class="inline-flex items-center justify-center px-2 py-1 text-xs mr-1 font-bold leading-none text-red-100 bg-green-600 rounded-full">Deploy</span>
                                 <span class="inline-flex items-center justify-center px-2 mr-1 py-1 text-xs font-bold leading-none text-red-100 bg-green-600 rounded-full">Js</span>
 
