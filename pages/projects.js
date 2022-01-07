@@ -56,7 +56,7 @@ const projects = () => {
                     <img src='https://abhedyak.github.io/images/back-end-developer.svg' class="object-cover sm:h-6/6 w-6/6 ..." />
                     <div class="flex items-stretch ...">
                         <div></div>
-                        <div className="px-8 pt-5 sm:px-0 sm:pt-0 text-sm sm:text-3xl text-center font-serif font-bold self-center ...">
+                        <div className="px-8 pt-10 sm:px-0 sm:pt-0 text-base sm:text-3xl text-center font-serif font-bold self-center ...">
                             <p className=''>
                                 My Latest Projects
                             </p>
