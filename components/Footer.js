@@ -6,7 +6,7 @@ const Footer = () => {
                 <div>
                     <div class="mx-auto container xl:px-20 lg:px-12 sm:px-6 px-4 py-12">
                         <div class="flex flex-col items-center justify-center">
-                            <img class='pl-3' src='./project.png' width="60" height="50" />
+                            <img class='pl-2' src='./project.png' width="60" height="50" />
                             <div class="flex items-center gap-x-8 mt-6">
                                 <a class="link" data-tippy-content="Github" href="https://github.com/mhmadwrekat">
                                     <button aria-label="pinterest" class="hover:scale-125 rounded-full">
