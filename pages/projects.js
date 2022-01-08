@@ -2,27 +2,6 @@ import React from 'react';
 import Head from 'next/head';
 import Link from "next/link";
 import Footer from '../components/Footer';
-import Nav from '../components/Nav'
-/*
-            <section >
-                <div className="leading-normal tracking-normal gradient">
-                    <nav id="header" className="fixed top-0 z-30 w-full font-sans bg-white opacity-70">
-                        <div className="container flex flex-wrap items-center justify-between w-full py-2 mx-auto mt-0">
-                            <div className="flex items-center pl-4">
-                                <img class='pl-3' src='./icon.png' width="60" height="60" />
-                                <div class="w-full mx-auto flex flex-wrap items-center">
-                                    <span class="font-serif pl-3 text-2xl text-bolder">My Projects</span>
-                                </div>
-                            </div>
-                            <div class=" pt-2 content-center justify-between md:w-1/2 md:justify-end">
-                                <Link href="/profile"><p class="pr-3 float-right cursor-pointer no-underline font-serif">Profie</p></Link>
-                            </div>
-                        </div>
-                        <hr className="py-0 my-0 border-b border-gray-100 opacity-25" />
-                    </nav>
-                </div>
-            </section>
-*/
 const projects = () => {
     return (
         <>
@@ -39,11 +18,11 @@ const projects = () => {
                 <link rel="stylesheet" href="https://unpkg.com/tailwindcss@2.2.19/dist/tailwind.min.css" />
                 <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700" rel="stylesheet" />
             </Head>
-            <section className='bg-white opacity-70' id="profilehead">
+            <section className='text-gray-400 bg-black opacity-80' id="profilehead">
                 <div class=" container max-w-6xl mx-auto flex items-center py-5">
-                    <img class='pl-3' src='./project.png' width="60" height="50" />
+                    <img class='pl-3 cursor-grab	hover:scale-110 animate-pulse' src='./project.png' width="50" height="40" />
                     <div class="w-full mx-auto flex flex-wrap items-center">
-                        <span class="font-serif pl-3 text-2xl text-bolder">My Projects</span>
+                        <span class="font-serif pl-3 text-xl text-bolder">My Projects</span>
                     </div>
                     <div class=" pt-2 content-center justify-between md:w-1/2 md:justify-end">
                         <Link href="/"><p class="pr-3 float-right cursor-pointer no-underline font-serif">Profile</p></Link>
@@ -171,35 +150,3 @@ const projects = () => {
     )
 }
 export default projects
-/*
-<section className='bg-gray-100'>
-<img src='https://png.pngitem.com/pimgs/s/133-1337263_job-seeker-icon-hd-png-download.png'/>
-</section>
-*/
-/*
-            <section>
-                <div className="relative flex items-center content-center justify-center pt-16 pb-32 min-h-screen-75">
-                    <div
-                        className="bg-[url('https://abhedyak.github.io/images/back-end-developer.svg')] absolute w-full h-full bg-center bg-cover "
-                    >
-                        
-                        <span
-                            id="blackOverlay"
-                            className="absolute w-full h-full"
-                        ></span>
-                    </div>
-                    <div className="container relative mx-auto">
-                        <div className="flex flex-wrap items-center">
-                            <div className="w-full px-4 ml-auto mr-auto text-center lg:w-12/12">
-                                <div className="pr-12">
-                                    <h1 className="text-6xl font-semibold text-white pt-28 ">
-                                        Your story starts with us !
-                                    </h1>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-            </section>
-*/

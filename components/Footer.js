@@ -1,12 +1,20 @@
 import React from 'react';
+import Link from "next/link";
 const Footer = () => {
     return (
         <>
-            <section class='opacity-75 bg-white' id='profilefoot'>
+            <section class='opacity-95 bg-black text-gray-400' id='profilefoot'>
                 <div>
                     <div class="mx-auto container xl:px-20 lg:px-12 sm:px-6 px-4 py-12">
                         <div class="flex flex-col items-center justify-center">
-                            <img class='pl-2' src='./project.png' width="60" height="50" />
+                            <Link href="/">
+                                <img class='cursor-grab	hover:scale-110 animate-pulse' src='./project.png' width="50" height="40" />
+                            </Link>
+                            <div class="flex flex-wrap sm:gap-10 gap-8 items-center justify-center mt-8 font-bold">
+                                <Link href="/feedback">
+                                    <a href="" class="cursor-grab	 hover:scale-110 focus:underline focus:outline-none text-base font-serif">FeedBacks</a>
+                                </Link>
+                            </div>
                             <div class="flex items-center gap-x-8 mt-6">
                                 <a class="link" data-tippy-content="Github" href="https://github.com/mhmadwrekat">
                                     <button aria-label="pinterest" class="hover:scale-125 rounded-full">
