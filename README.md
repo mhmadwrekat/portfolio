@@ -1,7 +1,7 @@
 ## profile_card
 
 ---
-- ***[Live URL](https://portfoliowrekat.vercel.app/)***
+- ***[Live URL](https://wrekat.vercel.app/)***
 
 ---
 - Read The **[LICENSE](./LICENSE)**
