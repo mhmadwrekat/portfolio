@@ -1,16 +1,16 @@
-import Footer from '../components/Footer';
-import Head from 'next/head';
-import Link from "next/link";
-const FEEDBACK = process.env.NEXT_PUBLIC_FEEDBACK_API;
-import Axios from 'axios';
-import React, { useState, useEffect } from "react";
+import Footer from '../components/Footer' ;
+import Head from 'next/head' ;
+import Link from "next/link" ;
+const FEEDBACK = process.env.NEXT_PUBLIC_FEEDBACK_API ;
+import Axios from 'axios' ;
+import React, { useState, useEffect } from "react" ;
 const feedback = () => {
-    const [feedback, setFeedback] = useState([]);
+    const [feedback, setFeedback] = useState([]) ;
     useEffect(() => {
         Axios.get(FEEDBACK).then(res => {
             setFeedback(res.data)
         })
-    }, []);
+    }, []) ;
     return (
         <section
             className="bg-cover bg-[url('https://wallpaperaccess.com/full/2185980.jpg')] font-awesome antialiased text-gray-900 leading-normal tracking-wider">
