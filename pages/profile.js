@@ -23,7 +23,7 @@ const profile = () => {
             name: event.target.name.value,
             email: event.target.email.value,
             message: event.target.message.value,
-            author: event.target.name.value
+            author: 1
         }
         createFeedback(feedback);
         swal("Success", "Thank You For Your Feedback!!", "success");
