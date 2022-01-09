@@ -97,7 +97,7 @@ const profile = () => {
                             <div className="flex flex-col w-full p-8 lg:w-1/3">
                                 <p className="text-3xl font-extrabold leading-relaxed md:text-5xl md:leading-snug">Leave Me a Feedback!</p>
                                 <p className="text-sm font-bold leading-snug md:text-base text-gray-50">
-                                    Please provide your valuable feedback and something something ...
+                                    Please provide your valuable feedback or any beautiful word for support ...
                                 </p>
                             </div>
                             <div className="flex flex-col justify-center w-full lg:w-2/3">
