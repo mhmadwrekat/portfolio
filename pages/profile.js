@@ -2,6 +2,7 @@ import Nav from '../components/Nav';
 import useFeedback from '../hooks/useFeedback';
 import Footer from '../components/Footer';
 import swal from 'sweetalert';
+const WEATHER = process.env.NEXT_PUBLIC_BACKEND_WEATHER_API ;
 import Axios from 'axios';
 import React, { useState, useEffect } from "react";
 let counter = 0;
@@ -10,7 +11,7 @@ const profile = () => {
     const { createFeedback } = useFeedback();
     {/* WEATHER DATA */ }
     useEffect(() => {
-        Axios.get('https://personalnodejs.herokuapp.com/weather').then(res => {
+        Axios.get(WEATHER).then(res => {
             res.data.cache.data && setWeather(res.data.cache.data)
         })
     }, []);
