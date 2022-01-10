@@ -184,7 +184,7 @@ bg-gray-300 placeholder-black text-gray-800 outline-none focus:bg-gray-400" plac
                 <section className='hidden grid-cols-6 py-10 pt-5 sm:pt-5 sm:px-0 sm:grid'>
                     {
                         weather && weather.map((item) => {
-                            if (counter < 8) {
+                            if (counter < 7) {
                                 counter++;
                                 return (<>
                                     <div class="pt-3 pb-3 flex flex-col items-center justify-center opacity-90">
