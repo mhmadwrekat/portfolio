@@ -181,13 +181,13 @@ bg-gray-300 placeholder-black text-gray-800 outline-none focus:bg-gray-400" plac
                 </section>
                 {/* END WEATHER DATA MOBILE */}
                 {/* WEATHER DATA DESKTOP VIEW */}
-                <section className='hidden grid-cols-6 py-10 pt-5 sm:pt-5 sm:px-0 sm:grid'>
+                <section className='hidden grid-cols-5 py-10 pt-5 sm:pt-5 sm:px-0 sm:grid'>
                     {
                         weather && weather.map((item) => {
                             if (counter < 7) {
                                 counter++;
                                 return (<>
-                                    <div class="pt-3 pb-3 flex flex-col items-center justify-center opacity-90">
+                                    <div class="pr-2 pt-3 pb-3 flex flex-col items-center justify-center opacity-90">
                                         <div class="px-6 py-2 max-w-md sm:px-10 sm:py-5 mx-auto bg-white rounded-2xl shadow-xl">
                                             <div class="">
                                                 <div class="flex">
