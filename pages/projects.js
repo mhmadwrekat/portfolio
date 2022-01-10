@@ -113,7 +113,7 @@ const projects = () => {
                     </div>
                 </section>
                 {/* PROJECT 3 */}
-                <section className='pt-20'>
+                <section className='pt-20 pb-5'>
                     <div class="max-w-md mx-auto bg-white rounded-xl shadow-2xl overflow-hidden md:max-w-2xl">
                         <div class="md:flex">
                             <div class="px-10 ml-2 md:px-0 md:shrink-0">
