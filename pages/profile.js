@@ -2,7 +2,7 @@ import Nav from '../components/Nav';
 import useFeedback from '../hooks/useFeedback';
 import Footer from '../components/Footer';
 import swal from 'sweetalert';
-const WEATHER = process.env.NEXT_PUBLIC_BACKEND_WEATHER_API ;
+const WEATHER = process.env.NEXT_PUBLIC_BACKEND_WEATHER_API;
 import Axios from 'axios';
 import React, { useState, useEffect } from "react";
 let counter = 0;
@@ -44,7 +44,7 @@ const profile = () => {
                         <div className="p-4 text-center md:p-12 lg:text-left">
                             <div className="bg-[url('https://github.com/ai-survivors/world_cup_22_frontend/blob/main/assest/wrekat.jpg?raw=true')] block lg:hidden rounded-full shadow-xl mx-auto -mt-16 h-48 w-48 bg-cover bg-center">
                             </div>
-                            <h1 className="pt-8 text-3xl font-bold lg:pt-0 hover:text-red-700">Mhmad Wrekat</h1>
+                            <h1 className="pt-8 text-3xl font-bold lg:pt-0 ">Mhmad Wrekat</h1>
                             <div className="w-4/5 pt-3 mx-auto border-b-2 border-green-500 opacity-25 lg:mx-0"></div>
                             <p className="flex items-center justify-center pt-4 text-base font-bold lg:justify-start"><svg
                                 className="h-4 pr-4 text-green-700 fill-current" xmlns="http://www.w3.org/2000/svg"
@@ -74,24 +74,36 @@ const profile = () => {
                                 </button>
                                 </a>
                             </div>
-                            <div className="flex flex-wrap items-center justify-between w-4/5 pr-10 mx-auto mt-6 lg:pb-0 lg:w-full">
-                                <a><svg
-                                    className="h-6 text-blue-600 fill-current" role="img" viewBox="0 0 24 24"
-                                    xmlns="http://www.w3.org/2000/svg">
-                                    <title>Twitter</title>
-                                    <path />
-                                </svg></a>
+                            <h1 className="pt-8 text-2xl font-bold lg:pt-0">Programming Languages</h1>
+                            <div className="pt-3 mx-auto border-b-2 border-green-500 opacity-25 w-5/5 lg:mx-0"></div>
+                            <div className="flex flex-wrap items-center justify-between mx-auto mt-6 w-5/5 lg:pb-0 lg:w-full">
+
+                                <section className='grid grid-cols-4 gap-3 sm:grid-cols-6'>
+                                    <p className='font-serif font-bold '>Python </p><img src='./assest/python.png' className="h-6 fill-current animate-bounce" />
+                                    <p className='font-serif font-bold'>Django </p><img src='./assest/django.png' className="h-6 fill-current animate-bounce" />
+                                    <p className='font-serif font-bold'>Postgres </p><img src='./assest/postgre.png' className="h-6 fill-current animate-bounce" />
+                                    <p className='font-serif font-bold'>JS </p><img src='./assest/js.png' className="h-6 fill-current animate-bounce" />
+                                    <p className='font-serif font-bold'>NodeJS </p><img src='./assest/nodejs.png' className="h-6 fill-current animate-bounce" />
+                                    <p className='font-serif font-bold'>NextJS </p><img src='./assest/next.png' className="h-6 fill-current animate-bounce" />
+                                    <p className='font-serif font-bold'>React </p><img src='./assest/react.png' className="h-6 fill-current animate-bounce" />
+                                    <p className='font-serif font-bold'>Mongo </p><img src='./assest/mongo.png' className="h-6 fill-current animate-bounce" />
+                                    <p className='font-serif font-bold'>BStrap </p><img src='./assest/bootstrap.png' className="h-6 fill-current animate-bounce" />
+                                    <p className='font-serif font-bold'>TWCSS </p><img src='./assest/wind.png' className="h-6 fill-current animate-bounce" />
+                                    <p className='font-serif font-bold'>HTML5 </p><img src='./assest/html.png' className="h-6 fill-current animate-bounce" />
+                                    <p className='font-serif font-bold'>CSS3 </p><img src='./assest/css.png' className="h-6 fill-current animate-bounce" />
+                                </section>
+
                             </div>
                         </div>
                     </div>
                     {/* DESKTOP PHOTO */}
                     <div className="w-full lg:w-2/5">
-                        <img src="./profile.jpg"
+                        <img src="./assest/profile.jpg"
                             className="hidden rounded-none shadow-2xl lg:rounded-lg lg:block" />
                     </div>
                 </div>
                 {/* FEEDBACK FORM */}
-                <section className="antialiased leading-normal tracking-wider text-gray-900 font-awesome">
+                <section className="pt-0 antialiased leading-normal tracking-wider text-gray-900 sm:pt-10 font-awesome">
                     <div className="text-white opacity-95">
                         <div className="container flex flex-col mx-auto md:flex-row">
                             <div className="flex flex-col w-full p-8 lg:w-1/3">
@@ -158,7 +170,7 @@ bg-gray-300 placeholder-black text-gray-800 outline-none focus:bg-gray-400" plac
                                                     <ul class="flex items-center justify-center space-x-2">
                                                         <li class="flex flex-col items-center space-y-2">
                                                             <div className='items-center justify-center'>
-                                                                <img className='w-8 h-8 sm:w-12 sm:h-12' src='./weather.png' />
+                                                                <img className='w-8 h-8 sm:w-12 sm:h-12' src='./assest/weather.png' />
                                                             </div>
                                                             <p class=" text-gray-500 font-bold text-xs">Amman</p>
                                                             <p class="text-left font-bold text-gray-500 text-xs">{item.date}</p>
@@ -194,13 +206,13 @@ bg-gray-300 placeholder-black text-gray-800 outline-none focus:bg-gray-400" plac
                                                     <ul class="flex items-center justify-center space-x-2">
                                                         <li class="flex flex-col items-center space-y-2">
                                                             <div className='items-center justify-center'>
-                                                                <img className='w-8 h-8 sm:w-12 sm:h-12 hover:scale-110 animate-pulse' src='./weather.png' />
+                                                                <img className='w-8 h-8 sm:w-12 sm:h-12 hover:scale-110 animate-pulse' src='./assest/weather.png' />
                                                             </div>
-                                                            <p class=" text-gray-500 font-bold text-xs hover:scale-110 animate-pulse">Amman</p>
-                                                            <p class="text-left font-bold text-gray-500 text-xs hover:scale-110 animate-pulse">{item.date}</p>
-                                                            <p class="text-left font-extrabold text-gray-500 text-xs hover:scale-110 animate-pulse">
+                                                            <p class=" text-gray-500 font-bold text-xs hover:scale-110 ">Amman</p>
+                                                            <p class="text-left font-bold text-gray-500 text-xs hover:scale-110">{item.date}</p>
+                                                            <p class="text-left font-extrabold text-gray-500 text-xs hover:scale-110 ">
                                                                 {item.description}                  </p>
-                                                            <p class="text-right sm:text-center font-bold mdi mdi-plus mdi-18px mx-1 text-gray-500 hover:scale-110 animate-pulse text-xs">
+                                                            <p class="text-right sm:text-center font-bold mdi mdi-plus mdi-18px mx-1 text-gray-500 hover:scale-110 text-xs">
                                                                 {item.max_temp}  °C
                                                             </p>
                                                         </li>

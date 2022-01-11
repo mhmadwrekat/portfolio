@@ -1,22 +1,22 @@
-import Footer from '../components/Footer' ;
-import Head from 'next/head' ;
-import Link from "next/link" ;
-const FEEDBACK = process.env.NEXT_PUBLIC_FEEDBACK_API ;
-import Axios from 'axios' ;
-import React, { useState, useEffect } from "react" ;
+import Footer from '../components/Footer';
+import Head from 'next/head';
+import Link from "next/link";
+const FEEDBACK = process.env.NEXT_PUBLIC_FEEDBACK_API;
+import Axios from 'axios';
+import React, { useState, useEffect } from "react";
 const feedback = () => {
-    const [feedback, setFeedback] = useState([]) ;
+    const [feedback, setFeedback] = useState([]);
     useEffect(() => {
         Axios.get(FEEDBACK).then(res => {
             setFeedback(res.data)
         })
-    }, []) ;
+    }, []);
     return (
         <section
             className="bg-cover bg-[url('https://wallpaperaccess.com/full/2185980.jpg')] font-awesome antialiased text-gray-900 leading-normal tracking-wider">
             <Head>
                 <title>Mhmad Wrekat</title>
-                <link rel="icon" href="./icon.png" />
+                <link rel="icon" href="./assest/icon.png" />
                 <meta charset="UTF-8" />
                 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
                 <meta http-equiv="X-UA-Compatible" content="ie=edge" />
@@ -28,7 +28,7 @@ const feedback = () => {
             </Head>
             <section className='text-gray-400 bg-black opacity-80' id="profilehead">
                 <div class=" container max-w-6xl mx-auto flex items-center py-5">
-                    <img class='pl-3 cursor-grab	hover:scale-110 animate-pulse' src='./project.png' width="50" height="40" />
+                    <img class='pl-3 cursor-grab	hover:scale-110 animate-pulse' src='./assest/project.png' width="50" height="40" />
                     <div class="w-full mx-auto flex flex-wrap items-center">
                         <span class="font-serif pl-3 text-xl text-bolder">Feedbacks</span>
                     </div>
@@ -51,7 +51,7 @@ const feedback = () => {
                                                     <li class="flex flex-col items-center space-y-2">
                                                         <div className='items-center justify-center'>
                                                             <img class="w-10 rounded-full text-black"
-                                                                src='./user.png' />
+                                                                src='./assest/user.png' />
                                                         </div>
                                                         <p class=" text-gray-500 text-xs">{item.name}</p>
 

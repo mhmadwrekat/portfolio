@@ -4,11 +4,11 @@ import Link from "next/link";
 import Footer from '../components/Footer';
 const projects = () => {
     return (
-        <>
+        <section className="bg-cover bg-[url('https://images.wallpaperscraft.com/image/single/silhouette_desert_pyramid_130240_3000x3000.jpg')]">
             {/* NAV */}
             <Head>
                 <title>Mhmad Wrekat</title>
-                <link rel="icon" href="./icon.png" />
+                <link rel="icon" href="./assest/icon.png" />
                 <meta charset="UTF-8" />
                 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
                 <meta http-equiv="X-UA-Compatible" content="ie=edge" />
@@ -20,7 +20,7 @@ const projects = () => {
             </Head>
             <section className='text-gray-400 bg-black opacity-80' id="profilehead">
                 <div class=" container max-w-6xl mx-auto flex items-center py-5">
-                    <img class='pl-3 cursor-grab	hover:scale-110 animate-pulse' src='./project.png' width="50" height="40" />
+                    <img class='pl-3 cursor-grab	hover:scale-110 animate-pulse' src='./assest/project.png' width="50" height="40" />
                     <div class="w-full mx-auto flex flex-wrap items-center">
                         <span class="font-serif pl-3 text-xl text-bolder">My Projects</span>
                     </div>
@@ -31,7 +31,7 @@ const projects = () => {
             </section>
             {/* TITLE */}
             <section>
-                <div class="grid grid-cols-1 gap:10 sm:gap-10 sm:grid sm:grid-cols-2 text-sky-900">
+                <div class="grid grid-cols-1 gap:10 sm:gap-10 sm:grid sm:grid-cols-2 text-green-600">
                     <img src='https://abhedyak.github.io/images/back-end-developer.svg' class="object-cover sm:h-6/6 w-6/6 ..." />
                     <div class="flex items-stretch ...">
                         <div></div>
@@ -113,7 +113,7 @@ const projects = () => {
                     </div>
                 </section>
                 {/* PROJECT 3 */}
-                <section className='pt-20 pb-5'>
+                <section className='pt-20 pb-10'>
                     <div class="max-w-md mx-auto bg-white rounded-xl shadow-2xl overflow-hidden md:max-w-2xl">
                         <div class="md:flex">
                             <div class="px-10 ml-2 md:px-0 md:shrink-0">
@@ -146,7 +146,7 @@ const projects = () => {
                 </section>
             </section>
             <Footer />
-        </>
+        </section>
     )
 }
 export default projects

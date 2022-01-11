@@ -8,7 +8,7 @@ const Footer = () => {
                     <div class="mx-auto container xl:px-20 lg:px-12 sm:px-6 px-4 py-12">
                         <div class="flex flex-col items-center justify-center">
                             <Link href="/">
-                                <img class='cursor-grab	hover:scale-110 animate-pulse' src='./project.png' width="50" height="40" />
+                                <img class='cursor-grab	hover:scale-110 animate-pulse' src='./assest/project.png' width="50" height="40" />
                             </Link>
                             <div class="flex flex-wrap sm:gap-10 gap-8 items-center justify-center mt-8 font-bold">
                                 <Link href="/feedback">
