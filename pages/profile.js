@@ -76,7 +76,7 @@ const profile = () => {
                             </Fade>
                             <Fade delay={2500}>
                                 <div className="pt-12 pb-8">
-                                    <a target='_balnk' href="https://wa.me/+962788818125">
+                                    <a target='_balnk' href="https://wa.me/+962798596928">
                                         <span class=" h-0 w-0">
                                             <span class="animate-ping absolute inline h-4 w-4 rounded-full bg-green-600 opacity-75"></span>
                                             <span class="relative rounded-full h-0 w-0 bg-green-600"></span>
