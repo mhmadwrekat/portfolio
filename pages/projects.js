@@ -1,31 +1,34 @@
 import React from 'react';
 import Nav from '../components/Nav';
-import Head from 'next/head';
-import Link from "next/link";
 import Footer from '../components/Footer';
+import { Slide } from "react-awesome-reveal";
 const projects = () => {
     return (
-        <section className="bg-cover bg-[url('https://images.wallpaperscraft.com/image/single/silhouette_desert_pyramid_130240_3000x3000.jpg')]">
+        <section className="bg-cover bg-[url('https://images.wallpaperscraft.com/image/single/stars_glitter_patterns_128474_3000x3000.jpg')]">
             {/* NAV */}
-<Nav/>
+            <Nav />
             {/* TITLE */}
             <section>
-                <div class="grid grid-cols-1 gap:10 sm:gap-10 sm:grid sm:grid-cols-2 text-green-600">
+                <div class="grid grid-cols-1 gap:10 sm:gap-10 sm:grid sm:grid-cols-2 text-violet-800">
                     <img src='https://abhedyak.github.io/images/back-end-developer.svg' class="object-cover sm:h-6/6 w-6/6 ..." />
                     <div class="flex items-stretch ...">
                         <div></div>
                         <div className="px-8 pt-10 sm:px-0 sm:pt-0 text-base sm:text-3xl text-center font-serif font-bold self-center ...">
-                            <p className=''>
-                                My Latest Projects
-                            </p>
+
+                            <Slide triggerOnce>
+                                <p>My Latest Projects</p>
+                            </Slide>
                             <br></br>
-                            <p className=''>
-                                “You can do anything you set your mind to it.”
-                            </p>
+                            <Slide triggerOnce>
+                                <p>“You can do anything you set your mind to it.”</p>
+                            </Slide>
+
                             <br></br>
-                            <p className='text-xs text-gray-500 sm:text-lg'>
-                                - Benjamin Franklin
-                            </p>
+                            <Slide triggerOnce>
+                                <p className='text-xs text-gray-500 sm:text-lg'>
+                                    - Benjamin Franklin
+                                </p>
+                            </Slide>
                         </div>
                         <div></div>
                     </div></div>

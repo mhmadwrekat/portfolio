@@ -5,6 +5,7 @@ import swal from 'sweetalert';
 const WEATHER = process.env.NEXT_PUBLIC_BACKEND_WEATHER_API;
 import Axios from 'axios';
 import React, { useState, useEffect } from "react";
+import { Flip, Fade } from "react-awesome-reveal";
 let counter = 0;
 const profile = () => {
     const [weather, setWeather] = useState([]);
@@ -44,56 +45,45 @@ const profile = () => {
                         <div className="p-4 text-center md:p-12 lg:text-left">
                             <div className="bg-[url('https://github.com/ai-survivors/world_cup_22_frontend/blob/main/assest/wrekat.jpg?raw=true')] block lg:hidden rounded-full shadow-xl mx-auto -mt-16 h-48 w-48 bg-cover bg-center">
                             </div>
-                            <h1 className="pt-8 text-3xl font-bold lg:pt-0 ">Mhmad Wrekat</h1>
-                            <div className="w-4/5 pt-3 mx-auto border-b-2 border-green-500 opacity-25 lg:mx-0"></div>
-                            <p className="flex items-center justify-center pt-4 text-base font-bold lg:justify-start"><svg
-                                className="h-4 pr-4 text-green-700 fill-current" xmlns="http://www.w3.org/2000/svg"
-                                viewBox="0 0 20 20">
-                                <path
-                                    d="M9 12H1v6a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-6h-8v2H9v-2zm0-1H0V5c0-1.1.9-2 2-2h4V2a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v1h4a2 2 0 0 1 2 2v6h-9V9H9v2zm3-8V2H8v1h4z" />
-                            </svg>Web Developer</p>
-                            <p
-                                className="flex items-center justify-center pt-2 pr-5 text-xs text-white-600 lg:text-sm lg:justify-start">
-                                <svg className="h-4 pr-4 text-green-700 fill-current" xmlns="http://www.w3.org/2000/svg"
+                            <h1 className="pt-8 text-3xl font-bold lg:pt-0 ">
+                                <Flip>
+                                    <p>Mhmad Wrekat</p>
+                                </Flip>
+                            </h1>
+                            <Fade delay={1000}>
+                                <div className="w-4/5 pt-3 mx-auto border-b-2 opacity-25 border-violet-900 lg:mx-0"></div>
+                                <p className="flex items-center justify-center pt-4 text-base font-bold lg:justify-start"><svg
+                                    className="h-4 pr-4 fill-current text-violet-800" xmlns="http://www.w3.org/2000/svg"
                                     viewBox="0 0 20 20">
                                     <path
-                                        d="M10 20a10 10 0 1 1 0-20 10 10 0 0 1 0 20zm7.75-8a8.01 8.01 0 0 0 0-4h-3.82a28.81 28.81 0 0 1 0 4h3.82zm-.82 2h-3.22a14.44 14.44 0 0 1-.95 3.51A8.03 8.03 0 0 0 16.93 14zm-8.85-2h3.84a24.61 24.61 0 0 0 0-4H8.08a24.61 24.61 0 0 0 0 4zm.25 2c.41 2.4 1.13 4 1.67 4s1.26-1.6 1.67-4H8.33zm-6.08-2h3.82a28.81 28.81 0 0 1 0-4H2.25a8.01 8.01 0 0 0 0 4zm.82 2a8.03 8.03 0 0 0 4.17 3.51c-.42-.96-.74-2.16-.95-3.51H3.07zm13.86-8a8.03 8.03 0 0 0-4.17-3.51c.42.96.74 2.16.95 3.51h3.22zm-8.6 0h3.34c-.41-2.4-1.13-4-1.67-4S8.74 3.6 8.33 6zM3.07 6h3.22c.2-1.35.53-2.55.95-3.51A8.03 8.03 0 0 0 3.07 6z" />
-                                </svg>Jordan - Amman
-                            </p>
-                            <p className="pt-8 text-sm">
-                                Have a Beclore Degree in Software Engineering ,
-                                and Web Development - FrontEnd and BackEnd ,
-                                I like Programming and Web Development .
-                                The Excites Me The Most About Tech is it Always Evolve Quickly and New
-                                Technologies are Always Emerging .</p>
-                            <div className="pt-12 pb-8">
-                                <a target='_balnk' href="https://wa.me/+962788818125"><button
-                                    className="px-4 py-2 font-bold text-white bg-green-700 rounded-full hover:bg-green-900">
-                                    Want your own page ?
-                                    Text Me
-                                </button>
-                                </a>
-                            </div>
-                            <h1 className="pt-8 text-2xl font-bold lg:pt-0">Programming Languages</h1>
-                            <div className="pt-3 mx-auto border-b-2 border-green-500 opacity-25 w-5/5 lg:mx-0"></div>
-                            <div className="flex flex-wrap items-center justify-between mx-auto mt-6 w-5/5 lg:pb-0 lg:w-full">
-
-                                <section className='grid grid-cols-4 gap-3 sm:grid-cols-6'>
-                                    <p className='font-serif font-bold '>Python </p><img src='./assest/python.png' className="h-6 fill-current animate-bounce" />
-                                    <p className='font-serif font-bold'>Django </p><img src='./assest/django.png' className="h-6 fill-current animate-bounce" />
-                                    <p className='font-serif font-bold'>Postgres </p><img src='./assest/postgre.png' className="h-6 fill-current animate-bounce" />
-                                    <p className='font-serif font-bold'>JS </p><img src='./assest/js.png' className="h-6 fill-current animate-bounce" />
-                                    <p className='font-serif font-bold'>NodeJS </p><img src='./assest/nodejs.png' className="h-6 fill-current animate-bounce" />
-                                    <p className='font-serif font-bold'>NextJS </p><img src='./assest/next.png' className="h-6 fill-current animate-bounce" />
-                                    <p className='font-serif font-bold'>React </p><img src='./assest/react.png' className="h-6 fill-current animate-bounce" />
-                                    <p className='font-serif font-bold'>Mongo </p><img src='./assest/mongo.png' className="h-6 fill-current animate-bounce" />
-                                    <p className='font-serif font-bold'>BStrap </p><img src='./assest/bootstrap.png' className="h-6 fill-current animate-bounce" />
-                                    <p className='font-serif font-bold'>TWCSS </p><img src='./assest/wind.png' className="h-6 fill-current animate-bounce" />
-                                    <p className='font-serif font-bold'>HTML5 </p><img src='./assest/html.png' className="h-6 fill-current animate-bounce" />
-                                    <p className='font-serif font-bold'>CSS3 </p><img src='./assest/css.png' className="h-6 fill-current animate-bounce" />
-                                </section>
-
-                            </div>
+                                        d="M9 12H1v6a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-6h-8v2H9v-2zm0-1H0V5c0-1.1.9-2 2-2h4V2a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v1h4a2 2 0 0 1 2 2v6h-9V9H9v2zm3-8V2H8v1h4z" />
+                                </svg>Web Developer</p></Fade>
+                            <Fade delay={2000}>
+                                <p
+                                    className="flex items-center justify-center pt-2 pr-5 text-xs text-white-600 lg:text-sm lg:justify-start">
+                                    <svg className="h-4 pr-4 fill-current text-violet-800" xmlns="http://www.w3.org/2000/svg"
+                                        viewBox="0 0 20 20">
+                                        <path
+                                            d="M10 20a10 10 0 1 1 0-20 10 10 0 0 1 0 20zm7.75-8a8.01 8.01 0 0 0 0-4h-3.82a28.81 28.81 0 0 1 0 4h3.82zm-.82 2h-3.22a14.44 14.44 0 0 1-.95 3.51A8.03 8.03 0 0 0 16.93 14zm-8.85-2h3.84a24.61 24.61 0 0 0 0-4H8.08a24.61 24.61 0 0 0 0 4zm.25 2c.41 2.4 1.13 4 1.67 4s1.26-1.6 1.67-4H8.33zm-6.08-2h3.82a28.81 28.81 0 0 1 0-4H2.25a8.01 8.01 0 0 0 0 4zm.82 2a8.03 8.03 0 0 0 4.17 3.51c-.42-.96-.74-2.16-.95-3.51H3.07zm13.86-8a8.03 8.03 0 0 0-4.17-3.51c.42.96.74 2.16.95 3.51h3.22zm-8.6 0h3.34c-.41-2.4-1.13-4-1.67-4S8.74 3.6 8.33 6zM3.07 6h3.22c.2-1.35.53-2.55.95-3.51A8.03 8.03 0 0 0 3.07 6z" />
+                                    </svg>Jordan - Amman
+                                </p></Fade>
+                            <Fade delay={2500}>
+                                <p className="pt-8 text-sm">
+                                    Have a Beclore Degree in Software Engineering ,
+                                    and Web Development - FrontEnd and BackEnd ,
+                                    I like Programming and Web Development .
+                                    The Excites Me The Most About Tech is it Always Evolve Quickly and New
+                                    Technologies are Always Emerging .</p>
+                            </Fade>
+                            <Fade delay={3000}>
+                                <div className="pt-12 pb-8">
+                                    <a target='_balnk' href="https://wa.me/+962788818125"><button
+                                        className="px-4 py-2 font-bold text-gray-200 rounded-full cursor-alias bg-violet-800 hover:bg-violet-600">
+                                        Want your own page ?
+                                        Text Me
+                                    </button>
+                                    </a>
+                                </div></Fade>
                         </div>
                     </div>
                     {/* DESKTOP PHOTO */}
@@ -123,14 +113,14 @@ const profile = () => {
                                                     <form id="feedbackForm" method='post' onSubmit={handelFeedback}>
                                                         <div className="relative w-full mb-3">
                                                             <label className="block mb-2 text-xs font-bold text-gray-700 uppercase"
-                                                                for="email">Name</label><input type="text" name="name" id="name" class="border-0 px-3 py-3 rounded text-sm shadow w-full
-bg-gray-300 placeholder-black text-gray-800 outline-none focus:bg-gray-400" placeholder=" "
+                                                                for="email">Name</label><input type="text" name="name" id="name"
+                                                                    class="border-0 px-3 py-3 rounded text-sm shadow w-full bg-gray-300 placeholder-black text-gray-800 outline-none focus:bg-gray-400" placeholder=" "
                                                                     required />
                                                         </div>
                                                         <div className="relative w-full mb-3">
                                                             <label className="block mb-2 text-xs font-bold text-gray-700 uppercase"
-                                                                for="email">Email</label><input type="email" name="email" id="email" class="border-0 px-3 py-3 rounded text-sm shadow w-full
-                    bg-gray-300 placeholder-black text-gray-800 outline-none focus:bg-gray-400" placeholder=" "
+                                                                for="email">Email</label><input type="email" name="email" id="email"
+                                                                    class="border-0 px-3 py-3 rounded text-sm shadow w-full bg-gray-300 placeholder-black text-gray-800 outline-none focus:bg-gray-400" placeholder=" "
                                                                     required />
                                                         </div>
                                                         <div className="relative w-full mb-3">
@@ -142,7 +132,7 @@ bg-gray-300 placeholder-black text-gray-800 outline-none focus:bg-gray-400" plac
                                                         </div>
                                                         <div className="mt-6 text-center">
                                                             <button id="feedbackBtn" type="submit"
-                                                                className="px-6 py-3 mx-auto mb-1 mr-1 text-sm font-bold text-center text-white uppercase bg-green-700 rounded shadow outline-none hover:bg-green-900 cursor-grab active:bg-yellow-400 hover:shadow-lg focus:outline-none"
+                                                                className="px-6 py-3 mx-auto mb-1 mr-1 text-sm font-bold text-center text-gray-200 uppercase rounded shadow outline-none bg-violet-800 hover:bg-violet-600 cursor-alias active:bg-yellow-400 hover:shadow-lg focus:outline-none"
                                                             >Submit
                                                             </button>
                                                         </div>

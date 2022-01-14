@@ -1,133 +1,73 @@
 import Head from 'next/head';
 import Link from "next/link";
-import React, { useState, useEffect } from "react";
-
+import React, { useEffect } from "react";
 const Nav = () => {
-
-let open = false ;
-
-//const btn = window.addEventListener("button.mobile-menu-button");
-//const menu = getElementById(".mobile-menu");
-
-
-useEffect(() => {
-    try {
-const btn = document.querySelector("button.mobile-menu-button");
-const menu = document.querySelector(".mobile-menu");
-btn.addEventListener("click",() => {
-    menu.classList.toggle("hidden");
-    });}catch (error) {
-        handleError(error);
-    }
-    function handleError(error) {
-        console.error(error);
-    }
-},[]); 
-
-return (
-    <>
-        <Head>
-            <title>Mhmad Wrekat</title>
-            <link rel="icon" href="./assest/icon.png" />
-        </Head>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-        <nav class="bg-white border-gray-200 px-2 sm:px-4 py-2.5 rounded dark:bg-gray-800">
-<div class="container flex flex-wrap justify-between items-center mx-auto">
-<a href="#" class="flex">
-<svg class="mr-3 h-10" viewBox="0 0 52 72" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1.87695 53H28.7791C41.5357 53 51.877 42.7025 51.877 30H24.9748C12.2182 30 1.87695 40.2975 1.87695 53Z" fill="#76A9FA"/><path d="M0.000409561 32.1646L0.000409561 66.4111C12.8618 66.4111 23.2881 55.9849 23.2881 43.1235L23.2881 8.87689C10.9966 8.98066 1.39567 19.5573 0.000409561 32.1646Z" fill="#A4CAFE"/><path d="M50.877 5H23.9748C11.2182 5 0.876953 15.2975 0.876953 28H27.7791C40.5357 28 50.877 17.7025 50.877 5Z" fill="#1C64F2"/></svg>
-  <span class="self-center text-lg font-semibold whitespace-nowrap dark:text-white">FlowBite</span>
-</a>
-<div class="flex md:order-2">
-  <button type="button" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-3 md:mr-0 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Get started</button>
-
-
-
-{/* class="inline-flex items-center p-2 text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" */}
-  <button class="mobile-menu-button" type="button" >
-  <span class="sr-only">Open main menu</span>
-  <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd"></path></svg>
-  <svg class="hidden w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
-
-</button>
-
-
-
-</div>
-<div class="hidden justify-between items-center w-full md:flex md:w-auto md:order-1" id="mobile-menu-4">
-<ul class="flex flex-col mt-4 md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium">
-  <li>
-    <a href="#" class="block py-2 pr-4 pl-3 text-white bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0 dark:text-white" aria-current="page">Home</a>
-  </li>
-  <li>
-    <a href="#" class="block py-2 pr-4 pl-3 text-gray-700 border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 md:dark:hover:text-white dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">About</a>
-  </li>
-</ul>
-</div>
-</div>
-</nav>
-
-
-
-
-<div class='hidden mobile-menu'>
-<ul class="flex flex-col mt-4 md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium">
-  <li>
-    <a href="#" class="block py-2 pr-4 pl-3 text-white bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0 dark:text-white" aria-current="page">Home</a>
-  </li>
-  <li>
-    <a href="#" class="block py-2 pr-4 pl-3 text-gray-700 border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 md:dark:hover:text-white dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">About</a>
-  </li>
-</ul>
-</div>
-
-
-
-        
-        <section className='text-gray-400 bg-black opacity-80' id="profilehead">
-            <div class=" container max-w-6xl mx-auto flex items-center py-5">
-                <img class='pl-3 cursor-grab hover:scale-110' src='./assest/icon.png' width="60" height="60" />
-                <div class="w-full mx-auto flex flex-wrap items-center">
-                    <Link href='/'><p class="pl-3 hover:text-white cursor-pointer no-underline font-serif">profile</p></Link>
-                    <Link href='/projects'><p class="pl-3 cursor-pointer hover:text-white no-underline font-serif">Projects</p></Link>
+    useEffect(() => {
+        try {
+            const btn = document.querySelector("button.mobile-menu-button");
+            const menu = document.querySelector(".mobile-menu");
+            btn.addEventListener("click", () => {
+                menu.classList.toggle("hidden");
+            });
+        } catch (error) {
+            handleError(error);
+        }
+        function handleError(error) {
+            console.error(error);
+        }
+    }, []);
+    return (
+        <>
+            <Head>
+                <title>Mhmad Wrekat</title>
+                <link rel="icon" href="./assest/icon.png" />
+            </Head>
+            <nav class="bg-black opacity-80 border-gray-200 px-2 sm:px-4 py-2.5 rounded">
+                <div class="container flex flex-wrap justify-between items-center mx-auto">
+                    <img class='pl-3 cursor-grab hover:scale-110' src='./assest/icon.png' width="60" height="60" />
+                    <div class="flex md:order-2">
+                        <a href="./assest/wrekatt.pdf" download="wrekatt.pdf">
+                            <button type="button" class="cursor-help animate-bounce flex text-gray-200 hover:bg-violet-600 bg-violet-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-4 md:mr-0">
+                                <svg class="fill-current w-4 h-4 mr-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M13 8V2H7v6H2l8 8 8-8h-5zM0 18h20v2H0v-2z" /></svg>
+                                <span>Resume</span>
+                            </button>
+                        </a>
+                        <button class="mobile-menu-button" type="button" >
+                            <span class="sr-only">Open main menu</span>
+                            <svg class="md:hidden flex w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd"></path></svg>
+                        </button>
+                    </div>
+                    <div class="hidden justify-between items-center w-full md:flex md:w-auto md:order-1" id="mobile-menu-4">
+                        <ul class="flex flex-col mt-4 md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium">
+                            <Link href='/'>
+                                <li>
+                                    <a href="" class="cursor-grab hover:scale-110 block py-2 pr-4 pl-3 text-gray-200 hover:text-violet-600 rounded md:bg-transparent md:p-0" aria-current="page">Profile</a>
+                                </li>
+                            </Link>
+                            <Link href='/projects'>
+                                <li>
+                                    <a href="" class="cursor-grab hover:scale-110 block py-2 pr-4 pl-3 text-gray-200 hover:text-violet-600 md:border-0 md:p-0">Project</a>
+                                </li>
+                            </Link>
+                        </ul>
+                    </div>
                 </div>
-                <div class=" pt-2 content-center justify-between md:w-1/2 md:justify-end">
-                <a href="./assest/wrekatt.pdf" download="wrekatt.pdf">
-                <button class="bg-gray-300 hover:bg-gray-400 text-gray-800 font-bold py-2 px-4 rounded inline-flex items-center">
-<svg class="fill-current w-4 h-4 mr-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M13 8V2H7v6H2l8 8 8-8h-5zM0 18h20v2H0v-2z"/></svg>
-<span>Resume</span>
-</button>
-                </a>
-                </div>
-
+            </nav>
+            <div class='hidden mobile-menu md:hidden bg-black opacity-80 border-gray-200'>
+                <ul class="flex flex-col md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium">
+                    <Link href='/'>
+                        <li>
+                            <a href="" class="cursor-grab hover:scale-110 block py-2 pr-4 pl-3 text-gray-200 text-center hover:text-violet-600 rounded md:p-0 " aria-current="page">Profile</a>
+                        </li>
+                    </Link>
+                    <Link href='/projects'>
+                        <li>
+                            <a href="" class="cursor-grab hover:scale-110 block py-2 pr-4 pl-3 text-center text-gray-200 hover:text-violet-600 md:p-0">Project</a>
+                        </li>
+                    </Link>
+                </ul>
             </div>
-        </section>
-    </>
-)
+        </>
+    )
 }
 export default Nav
-/*
-  <button id="theme-toggle" type="button" class="text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5">
-<svg id="theme-toggle-dark-icon" class="hidden w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path></svg>
-<svg id="theme-toggle-light-icon" class="hidden w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" fill-rule="evenodd" clip-rule="evenodd"></path></svg>
-</button>
-*/
-
