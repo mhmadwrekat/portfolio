@@ -1,6 +1,7 @@
 import Footer from '../components/Footer';
 import Head from 'next/head';
 import Link from "next/link";
+import Nav from '../components/Nav';
 const FEEDBACK = process.env.NEXT_PUBLIC_FEEDBACK_API;
 import Axios from 'axios';
 import React, { useState, useEffect } from "react";
@@ -14,29 +15,8 @@ const feedback = () => {
     return (
         <section
             className="bg-cover bg-[url('https://wallpaperaccess.com/full/2185980.jpg')] font-awesome antialiased text-gray-900 leading-normal tracking-wider">
-            <Head>
-                <title>Mhmad Wrekat</title>
-                <link rel="icon" href="./assest/icon.png" />
-                <meta charset="UTF-8" />
-                <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-                <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-                <meta name="description" content="Simple landind page" />
-                <meta name="keywords" content="" />
-                <meta name="author" content="" />
-                <link rel="stylesheet" href="https://unpkg.com/tailwindcss@2.2.19/dist/tailwind.min.css" />
-                <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700" rel="stylesheet" />
-            </Head>
-            <section className='text-gray-400 bg-black opacity-80' id="profilehead">
-                <div class=" container max-w-6xl mx-auto flex items-center py-5">
-                    <img class='pl-3 cursor-grab	hover:scale-110 animate-pulse' src='./assest/project.png' width="50" height="40" />
-                    <div class="w-full mx-auto flex flex-wrap items-center">
-                        <span class="font-serif pl-3 text-xl text-bolder">Feedbacks</span>
-                    </div>
-                    <div class=" pt-2 content-center justify-between md:w-1/2 md:justify-end">
-                        <Link href="/"><p class="pr-3 float-right cursor-pointer no-underline font-serif">Profile</p></Link>
-                    </div>
-                </div>
-            </section>
+<Nav/>
+
             <section className='grid grid-cols-1 px-10 py-0 sm:py-32 sm:px-0 sm:grid-cols-4'>
 
                 {

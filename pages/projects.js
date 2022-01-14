@@ -1,4 +1,5 @@
 import React from 'react';
+import Nav from '../components/Nav';
 import Head from 'next/head';
 import Link from "next/link";
 import Footer from '../components/Footer';
@@ -6,29 +7,7 @@ const projects = () => {
     return (
         <section className="bg-cover bg-[url('https://images.wallpaperscraft.com/image/single/silhouette_desert_pyramid_130240_3000x3000.jpg')]">
             {/* NAV */}
-            <Head>
-                <title>Mhmad Wrekat</title>
-                <link rel="icon" href="./assest/icon.png" />
-                <meta charset="UTF-8" />
-                <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-                <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-                <meta name="description" content="Simple landind page" />
-                <meta name="keywords" content="" />
-                <meta name="author" content="" />
-                <link rel="stylesheet" href="https://unpkg.com/tailwindcss@2.2.19/dist/tailwind.min.css" />
-                <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700" rel="stylesheet" />
-            </Head>
-            <section className='text-gray-400 bg-black opacity-80' id="profilehead">
-                <div class=" container max-w-6xl mx-auto flex items-center py-5">
-                    <img class='pl-3 cursor-grab	hover:scale-110 animate-pulse' src='./assest/project.png' width="50" height="40" />
-                    <div class="w-full mx-auto flex flex-wrap items-center">
-                        <span class="font-serif pl-3 text-xl text-bolder">My Projects</span>
-                    </div>
-                    <div class=" pt-2 content-center justify-between md:w-1/2 md:justify-end">
-                        <Link href="/"><p class="pr-3 float-right cursor-pointer no-underline font-serif">Profile</p></Link>
-                    </div>
-                </div>
-            </section>
+<Nav/>
             {/* TITLE */}
             <section>
                 <div class="grid grid-cols-1 gap:10 sm:gap-10 sm:grid sm:grid-cols-2 text-green-600">
