@@ -5,19 +5,16 @@ import { Slide } from "react-awesome-reveal";
 //bg-[url('https://images.wallpaperscraft.com/image/single/stars_glitter_patterns_128474_3000x3000.jpg')]">
 const projects = () => {
     return (
-        <section className="bg-violet-300" >
+        <section className="bg-gradient-to-r from-violet-100 to-violet-300" >
             {/* NAV */}
             <Nav />
             {/* TITLE */}
             <section>
                 <div class="grid grid-cols-1 gap:10 sm:gap-10 sm:grid sm:grid-cols-2 text-violet-800">
-                    <Slide triggerOnce>
                         <img src='./assest/proj.png' class="object-cover sm:h-6/6 w-6/6 ..." />
-                    </Slide>
                     <div class="flex items-stretch ...">
                         <div></div>
                         <div className="px-8 pt-10 sm:px-0 sm:pt-0 text-base sm:text-3xl text-center font-serif font-bold self-center ...">
-
                             <Slide triggerOnce>
                                 <p>My Latest Projects</p>
                                 <br></br>
@@ -44,7 +41,13 @@ const projects = () => {
                             </div>
                             <div class="p-8 text-center md:text-left">
                                 <div class="uppercase tracking-wide text-sm text-red-700 font-semibold">Desktop Website</div>
-                                <a href="#" class="block mt-1 text-xl uppercase leading-tight font-medium text-black hover:underline">Yalla Bike</a>
+                                <a href="https://priceless-swartz-6b6f00.netlify.app/" class="block mt-1 text-xl cursor-alias uppercase leading-tight font-medium text-black hover:underline">
+                                    Yalla Bike{' '}<svg className="inline h-4 pr-4 text-green-600 fill-current" xmlns="http://www.w3.org/2000/svg"
+                                        viewBox="0 0 20 20">
+                                        <path
+                                            d="M10 20a10 10 0 1 1 0-20 10 10 0 0 1 0 20zm7.75-8a8.01 8.01 0 0 0 0-4h-3.82a28.81 28.81 0 0 1 0 4h3.82zm-.82 2h-3.22a14.44 14.44 0 0 1-.95 3.51A8.03 8.03 0 0 0 16.93 14zm-8.85-2h3.84a24.61 24.61 0 0 0 0-4H8.08a24.61 24.61 0 0 0 0 4zm.25 2c.41 2.4 1.13 4 1.67 4s1.26-1.6 1.67-4H8.33zm-6.08-2h3.82a28.81 28.81 0 0 1 0-4H2.25a8.01 8.01 0 0 0 0 4zm.82 2a8.03 8.03 0 0 0 4.17 3.51c-.42-.96-.74-2.16-.95-3.51H3.07zm13.86-8a8.03 8.03 0 0 0-4.17-3.51c.42.96.74 2.16.95 3.51h3.22zm-8.6 0h3.34c-.41-2.4-1.13-4-1.67-4S8.74 3.6 8.33 6zM3.07 6h3.22c.2-1.35.53-2.55.95-3.51A8.03 8.03 0 0 0 3.07 6z" />
+                                    </svg>
+                                    </a>
                                 <p class="mt-2 text-gray-500">
                                     Events to help Nature .
                                     <br></br>
@@ -67,47 +70,25 @@ const projects = () => {
                     </div>
                 </section>
                 {/* PROJECT 2 */}
-                <section className='pt-20'>
-                    <div class="max-w-md mx-auto bg-white rounded-xl shadow-2xl overflow-hidden md:max-w-2xl">
-                        <div class="md:flex">
-                            <div class="px-10 ml-2 md:px-0 md:shrink-0">
-                                <img class="h-60 w-72 object-cover md:h-72 md:w-72"
-                                    src="https://github.com/mhmadwrekat/wrekat-Portfolio/blob/main/src/assets/img/theme/img-1-1200x1000.jpg?raw=true" alt="Man looking at item at a store" />
-                            </div>
-                            <div class="p-8 text-center md:text-left">
-                                <div class="uppercase tracking-wide text-sm text-red-700 font-semibold">Desktop Website</div>
-                                <a href="#" class="block mt-1 text-xl leading-tight font-medium text-black uppercase hover:underline">GALLERY OF HORNS</a>
-                                <p class="mt-2 text-gray-500">
-                                    Pictures Of Animals With Killer Headgear .
-                                    <br></br>
-                                    Best Horns In The Animal World - The Definitive List .
-                                </p>
-                                <br></br>
-                                <span class="inline-flex items-center justify-center px-2 py-1 mr-1 text-xs font-bold leading-none text-red-100 bg-green-600 rounded-full">React</span>
-                                <span class="inline-flex items-center justify-center px-2 py-1 text-xs mr-1 font-bold leading-none text-red-100 bg-green-600 rounded-full">JSON</span>
-                                <span class="inline-flex items-center justify-center px-2 py-1 text-xs font-bold leading-none text-red-100 bg-green-600 mr-1 rounded-full">Bootstrap</span>
-                                <span class="inline-flex items-center justify-center px-2 py-1 text-xs mr-1 font-bold leading-none text-red-100 bg-green-600 rounded-full">Deploy</span>
-                                <span class="inline-flex items-center justify-center px-2 mr-1 py-1 text-xs font-bold leading-none text-red-100 bg-green-600 rounded-full">Js</span>
-
-                            </div>
-                        </div>
-                    </div>
-                </section>
-                {/* PROJECT 3 */}
                 <section className='pt-20 pb-10'>
                     <div class="max-w-md mx-auto bg-white rounded-xl shadow-2xl overflow-hidden md:max-w-2xl">
                         <div class="md:flex">
                             <div class="px-10 ml-2 md:px-0 md:shrink-0">
                                 <img class="h-60 w-72 object-cover md:h-72 md:w-72"
-                                    src="https://i0.wp.com/aipsafrica.com/wp-content/uploads/2017/05/khalifa-stadium-586x418.jpg?resize=534%2C450" alt="Man looking at item at a store" />
+                                    src="./assest/worldcup.png" alt="Man looking at item at a store" />
                             </div>
                             <div class="p-8 text-center md:text-left">
                                 <div class="uppercase tracking-wide text-sm text-red-700 font-semibold">Desktop Website</div>
-                                <a href="#" class="block mt-1 text-xl leading-tight font-medium text-black hover:underline">World cup 2022 qatar</a>
+                                <a href="https://world-cup-22-frontend.vercel.app/" class="block mt-1 text-xl leading-tight cursor-alias font-medium text-black hover:underline">
+                                    World cup 2022 qatar{' '}<svg className="inline h-4 pr-4 text-blue-600 fill-current" xmlns="http://www.w3.org/2000/svg"
+                                        viewBox="0 0 20 20">
+                                        <path
+                                            d="M10 20a10 10 0 1 1 0-20 10 10 0 0 1 0 20zm7.75-8a8.01 8.01 0 0 0 0-4h-3.82a28.81 28.81 0 0 1 0 4h3.82zm-.82 2h-3.22a14.44 14.44 0 0 1-.95 3.51A8.03 8.03 0 0 0 16.93 14zm-8.85-2h3.84a24.61 24.61 0 0 0 0-4H8.08a24.61 24.61 0 0 0 0 4zm.25 2c.41 2.4 1.13 4 1.67 4s1.26-1.6 1.67-4H8.33zm-6.08-2h3.82a28.81 28.81 0 0 1 0-4H2.25a8.01 8.01 0 0 0 0 4zm.82 2a8.03 8.03 0 0 0 4.17 3.51c-.42-.96-.74-2.16-.95-3.51H3.07zm13.86-8a8.03 8.03 0 0 0-4.17-3.51c.42.96.74 2.16.95 3.51h3.22zm-8.6 0h3.34c-.41-2.4-1.13-4-1.67-4S8.74 3.6 8.33 6zM3.07 6h3.22c.2-1.35.53-2.55.95-3.51A8.03 8.03 0 0 0 3.07 6z" />
+                                    </svg>
+                                    </a>
                                 <p class="mt-2 text-gray-500">
                                     A project to display the Matches of the World Cup 2022 in Qatar .
                                     <br></br>
-                                    With the possibility of predicting who will win, you can also book a ticket to attend any match you want .
                                 </p>
                                 <br></br>
                                 <span class="inline-flex items-center justify-center mr-1 px-2 py-1 text-xs font-bold leading-none text-red-100 bg-blue-600 rounded-full">Python</span>
@@ -121,6 +102,38 @@ const projects = () => {
                                 <span class="inline-flex items-center justify-center px-2 py-1 text-xs mr-1 font-bold leading-none text-red-100 bg-blue-600 rounded-full">TailwindCSS</span>
                                 <span class="inline-flex items-center justify-center px-2 py-1 text-xs mr-1 font-bold leading-none text-red-100 bg-blue-600 rounded-full">Vercel</span>
                                 <span class="inline-flex items-center justify-center px-2 py-1 text-xs font-bold leading-none text-red-100 bg-blue-600 rounded-full">Heroku</span>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                {/* PROJECT 3 */}
+                <section className='pt-20 pb-10'>
+                    <div class="max-w-md mx-auto bg-white rounded-xl shadow-2xl overflow-hidden md:max-w-2xl">
+                        <div class="md:flex">
+                            <div class="px-10 ml-2 md:px-0 md:shrink-0">
+                                <img class="h-60 w-72 object-cover md:h-72 md:w-72"
+                                    src="./assest/cella.jpg" alt="Man looking at item at a store" />
+                            </div>
+                            <div class="p-8 text-center md:text-left">
+                                <div class="uppercase tracking-wide text-sm text-red-700 font-semibold">Mobile + Desktop Website "RESPONSIVE"</div>
+                                <a href="https://cella-center.vercel.app/" class="block  mt-1 text-xl cursor-alias leading-tight font-medium text-black hover:underline">
+                                Cella Beauty Center{' '}<svg className="inline h-4 pr-4 fill-current text-violet-800" xmlns="http://www.w3.org/2000/svg"
+                                        viewBox="0 0 20 20">
+                                        <path
+                                            d="M10 20a10 10 0 1 1 0-20 10 10 0 0 1 0 20zm7.75-8a8.01 8.01 0 0 0 0-4h-3.82a28.81 28.81 0 0 1 0 4h3.82zm-.82 2h-3.22a14.44 14.44 0 0 1-.95 3.51A8.03 8.03 0 0 0 16.93 14zm-8.85-2h3.84a24.61 24.61 0 0 0 0-4H8.08a24.61 24.61 0 0 0 0 4zm.25 2c.41 2.4 1.13 4 1.67 4s1.26-1.6 1.67-4H8.33zm-6.08-2h3.82a28.81 28.81 0 0 1 0-4H2.25a8.01 8.01 0 0 0 0 4zm.82 2a8.03 8.03 0 0 0 4.17 3.51c-.42-.96-.74-2.16-.95-3.51H3.07zm13.86-8a8.03 8.03 0 0 0-4.17-3.51c.42.96.74 2.16.95 3.51h3.22zm-8.6 0h3.34c-.41-2.4-1.13-4-1.67-4S8.74 3.6 8.33 6zM3.07 6h3.22c.2-1.35.53-2.55.95-3.51A8.03 8.03 0 0 0 3.07 6z" />
+                                    </svg>
+                                    </a>
+                                <p class="mt-2 text-gray-500">
+                                    A project For a Beauty Center Display The Beauty Services .
+                                    <br></br>
+                                </p>
+                                <br></br>
+                                <span class="inline-flex items-center justify-center px-2 py-1 text-xs mr-1 font-bold leading-none text-red-100 bg-violet-600 rounded-full">React</span>
+                                <span class="inline-flex items-center justify-center px-2 py-1 text-xs mr-1 font-bold leading-none text-red-100 bg-violet-600 rounded-full">NextJS</span>
+                                <span class="inline-flex items-center justify-center px-2 py-1 text-xs mr-1 font-bold leading-none text-red-100 bg-violet-600 rounded-full">TailwindCSS</span>
+                                <span class="inline-flex items-center justify-center px-2 py-1 text-xs mr-1 font-bold leading-none text-red-100 bg-violet-600 rounded-full">Vercel</span>
+                                <span class="inline-flex items-center justify-center px-2 py-1 text-xs mr-1 font-bold leading-none text-red-100 bg-violet-600 rounded-full">JS</span>
+
                             </div>
                         </div>
                     </div>
