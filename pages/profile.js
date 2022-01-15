@@ -2,7 +2,7 @@ import Nav from '../components/Nav';
 import useFeedback from '../hooks/useFeedback';
 import Footer from '../components/Footer';
 import swal from 'sweetalert';
-import { Flip, Fade } from "react-awesome-reveal";
+import { Flip, Fade, Slide } from "react-awesome-reveal";
 const { createFeedback } = useFeedback();
 const profile = () => {
     {/* POST FEEDBACK */ }
@@ -24,9 +24,11 @@ const profile = () => {
     return (
         <>
             {/* PROFILE */}
-            <section className="bg-cover bg-[url('https://images.wallpaperscraft.com/image/single/stars_glitter_patterns_128474_3000x3000.jpg')] font-awesome antialiased text-gray-900 leading-normal tracking-wider">
+<section 
+className="bg-cover 
+bg-[url('https://cutewallpaper.org/21/3000x3000-wallpaper/3000x3000-gradient-background-texture-square-dark-.jpg')] font-awesome antialiased text-gray-900 leading-normal tracking-wider">
                 <Nav />
-                <div className='pt-16 sm:pt-0'></div>
+                <div className='pt-20 sm:pt-0'></div>
                 <div className="flex flex-wrap items-center h-auto max-w-4xl mx-auto lg:h-screen lg:my-0">
                     <div id="profile"
                         className="w-full mx-6 bg-white rounded-lg shadow-2xl lg:w-3/5 lg:rounded-l-lg lg:rounded-r-none opacity-90 lg:mx-0">
@@ -34,21 +36,13 @@ const profile = () => {
                             <div className="bg-[url('https://github.com/ai-survivors/world_cup_22_frontend/blob/main/assest/wrekat.jpg?raw=true')] block lg:hidden rounded-full shadow-xl mx-auto -mt-16 h-48 w-48 bg-cover bg-center">
                             </div>
                             <h1 className="pt-8 text-3xl font-bold lg:pt-0 ">
-
                                 <Flip>
                                     <p>Mhmad Wrekat</p>
                                 </Flip>
-
                             </h1>
-
                             <div className="w-4/5 pt-3 mx-auto border-b-2 opacity-25 border-violet-900 lg:mx-0"></div>
                             <Fade delay={1000}>
                                 <p className="flex items-center justify-center pt-4 text-base font-bold lg:justify-start">
-
-                                    <span class=" h-0 w-0">
-                                        <span class="animate-ping absolute inline h-4 w-4 rounded-full bg-green-800 opacity-75"></span>
-                                        <span class="relative rounded-full h-0 w-0 bg-green-600"></span>
-                                    </span>
                                     <svg
                                         className="h-4 pr-4 fill-current text-violet-800" xmlns="http://www.w3.org/2000/svg"
                                         viewBox="0 0 20 20">
@@ -96,6 +90,170 @@ const profile = () => {
                             className="hidden rounded-none shadow-2xl lg:rounded-lg lg:block" />
                     </div>
                 </div>
+<section className='px-5 pt-10 text-xs sm:pt-0 sm:text-base sm:px-52'>
+<section className='grid grid-cols-2 gap-5 px-3 py-5 text-black bg-white shadow-2xl opacity-75 rounded-2xl sm:py-10 sm:px-12'>
+<Slide triggerOnce delay={1000}>
+<div>
+<span className='pb-0 font-semibold uppercase'>python</span>
+<section className='flex items-center'>
+<div class="w-full bg-gray-300 rounded-full h-1.5">
+<div class="bg-violet-900 h-1.5 w-11/12 rounded-full"></div>
+</div><p className='pt-2 pl-1.5 font-semibold'> 95%</p>
+</section>    
+</div>
+</Slide>
+<Slide triggerOnce>
+<div>
+<span className='pb-0 font-semibold uppercase'>django</span>
+<section className='flex items-center'>
+   <div class="w-full bg-gray-200 rounded-full h-1.5">
+<div class="bg-violet-900 h-1.5 w-10/12 rounded-full"></div>
+</div><p className='pt-2 pl-1.5 font-semibold'> 90%</p>
+</section>    
+</div>
+</Slide>
+<Slide triggerOnce delay={1000}>
+<div>
+<span className='pb-0 font-semibold uppercase'>postgress db</span>
+<section className='flex items-center'>
+   <div class="w-full bg-gray-200 rounded-full h-1.5">
+<div class="bg-violet-900 h-1.5 w-10/12 rounded-full"></div>
+</div><p className='pt-2 pl-1.5 font-semibold'> 91%</p>
+</section>    
+</div>
+</Slide>
+<Slide triggerOnce>
+<div>
+<span className='pb-0 font-semibold uppercase'>mongo db</span>
+<section className='flex items-center'>
+   <div class="w-full bg-gray-200 rounded-full h-1.5">
+<div class="bg-violet-900 h-1.5 w-10/12 rounded-full"></div>
+</div><p className='pt-2 pl-1.5 font-semibold'> 92%</p>
+</section>    
+</div>
+</Slide>
+<Slide triggerOnce delay={1000}>
+<div>
+<span className='pb-0 font-semibold uppercase'>javascript</span>
+<section className='flex items-center'>
+   <div class="w-full bg-gray-200 rounded-full h-1.5">
+<div class="bg-violet-900 h-1.5 w-11/12 rounded-full"></div>
+</div><p className='pt-2 pl-1.5 font-semibold'> 95%</p>
+</section>    
+</div>
+</Slide>
+<Slide triggerOnce>
+<div>
+<span className='pb-0 font-semibold uppercase'>nodejs</span>
+<section className='flex items-center'>
+   <div class="w-full bg-gray-200 rounded-full h-1.5">
+<div class="bg-violet-900 h-1.5 w-10/12 rounded-full"></div>
+</div><p className='pt-2 pl-1.5 font-semibold'> 90%</p>
+</section>    
+</div>
+</Slide>
+<Slide triggerOnce delay={1000}> 
+<div>
+<span className='pb-0 font-semibold uppercase'>nextjs</span>
+<section className='flex items-center'>
+   <div class="w-full bg-gray-200 rounded-full h-1.5">
+<div class="bg-violet-900 h-1.5 w-11/12 rounded-full"></div>
+</div><p className='pt-2 pl-1.5 font-semibold'> 95%</p>
+</section>    
+</div>
+</Slide>
+<Slide triggerOnce>
+<div>
+<span className='pb-0 font-semibold uppercase'>react</span>
+<section className='flex items-center'>
+   <div class="w-full bg-gray-200 rounded-full h-1.5">
+<div class="bg-violet-900 h-1.5 w-11/12 rounded-full"></div>
+</div><p className='pt-2 pl-1.5 font-semibold'> 96%</p>
+</section>    
+</div>
+</Slide>
+<Slide triggerOnce delay={1000}>
+<div>
+<span className='pb-0 font-semibold uppercase'>react Bootstrap</span>
+<section className='flex items-center'>
+   <div class="w-full bg-gray-200 rounded-full h-1.5">
+<div class="bg-violet-900 h-1.5 w-11/12 rounded-full"></div>
+</div><p className='pt-2 pl-1.5 font-semibold'> 93%</p>
+</section>    
+</div>
+</Slide>
+<Slide triggerOnce>
+<div>
+<span className='pb-0 font-semibold uppercase'>tailwindcss</span>
+<section className='flex items-center'>
+   <div class="w-full bg-gray-200 rounded-full h-1.5">
+<div class="bg-violet-900 h-1.5 w-11/12 rounded-full"></div>
+</div><p className='pt-2 pl-1.5 font-semibold'> 97%</p>
+</section>    
+</div>
+</Slide>
+<Slide triggerOnce delay={1000}>
+<div>
+<span className='pb-0 font-semibold uppercase'>html5</span>
+<section className='flex items-center'>
+   <div class="w-full bg-gray-200 rounded-full h-1.5">
+<div class="bg-violet-900 h-1.5 w-11/12 rounded-full"></div>
+</div><p className='pt-2 pl-1.5 font-semibold'> 94%</p>
+</section>    
+</div>
+</Slide>
+<Slide triggerOnce>
+<div>
+<span className='pb-0 font-semibold uppercase'>css3</span>
+<section className='flex items-center'>
+   <div class="w-full bg-gray-200 rounded-full h-1.5">
+<div class="bg-violet-900 h-1.5 w-11/12 rounded-full"></div>
+</div><p className='pt-2 pl-1.5 font-semibold'> 95%</p>
+</section>    
+</div>
+</Slide>
+<Slide triggerOnce delay={1000}>
+<div>
+<span className='pb-0 font-semibold uppercase'>markdown</span>
+<section className='flex items-center'>
+   <div class="w-full bg-gray-200 rounded-full h-1.5">
+<div class="bg-violet-900 h-1.5 w-11/12 rounded-full"></div>
+</div><p className='pt-2 pl-1.5 font-semibold'> 97%</p>
+</section>    
+</div>
+</Slide>
+<Slide triggerOnce>
+<div>
+<span className='pb-0 font-semibold uppercase'>github</span>
+<section className='flex items-center'>
+   <div class="w-full bg-gray-200 rounded-full h-1.5">
+<div class="bg-violet-900 h-1.5 w-11/12 rounded-full"></div>
+</div><p className='pt-2 pl-1.5 font-semibold'> 96%</p>
+</section>    
+</div>
+</Slide>
+<Slide triggerOnce delay={1000}>
+<div>
+<span className='pb-0 font-semibold uppercase'>restframework</span>
+<section className='flex items-center'>
+   <div class="w-full bg-gray-200 rounded-full h-1.5">
+<div class="bg-violet-900 h-1.5 w-10/12 rounded-full"></div>
+</div><p className='pt-2 pl-1.5 font-semibold'> 92%</p>
+</section>    
+</div>
+</Slide>
+<Slide triggerOnce>
+<div>
+<span className='pb-0 font-semibold uppercase'>deploy</span>
+<section className='flex items-center'>
+   <div class="w-full bg-gray-200 rounded-full h-1.5">
+<div class="bg-violet-900 h-1.5 w-10/12 rounded-full"></div>
+</div><p className='pt-2 pl-1.5 font-semibold'> 95%</p>
+</section>    
+</div>
+</Slide>
+</section> 
+</section> 
                 {/* FEEDBACK FORM */}
                 <section className="pt-0 antialiased leading-normal tracking-wider text-gray-900 sm:pt-10 font-awesome">
                     <div className="text-white opacity-95">
