@@ -5,7 +5,7 @@ import { Slide } from "react-awesome-reveal";
 //bg-[url('https://images.wallpaperscraft.com/image/single/stars_glitter_patterns_128474_3000x3000.jpg')]">
 const projects = () => {
     return (
-        <section className="bg-gradient-to-r from-violet-100 to-violet-300" >
+        <section >
             {/* NAV */}
             <Nav />
             {/* TITLE */}
