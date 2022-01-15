@@ -10,12 +10,11 @@ const projects = () => {
             <Nav />
             {/* TITLE */}
             <section>
-                <div class="grid grid-cols-1 gap:10 sm:gap-10 sm:grid sm:grid-cols-2 text-violet-800">
-                        <img src='./assest/proj.png' class="object-cover sm:h-6/6 w-6/6 ..." />
-                    <div class="flex items-stretch ...">
-                        <div></div>
-                        <div className="px-8 pt-10 sm:px-0 sm:pt-0 text-base sm:text-3xl text-center font-serif font-bold self-center ...">
-                            <Slide triggerOnce>
+                <div class=" text-violet-800">
+                        <img src='./assest/projectgif.gif' class="w-full" />
+                    <div>
+<div className="px-8 pt-10 sm:px-0 sm:pt-10 text-base sm:text-3xl text-center font-serif font-bold self-center ...">
+<Slide triggerOnce>
                                 <p>My Latest Projects</p>
                                 <br></br>
                                 <p>“You can do anything you set your mind to it.”</p>
@@ -32,6 +31,9 @@ const projects = () => {
             {/* PROJECTS */}
             <section className='sm:grid sm:grid-cols-2 sm:gap-4'>
                 {/* PROJECT 1 */}
+
+
+                
                 <section className='pt-20'>
                     <div class="max-w-md mx-auto bg-white rounded-xl shadow-2xl overflow-hidden md:max-w-2xl">
                         <div class="md:flex">

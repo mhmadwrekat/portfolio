@@ -23,6 +23,12 @@ const profile = () => {
     {/* END POST FEEDBACK */ }
     return (
         <>
+{/*                 <section>
+                <div class="grid grid-cols-1 gap:10 sm:gap-10 sm:grid sm:grid-cols-1 text-violet-800">
+                        <img src='https://miro.medium.com/max/2000/1*pKIjwoPgFlNqoGwe9LZTtw.jpeg' class="object-cover sm:h-5/6 w-full ..." />
+                   </div>
+            </section> */}
+            
             {/* PROFILE */}
 <section 
 className="bg-cover 
