@@ -3,7 +3,7 @@ import Link from "next/link";
 const Footer = () => {
     return (
         <>
-            <section class='opacity-95 bg-black text-gray-200' id='profilefoot'>
+            <section class='opacity-95 bg-black text-gray-200' id='profilefoot' translate='no'>
                 <div>
                     <div class="mx-auto container xl:px-20 lg:px-12 sm:px-6 px-4 py-12">
                         <div class="flex flex-col items-center justify-center">

@@ -23,14 +23,7 @@ const profile = () => {
     {/* END POST FEEDBACK */ }
     return (
         <>
-{/*                 <section>
-                <div class="grid grid-cols-1 gap:10 sm:gap-10 sm:grid sm:grid-cols-1 text-violet-800">
-                        <img src='https://miro.medium.com/max/2000/1*pKIjwoPgFlNqoGwe9LZTtw.jpeg' class="object-cover sm:h-5/6 w-full ..." />
-                   </div>
-            </section> */}
-            
-            {/* PROFILE */}
-<section 
+<section translate='no'
 className="bg-cover 
 bg-[url('https://cutewallpaper.org/21/3000x3000-wallpaper/3000x3000-gradient-background-texture-square-dark-.jpg')] font-awesome antialiased text-gray-900 leading-normal tracking-wider">
                 <Nav />
@@ -94,7 +87,7 @@ bg-[url('https://cutewallpaper.org/21/3000x3000-wallpaper/3000x3000-gradient-bac
                             className="hidden rounded-none shadow-2xl lg:rounded-lg lg:block" />
                     </div>
                 </div>
-<section className='px-5 pt-10 text-xs sm:pt-0 sm:text-base sm:px-52'>
+<section translate='no' className='px-5 pt-10 text-xs sm:pt-0 sm:text-base sm:px-52'>
 <section className='grid grid-cols-2 gap-5 px-3 py-5 text-black bg-white shadow-2xl opacity-75 rounded-2xl sm:py-10 sm:px-12'>
 <Slide triggerOnce delay={1000}>
 <div>

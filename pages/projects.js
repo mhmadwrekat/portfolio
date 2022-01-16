@@ -5,7 +5,7 @@ import { Slide } from "react-awesome-reveal";
 //bg-[url('https://images.wallpaperscraft.com/image/single/stars_glitter_patterns_128474_3000x3000.jpg')]">
 const projects = () => {
     return (
-        <section >
+        <section translate='no'>
             {/* NAV */}
             <Nav />
             {/* TITLE */}
@@ -31,9 +31,6 @@ const projects = () => {
             {/* PROJECTS */}
             <section className='sm:grid sm:grid-cols-2 sm:gap-4'>
                 {/* PROJECT 1 */}
-
-
-                
                 <section className='pt-20'>
                     <div class="max-w-md mx-auto bg-white rounded-xl shadow-2xl overflow-hidden md:max-w-2xl">
                         <div class="md:flex">

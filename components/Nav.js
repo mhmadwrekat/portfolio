@@ -22,7 +22,7 @@ const Nav = () => {
                 <title>Mhmad Wrekat</title>
                 <link rel="icon" href="./assest/icon.png" />
             </Head>
-            <nav class="bg-black opacity-80 border-gray-200 px-2 sm:px-4 py-2.5 rounded">
+            <nav class="bg-black opacity-80 border-gray-200 px-2 sm:px-4 py-2.5 rounded" translate='no'>
                 <div class="container flex flex-wrap justify-between items-center mx-auto">
                    <Link href='/'>
  <img class='pl-3 cursor-grab hover:scale-110' src='./assest/icon.png' width="60" height="60" />
@@ -55,7 +55,7 @@ const Nav = () => {
                     </div>
                 </div>
             </nav>
-            <div class='hidden mobile-menu md:hidden w-full bg-black opacity-80 border-gray-200'>
+            <div translate='no' class='hidden mobile-menu md:hidden w-full bg-black opacity-80 border-gray-200'>
                 <ul class="flex flex-col md:flex-row md:space-x-0 md:mt-0 md:text-sm md:font-medium text-center">
                     <Link href='/'>
                         <li className='py-3'>
