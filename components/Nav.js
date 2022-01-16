@@ -24,8 +24,9 @@ const Nav = () => {
             </Head>
             <nav class="bg-black opacity-80 border-gray-200 px-2 sm:px-4 py-2.5 rounded">
                 <div class="container flex flex-wrap justify-between items-center mx-auto">
-                    <img class='pl-3 cursor-grab hover:scale-110' src='./assest/icon.png' width="60" height="60" />
-                    <div class="flex md:order-2">
+                   <Link href='/'>
+ <img class='pl-3 cursor-grab hover:scale-110' src='./assest/icon.png' width="60" height="60" />
+            </Link>        <div class="flex md:order-2">
                         <a href="./assest/wrekatt.pdf" download="wrekatt.pdf">
                             <button type="button" class="cursor-help animate-bounce flex text-gray-200 hover:bg-violet-600 bg-violet-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-4 md:mr-0">
                                 <svg class="fill-current w-4 h-4 mr-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M13 8V2H7v6H2l8 8 8-8h-5zM0 18h20v2H0v-2z" /></svg>
