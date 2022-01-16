@@ -68,7 +68,7 @@ bg-[url('https://cutewallpaper.org/21/3000x3000-wallpaper/3000x3000-gradient-bac
                                 </p></Fade>
                             <Fade triggerOnce delay={2000}>
                                 <p className="pt-8 text-sm">
-                                    Have a Beclore Degree in Software Engineering ,
+                                    Have a Bachelor's Degree in Software Engineering ,
                                     and Full-Stack Web Development course from Code Fellows .     
                                     </p>
                             </Fade>
