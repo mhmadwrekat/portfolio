@@ -4,7 +4,18 @@ import Footer from '../components/Footer';
 import swal from 'sweetalert';
 import { Flip, Fade, Slide } from "react-awesome-reveal";
 const { createFeedback } = useFeedback();
+import React, { useEffect } from "react";
+import ReactGo from 'react-ga';
+const ReactGoogle = process.env.NEXT_PUBLIC_REACT_GOOGLE;
 const profile = () => {
+    useEffect(() => {
+      ReactGo.initialize('G-YQKBBCF7XP');
+      //to report page view
+      ReactGo.pageview('/');
+    },[])
+
+
+
     {/* POST FEEDBACK */ }
     const handelFeedback = (event) => {
         event.preventDefault();
