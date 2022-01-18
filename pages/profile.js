@@ -2,12 +2,10 @@ import Nav from '../components/Nav';
 import useFeedback from '../hooks/useFeedback';
 import Footer from '../components/Footer';
 import swal from 'sweetalert';
-import { Flip, Fade, Slide } from "react-awesome-reveal";
+import { Reveal, Fade, Slide } from "react-awesome-reveal";
 const { createFeedback } = useFeedback();
-import React, { useEffect } from "react";
-import ReactGo from 'react-ga';
+import { keyframes } from "@emotion/react";
 const profile = () => {
-
     {/* POST FEEDBACK */ }
     const handelFeedback = (event) => {
         event.preventDefault();
@@ -24,10 +22,22 @@ const profile = () => {
         event.target.message.value = '';
     }
     {/* END POST FEEDBACK */ }
+
+    const customAnimation = keyframes`
+from {
+  opacity: 0;
+  transform: translate3d(-200px, -100px, 0);
+}
+
+to {
+  opacity: 1;
+  transform: translate3d(0, 0, 0);
+}
+`;
     return (
         <>
-<section translate='no'
-className="bg-cover 
+            <section translate='no'
+                className="bg-cover 
 bg-[url('https://cutewallpaper.org/21/3000x3000-wallpaper/3000x3000-gradient-background-texture-square-dark-.jpg')] font-awesome antialiased text-gray-900 leading-normal tracking-wider">
                 <Nav />
                 <div className='pt-20 sm:pt-0'></div>
@@ -35,12 +45,15 @@ bg-[url('https://cutewallpaper.org/21/3000x3000-wallpaper/3000x3000-gradient-bac
                     <div id="profile"
                         className="w-full mx-6 bg-white rounded-lg shadow-2xl lg:w-3/5 lg:rounded-l-lg lg:rounded-r-none opacity-90 lg:mx-0">
                         <div className="p-4 text-center md:p-12 lg:text-left">
-                            <div className="bg-[url('https://github.com/ai-survivors/world_cup_22_frontend/blob/main/assest/wrekat.jpg?raw=true')] block lg:hidden rounded-full shadow-xl mx-auto -mt-16 h-48 w-48 bg-cover bg-center">
+                            <div >
+                                <img src='./assest/mobileprofile.jpg'
+                                    className="block w-48 h-48 mx-auto -mt-16 rounded-full shadow-xl bg-fit lg:hidden" />
                             </div>
                             <h1 className="pt-8 text-3xl font-bold lg:pt-0 ">
-                                <Flip triggerOnce>
+                                <Reveal keyframes={customAnimation}>
                                     <p>Mhmad Wrekat</p>
-                                </Flip>
+                                </Reveal>
+
                             </h1>
                             <div className="w-4/5 pt-3 mx-auto border-b-2 opacity-25 border-violet-900 lg:mx-0"></div>
                             <Fade triggerOnce delay={1000}>
@@ -65,8 +78,8 @@ bg-[url('https://cutewallpaper.org/21/3000x3000-wallpaper/3000x3000-gradient-bac
                             <Fade triggerOnce delay={2000}>
                                 <p className="pt-8 text-sm">
                                     Have a Bachelor's Degree in Software Engineering ,
-                                    and Full-Stack Web Development course from Code Fellows .     
-                                    </p>
+                                    and Full-Stack Web Development course from Code Fellows .
+                                </p>
                             </Fade>
                             <Fade triggerOnce delay={2500}>
                                 <div className="pt-12 pb-8">
@@ -90,170 +103,170 @@ bg-[url('https://cutewallpaper.org/21/3000x3000-wallpaper/3000x3000-gradient-bac
                             className="hidden rounded-none shadow-2xl lg:rounded-lg lg:block" />
                     </div>
                 </div>
-<section translate='no' className='px-5 pt-10 text-xs sm:pt-0 sm:text-base sm:px-52'>
-<section className='grid grid-cols-2 gap-5 px-3 py-5 text-black bg-white shadow-2xl opacity-75 rounded-2xl sm:py-10 sm:px-12'>
-<Slide triggerOnce delay={1000}>
-<div>
-<span className='pb-0 font-semibold uppercase'>python</span>
-<section className='flex items-center'>
-<div class="w-full bg-gray-300 rounded-full h-1.5">
-<div class="bg-violet-900 h-1.5 w-11/12 rounded-full"></div>
-</div><p className='pt-2 pl-1.5 font-semibold'> 95%</p>
-</section>    
-</div>
-</Slide>
-<Slide triggerOnce>
-<div>
-<span className='pb-0 font-semibold uppercase'>django</span>
-<section className='flex items-center'>
-   <div class="w-full bg-gray-200 rounded-full h-1.5">
-<div class="bg-violet-900 h-1.5 w-10/12 rounded-full"></div>
-</div><p className='pt-2 pl-1.5 font-semibold'> 90%</p>
-</section>    
-</div>
-</Slide>
-<Slide triggerOnce delay={1000}>
-<div>
-<span className='pb-0 font-semibold uppercase'>postgress db</span>
-<section className='flex items-center'>
-   <div class="w-full bg-gray-200 rounded-full h-1.5">
-<div class="bg-violet-900 h-1.5 w-10/12 rounded-full"></div>
-</div><p className='pt-2 pl-1.5 font-semibold'> 91%</p>
-</section>    
-</div>
-</Slide>
-<Slide triggerOnce>
-<div>
-<span className='pb-0 font-semibold uppercase'>mongo db</span>
-<section className='flex items-center'>
-   <div class="w-full bg-gray-200 rounded-full h-1.5">
-<div class="bg-violet-900 h-1.5 w-10/12 rounded-full"></div>
-</div><p className='pt-2 pl-1.5 font-semibold'> 92%</p>
-</section>    
-</div>
-</Slide>
-<Slide triggerOnce delay={1000}>
-<div>
-<span className='pb-0 font-semibold uppercase'>javascript</span>
-<section className='flex items-center'>
-   <div class="w-full bg-gray-200 rounded-full h-1.5">
-<div class="bg-violet-900 h-1.5 w-11/12 rounded-full"></div>
-</div><p className='pt-2 pl-1.5 font-semibold'> 95%</p>
-</section>    
-</div>
-</Slide>
-<Slide triggerOnce>
-<div>
-<span className='pb-0 font-semibold uppercase'>nodejs</span>
-<section className='flex items-center'>
-   <div class="w-full bg-gray-200 rounded-full h-1.5">
-<div class="bg-violet-900 h-1.5 w-10/12 rounded-full"></div>
-</div><p className='pt-2 pl-1.5 font-semibold'> 90%</p>
-</section>    
-</div>
-</Slide>
-<Slide triggerOnce delay={1000}> 
-<div>
-<span className='pb-0 font-semibold uppercase'>nextjs</span>
-<section className='flex items-center'>
-   <div class="w-full bg-gray-200 rounded-full h-1.5">
-<div class="bg-violet-900 h-1.5 w-11/12 rounded-full"></div>
-</div><p className='pt-2 pl-1.5 font-semibold'> 95%</p>
-</section>    
-</div>
-</Slide>
-<Slide triggerOnce>
-<div>
-<span className='pb-0 font-semibold uppercase'>react</span>
-<section className='flex items-center'>
-   <div class="w-full bg-gray-200 rounded-full h-1.5">
-<div class="bg-violet-900 h-1.5 w-11/12 rounded-full"></div>
-</div><p className='pt-2 pl-1.5 font-semibold'> 96%</p>
-</section>    
-</div>
-</Slide>
-<Slide triggerOnce delay={1000}>
-<div>
-<span className='pb-0 font-semibold uppercase'>react Bootstrap</span>
-<section className='flex items-center'>
-   <div class="w-full bg-gray-200 rounded-full h-1.5">
-<div class="bg-violet-900 h-1.5 w-11/12 rounded-full"></div>
-</div><p className='pt-2 pl-1.5 font-semibold'> 93%</p>
-</section>    
-</div>
-</Slide>
-<Slide triggerOnce>
-<div>
-<span className='pb-0 font-semibold uppercase'>tailwindcss</span>
-<section className='flex items-center'>
-   <div class="w-full bg-gray-200 rounded-full h-1.5">
-<div class="bg-violet-900 h-1.5 w-11/12 rounded-full"></div>
-</div><p className='pt-2 pl-1.5 font-semibold'> 97%</p>
-</section>    
-</div>
-</Slide>
-<Slide triggerOnce delay={1000}>
-<div>
-<span className='pb-0 font-semibold uppercase'>html5</span>
-<section className='flex items-center'>
-   <div class="w-full bg-gray-200 rounded-full h-1.5">
-<div class="bg-violet-900 h-1.5 w-11/12 rounded-full"></div>
-</div><p className='pt-2 pl-1.5 font-semibold'> 94%</p>
-</section>    
-</div>
-</Slide>
-<Slide triggerOnce>
-<div>
-<span className='pb-0 font-semibold uppercase'>css3</span>
-<section className='flex items-center'>
-   <div class="w-full bg-gray-200 rounded-full h-1.5">
-<div class="bg-violet-900 h-1.5 w-11/12 rounded-full"></div>
-</div><p className='pt-2 pl-1.5 font-semibold'> 95%</p>
-</section>    
-</div>
-</Slide>
-<Slide triggerOnce delay={1000}>
-<div>
-<span className='pb-0 font-semibold uppercase'>markdown</span>
-<section className='flex items-center'>
-   <div class="w-full bg-gray-200 rounded-full h-1.5">
-<div class="bg-violet-900 h-1.5 w-11/12 rounded-full"></div>
-</div><p className='pt-2 pl-1.5 font-semibold'> 97%</p>
-</section>    
-</div>
-</Slide>
-<Slide triggerOnce>
-<div>
-<span className='pb-0 font-semibold uppercase'>github</span>
-<section className='flex items-center'>
-   <div class="w-full bg-gray-200 rounded-full h-1.5">
-<div class="bg-violet-900 h-1.5 w-11/12 rounded-full"></div>
-</div><p className='pt-2 pl-1.5 font-semibold'> 96%</p>
-</section>    
-</div>
-</Slide>
-<Slide triggerOnce delay={1000}>
-<div>
-<span className='pb-0 font-semibold uppercase'>restframework</span>
-<section className='flex items-center'>
-   <div class="w-full bg-gray-200 rounded-full h-1.5">
-<div class="bg-violet-900 h-1.5 w-10/12 rounded-full"></div>
-</div><p className='pt-2 pl-1.5 font-semibold'> 92%</p>
-</section>    
-</div>
-</Slide>
-<Slide triggerOnce>
-<div>
-<span className='pb-0 font-semibold uppercase'>deploy</span>
-<section className='flex items-center'>
-   <div class="w-full bg-gray-200 rounded-full h-1.5">
-<div class="bg-violet-900 h-1.5 w-10/12 rounded-full"></div>
-</div><p className='pt-2 pl-1.5 font-semibold'> 95%</p>
-</section>    
-</div>
-</Slide>
-</section> 
-</section> 
+                <section translate='no' className='px-5 pt-10 text-xs sm:pt-0 sm:text-base sm:px-52'>
+                    <section className='grid grid-cols-2 gap-5 px-3 py-5 text-black bg-white shadow-2xl opacity-75 rounded-2xl sm:py-10 sm:px-12'>
+                        <Slide triggerOnce delay={1000}>
+                            <div>
+                                <span className='pb-0 font-semibold uppercase'>python</span>
+                                <section className='flex items-center'>
+                                    <div class="w-full bg-gray-300 rounded-full h-1.5">
+                                        <div class="bg-violet-900 h-1.5 w-11/12 rounded-full"></div>
+                                    </div><p className='pt-2 pl-1.5 font-semibold'> 95%</p>
+                                </section>
+                            </div>
+                        </Slide>
+                        <Slide triggerOnce>
+                            <div>
+                                <span className='pb-0 font-semibold uppercase'>django</span>
+                                <section className='flex items-center'>
+                                    <div class="w-full bg-gray-200 rounded-full h-1.5">
+                                        <div class="bg-violet-900 h-1.5 w-10/12 rounded-full"></div>
+                                    </div><p className='pt-2 pl-1.5 font-semibold'> 90%</p>
+                                </section>
+                            </div>
+                        </Slide>
+                        <Slide triggerOnce delay={1000}>
+                            <div>
+                                <span className='pb-0 font-semibold uppercase'>postgress db</span>
+                                <section className='flex items-center'>
+                                    <div class="w-full bg-gray-200 rounded-full h-1.5">
+                                        <div class="bg-violet-900 h-1.5 w-10/12 rounded-full"></div>
+                                    </div><p className='pt-2 pl-1.5 font-semibold'> 91%</p>
+                                </section>
+                            </div>
+                        </Slide>
+                        <Slide triggerOnce>
+                            <div>
+                                <span className='pb-0 font-semibold uppercase'>mongo db</span>
+                                <section className='flex items-center'>
+                                    <div class="w-full bg-gray-200 rounded-full h-1.5">
+                                        <div class="bg-violet-900 h-1.5 w-10/12 rounded-full"></div>
+                                    </div><p className='pt-2 pl-1.5 font-semibold'> 92%</p>
+                                </section>
+                            </div>
+                        </Slide>
+                        <Slide triggerOnce delay={1000}>
+                            <div>
+                                <span className='pb-0 font-semibold uppercase'>javascript</span>
+                                <section className='flex items-center'>
+                                    <div class="w-full bg-gray-200 rounded-full h-1.5">
+                                        <div class="bg-violet-900 h-1.5 w-11/12 rounded-full"></div>
+                                    </div><p className='pt-2 pl-1.5 font-semibold'> 95%</p>
+                                </section>
+                            </div>
+                        </Slide>
+                        <Slide triggerOnce>
+                            <div>
+                                <span className='pb-0 font-semibold uppercase'>nodejs</span>
+                                <section className='flex items-center'>
+                                    <div class="w-full bg-gray-200 rounded-full h-1.5">
+                                        <div class="bg-violet-900 h-1.5 w-10/12 rounded-full"></div>
+                                    </div><p className='pt-2 pl-1.5 font-semibold'> 90%</p>
+                                </section>
+                            </div>
+                        </Slide>
+                        <Slide triggerOnce delay={1000}>
+                            <div>
+                                <span className='pb-0 font-semibold uppercase'>nextjs</span>
+                                <section className='flex items-center'>
+                                    <div class="w-full bg-gray-200 rounded-full h-1.5">
+                                        <div class="bg-violet-900 h-1.5 w-11/12 rounded-full"></div>
+                                    </div><p className='pt-2 pl-1.5 font-semibold'> 95%</p>
+                                </section>
+                            </div>
+                        </Slide>
+                        <Slide triggerOnce>
+                            <div>
+                                <span className='pb-0 font-semibold uppercase'>react</span>
+                                <section className='flex items-center'>
+                                    <div class="w-full bg-gray-200 rounded-full h-1.5">
+                                        <div class="bg-violet-900 h-1.5 w-11/12 rounded-full"></div>
+                                    </div><p className='pt-2 pl-1.5 font-semibold'> 96%</p>
+                                </section>
+                            </div>
+                        </Slide>
+                        <Slide triggerOnce delay={1000}>
+                            <div>
+                                <span className='pb-0 font-semibold uppercase'>react Bootstrap</span>
+                                <section className='flex items-center'>
+                                    <div class="w-full bg-gray-200 rounded-full h-1.5">
+                                        <div class="bg-violet-900 h-1.5 w-11/12 rounded-full"></div>
+                                    </div><p className='pt-2 pl-1.5 font-semibold'> 93%</p>
+                                </section>
+                            </div>
+                        </Slide>
+                        <Slide triggerOnce>
+                            <div>
+                                <span className='pb-0 font-semibold uppercase'>tailwindcss</span>
+                                <section className='flex items-center'>
+                                    <div class="w-full bg-gray-200 rounded-full h-1.5">
+                                        <div class="bg-violet-900 h-1.5 w-11/12 rounded-full"></div>
+                                    </div><p className='pt-2 pl-1.5 font-semibold'> 97%</p>
+                                </section>
+                            </div>
+                        </Slide>
+                        <Slide triggerOnce delay={1000}>
+                            <div>
+                                <span className='pb-0 font-semibold uppercase'>html5</span>
+                                <section className='flex items-center'>
+                                    <div class="w-full bg-gray-200 rounded-full h-1.5">
+                                        <div class="bg-violet-900 h-1.5 w-11/12 rounded-full"></div>
+                                    </div><p className='pt-2 pl-1.5 font-semibold'> 94%</p>
+                                </section>
+                            </div>
+                        </Slide>
+                        <Slide triggerOnce>
+                            <div>
+                                <span className='pb-0 font-semibold uppercase'>css3</span>
+                                <section className='flex items-center'>
+                                    <div class="w-full bg-gray-200 rounded-full h-1.5">
+                                        <div class="bg-violet-900 h-1.5 w-11/12 rounded-full"></div>
+                                    </div><p className='pt-2 pl-1.5 font-semibold'> 95%</p>
+                                </section>
+                            </div>
+                        </Slide>
+                        <Slide triggerOnce delay={1000}>
+                            <div>
+                                <span className='pb-0 font-semibold uppercase'>markdown</span>
+                                <section className='flex items-center'>
+                                    <div class="w-full bg-gray-200 rounded-full h-1.5">
+                                        <div class="bg-violet-900 h-1.5 w-11/12 rounded-full"></div>
+                                    </div><p className='pt-2 pl-1.5 font-semibold'> 97%</p>
+                                </section>
+                            </div>
+                        </Slide>
+                        <Slide triggerOnce>
+                            <div>
+                                <span className='pb-0 font-semibold uppercase'>github</span>
+                                <section className='flex items-center'>
+                                    <div class="w-full bg-gray-200 rounded-full h-1.5">
+                                        <div class="bg-violet-900 h-1.5 w-11/12 rounded-full"></div>
+                                    </div><p className='pt-2 pl-1.5 font-semibold'> 96%</p>
+                                </section>
+                            </div>
+                        </Slide>
+                        <Slide triggerOnce delay={1000}>
+                            <div>
+                                <span className='pb-0 font-semibold uppercase'>restframework</span>
+                                <section className='flex items-center'>
+                                    <div class="w-full bg-gray-200 rounded-full h-1.5">
+                                        <div class="bg-violet-900 h-1.5 w-10/12 rounded-full"></div>
+                                    </div><p className='pt-2 pl-1.5 font-semibold'> 92%</p>
+                                </section>
+                            </div>
+                        </Slide>
+                        <Slide triggerOnce>
+                            <div>
+                                <span className='pb-0 font-semibold uppercase'>deploy</span>
+                                <section className='flex items-center'>
+                                    <div class="w-full bg-gray-200 rounded-full h-1.5">
+                                        <div class="bg-violet-900 h-1.5 w-10/12 rounded-full"></div>
+                                    </div><p className='pt-2 pl-1.5 font-semibold'> 95%</p>
+                                </section>
+                            </div>
+                        </Slide>
+                    </section>
+                </section>
                 {/* FEEDBACK FORM */}
                 <section className="pt-0 antialiased leading-normal tracking-wider text-gray-900 sm:pt-10 font-awesome">
                     <div className="text-white opacity-95">
