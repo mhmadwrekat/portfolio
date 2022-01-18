@@ -90,8 +90,7 @@ bg-[url('https://cutewallpaper.org/21/3000x3000-wallpaper/3000x3000-gradient-bac
                                         </span>
                                         <button
                                             className="px-4 py-2 font-bold text-gray-200 rounded-full cursor-alias bg-violet-800 hover:bg-violet-600">
-                                            Want your own page ?
-                                            Text Me
+                                            Text Me!!
                                         </button>
                                     </a>
                                 </div></Fade>
