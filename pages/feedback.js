@@ -1,8 +1,7 @@
 import Footer from '../components/Footer';
 import Nav from '../components/Nav';
 import Profile from './profile';
-const feedback = (props) => {
-
+const feedback = () => {
 
 
 let feedbacks = [];

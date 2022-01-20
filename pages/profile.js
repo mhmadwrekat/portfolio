@@ -29,7 +29,7 @@ const profile = (props) => {
         }
     {/* POST FEEDBACK */ }
     const handelFeedback = (event) => {
-        event.preventDefault();
+  //      event.preventDefault();
         const feedback = {
             name: event.target.name.value,
             email: event.target.email.value,
@@ -41,6 +41,7 @@ const profile = (props) => {
         event.target.name.value = '';
         event.target.email.value = '';
         event.target.message.value = '';
+        window.reload()
     }
     {/* END POST FEEDBACK */ }
     return (

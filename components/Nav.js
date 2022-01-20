@@ -35,27 +35,21 @@ let weathers = [];
             </Head>
             <nav class="bg-black opacity-80 border-gray-200 px-2 sm:px-4 py-2.5 rounded" translate='no'>
                 <div class="container flex flex-wrap justify-between items-center mx-auto">
-{
-    (weathers.length > 0)?
-    <p class='text-sm sm:text-lg font-bold font-sans pl-3 text-gray-200 cursor-grab hover:scale-110'>⛅ {weathers[0].max_temp} °C</p>            
-:<></>
-}
 
-
-
-                    <div class="flex md:order-2">
+                    <div class="flex md:order-0">
+                    <button class="mobile-menu-button" type="button" >
+                            <span class="sr-only">Open main menu</span>
+                            <svg class="text-gray-500 md:hidden flex w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd"></path></svg>
+                        </button>
                         <a href="./assest/wrekatt.pdf" download="wrekatt.pdf">
-                            <button type="button" class="cursor-help animate-bounce flex text-gray-200 hover:bg-violet-600 bg-violet-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-4 md:mr-0">
+                            <button type="button" class="cursor-help animate-bounce flex text-gray-200 hover:bg-violet-600 bg-violet-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center ml-4 md:mr-0">
                                 <svg class="fill-current w-4 h-4 mr-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M13 8V2H7v6H2l8 8 8-8h-5zM0 18h20v2H0v-2z" /></svg>
                                 <span>Resume</span>
                             </button>
                         </a>
-                        <button class="mobile-menu-button" type="button" >
-                            <span class="sr-only">Open main menu</span>
-                            <svg class="md:hidden flex w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd"></path></svg>
-                        </button>
-                    </div>
-                    <div class="hidden justify-between items-center w-full md:flex md:w-auto md:order-1" id="mobile-menu-4">
+                       
+                    </div>                    
+                    <div class="hidden justify-between items-center w-full md:flex md:w-auto md:order-2" id="mobile-menu-4">
                         <ul class="flex flex-col mt-4 md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium">
                             <Link href='/'>
                                 <li>
@@ -69,6 +63,11 @@ let weathers = [];
                             </Link>
                         </ul>
                     </div>
+                    {
+    (weathers.length > 0)?
+    <p class='md:order-2 text-sm sm:text-lg font-bold font-sans pl-3 text-gray-200 cursor-grab hover:scale-110'>⛅ {weathers[0].max_temp} °C</p>            
+:<></>
+}
                 </div>
             </nav>
             <div translate='no' class='hidden mobile-menu md:hidden w-full bg-black opacity-80 border-gray-200'>
