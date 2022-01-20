@@ -1,18 +1,17 @@
 import Head from 'next/head';
 import Link from "next/link";
 import React, { useEffect } from "react";
-const Nav = () => {
-    let weathers = [];
-    
-        if (typeof window !== 'undefined') {
+const Nav = (props) => {
+let weathers = [];
+
+    if (typeof window !== 'undefined') {
     if(localStorage.getItem('weather') === null)
     {
       localStorage.setItem('weather' , JSON.stringify([])) ;
     }
     weathers = JSON.parse(localStorage.getItem('weather')) ;
-    console.log("FEEDBACK MOVEM :",weathers);
+    console.log(weathers[0])
         }
-
 
     useEffect(() => {
         try {
@@ -30,17 +29,20 @@ const Nav = () => {
     }, []);
     return (
         <>
-        
             <Head>
                 <title>Mhmad Wrekat</title>
                 <link rel="icon" href="./assest/icon.png" />
             </Head>
             <nav class="bg-black opacity-80 border-gray-200 px-2 sm:px-4 py-2.5 rounded" translate='no'>
                 <div class="container flex flex-wrap justify-between items-center mx-auto">
- {/*                  
- <p class='text-sm sm:text-lg font-bold font-sans pl-3 text-gray-200 cursor-grab hover:scale-110'>⛅ {weathers[0].max_temp} °C</p>
-*/}            
-            
+{
+    (weathers.length > 0)?
+    <p class='text-sm sm:text-lg font-bold font-sans pl-3 text-gray-200 cursor-grab hover:scale-110'>⛅ {weathers[0].max_temp} °C</p>            
+:<></>
+}
+
+
+
                     <div class="flex md:order-2">
                         <a href="./assest/wrekatt.pdf" download="wrekatt.pdf">
                             <button type="button" class="cursor-help animate-bounce flex text-gray-200 hover:bg-violet-600 bg-violet-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-4 md:mr-0">
@@ -50,7 +52,6 @@ const Nav = () => {
                         </a>
                         <button class="mobile-menu-button" type="button" >
                             <span class="sr-only">Open main menu</span>
-
                             <svg class="md:hidden flex w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd"></path></svg>
                         </button>
                     </div>

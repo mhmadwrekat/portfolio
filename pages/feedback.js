@@ -10,8 +10,6 @@ let weathers = [];
 let counter = 0;    
 
     if (typeof window !== 'undefined') {
-
-
     if(localStorage.getItem('feedback') === null)
 {
   localStorage.setItem('feedback' , JSON.stringify([])) ;
@@ -22,8 +20,6 @@ if(localStorage.getItem('weather') === null)
 }
 feedbacks = JSON.parse(localStorage.getItem('feedback')) ;
 weathers = JSON.parse(localStorage.getItem('weather')) ;
-console.log("FEEDBACK MOVEM :",feedbacks);
-console.log("FEEDBACK MOVEM :",weathers);
     }
   
 
