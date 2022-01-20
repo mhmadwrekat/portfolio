@@ -25,7 +25,7 @@ weathers = JSON.parse(localStorage.getItem('weather')) ;
 console.log("FEEDBACK MOVEM :",feedbacks);
 console.log("FEEDBACK MOVEM :",weathers);
     }
-    
+  
 
     return (
        <>

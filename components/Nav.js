@@ -2,9 +2,7 @@ import Head from 'next/head';
 import Link from "next/link";
 import React, { useEffect } from "react";
 const Nav = () => {
-    let feedbacks = [];
     let weathers = [];
-    let counter = 0;    
     
         if (typeof window !== 'undefined') {
     if(localStorage.getItem('weather') === null)
@@ -39,9 +37,9 @@ const Nav = () => {
             </Head>
             <nav class="bg-black opacity-80 border-gray-200 px-2 sm:px-4 py-2.5 rounded" translate='no'>
                 <div class="container flex flex-wrap justify-between items-center mx-auto">
-                   <Link href='/'>
+ {/*                  
  <p class='text-sm sm:text-lg font-bold font-sans pl-3 text-gray-200 cursor-grab hover:scale-110'>⛅ {weathers[0].max_temp} °C</p>
-            </Link>
+*/}            
             
                     <div class="flex md:order-2">
                         <a href="./assest/wrekatt.pdf" download="wrekatt.pdf">

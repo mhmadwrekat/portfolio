@@ -8,8 +8,6 @@ const FEEDBACK = process.env.NEXT_PUBLIC_FEEDBACK_API;
 const WEATHER = process.env.NEXT_PUBLIC_BACKEND_WEATHER_API;
 import React, { useState, useEffect } from "react";
 import Axios from 'axios';
-
-
 const profile = (props) => {
     const [feedback, setFeedback] = useState([]);
     const [weather, setWeather] = useState([]);
