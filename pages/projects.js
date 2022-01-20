@@ -3,6 +3,11 @@ import Nav from '../components/Nav';
 import Footer from '../components/Footer';
 import { Slide } from "react-awesome-reveal";
 const projects = () => {
+    let feedback = JSON.parse(localStorage.getItem('feedback')) ;
+    let weather = JSON.parse(localStorage.getItem('weather')) ;
+    
+    console.log("FEEDBACK MOVEM :",feedback);
+    console.log("FEEDBACK MOVEM :",weather);    
     return (
         <section translate='no'>
             {/* NAV */}

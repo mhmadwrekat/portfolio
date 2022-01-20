@@ -14,6 +14,14 @@ Copyright (c) 2022 Mhmad Wrekat
 
 ---
 
+<!--
+Animation Example :
+[tailwindcss](https://ikcb.org/animated-tailwindcss/docs/animation-name)
+ <h1 class="animate-bounce animate-infinite">Forever Bouncing Heading</h1>
+                            <div class="animate-bounce">Foo</div>
+<div class="animate-[bounce_1s_ease-in-out_infinite]">Bar</div>
+
+-->
 
 
 
@@ -42,4 +50,9 @@ Copyright (c) 2022 Mhmad Wrekat
                                 </section>
 
                             </div>
+-->
+
+---
+<!--
+
 -->
