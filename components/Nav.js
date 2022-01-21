@@ -71,7 +71,6 @@ let weathers = [];
 }
                 </div>
             </nav>
-<Slide>
             <div translate='no' class='hidden mobile-menu md:hidden w-full bg-black opacity-80 border-gray-200'>
                 <ul class="flex flex-col md:flex-row md:space-x-0 md:mt-0 md:text-sm md:font-medium text-center">
                     <Link href='/'>
@@ -86,7 +85,6 @@ let weathers = [];
                     </Link>
                 </ul>
             </div>
-</Slide>
         </>
     )
 }
