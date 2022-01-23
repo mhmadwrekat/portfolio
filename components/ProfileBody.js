@@ -25,12 +25,10 @@ const ProfileBody = () => {
                              <img src='./assest/mobileprofile.jpg'
                                  className="block w-48 h-48 mx-auto -mt-16 rounded-full shadow-xl bg-fit lg:hidden" />
                          </div>
-                        
                          <h1 className="pt-8 text-3xl font-bold lg:pt-0 ">
                              <Reveal keyframes={customAnimation}>
                                  <p>Mhmad Wrekat</p>
                              </Reveal>
-
                          </h1>
                          <div className="w-4/5 pt-3 mx-auto border-b-2 opacity-25 border-violet-900 lg:mx-0"></div>
                          <Fade triggerOnce delay={1000}>
