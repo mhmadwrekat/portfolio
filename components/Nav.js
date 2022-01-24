@@ -1,19 +1,15 @@
 import Head from 'next/head';
 import Link from "next/link";
 import React, { useEffect } from "react";
-import { Reveal, Fade, Slide } from "react-awesome-reveal";
 const Nav = (props) => {
 let weathers = [];
-
     if (typeof window !== 'undefined') {
     if(localStorage.getItem('weather') === null)
     {
       localStorage.setItem('weather' , JSON.stringify([])) ;
     }
     weathers = JSON.parse(localStorage.getItem('weather')) ;
-    console.log(weathers[0])
         }
-
     useEffect(() => {
         try {
             const btn = document.querySelector("button.mobile-menu-button");
@@ -34,7 +30,7 @@ let weathers = [];
                 <title>Mhmad Wrekat</title>
                 <link rel="icon" href="./assest/icon.png" />
             </Head>
-            <nav class="bg-black opacity-80 border-gray-200 px-2 sm:px-4 py-2.5 rounded" translate='no'>
+            <nav class="bg-black opacity-80 border-gray-200 px-2 sm:px-4 py-4 rounded" translate='no'>
                 <div class="container flex flex-wrap justify-between items-center mx-auto">
 
                     <div class="flex md:order-0">

@@ -6,9 +6,19 @@ const { createFeedback } = useFeedback();
 import ProfileBody from '../components/ProfileBody';
 const FEEDBACK = process.env.NEXT_PUBLIC_FEEDBACK_API;
 const WEATHER = process.env.NEXT_PUBLIC_BACKEND_WEATHER_API;
-import React, { useState, useEffect } from "react";
+const SERVICE_ID = process.env.NEXT_PUBLIC_EMAIL_SERVICE_ID;
+const USER_ID = process.env.NEXT_PUBLIC_EMAIL_USER_ID;
+const TEMPLATE_ID = process.env.NEXT_PUBLIC_EMAIL_TEMPLATE_ID;
+
+
+
+
+
+import React, { useRef, useState, useEffect } from "react";
 import Axios from 'axios';
+import emailjs from '@emailjs/browser';
 const profile = (props) => {
+    const form = useRef();
     const [feedback, setFeedback] = useState([]);
     const [weather, setWeather] = useState([]);
     {/* WEATHER DATA */ }
@@ -38,19 +48,26 @@ const profile = (props) => {
         }
                createFeedback(feedback);
         swal("Success", "Thank You For Your Feedback!!", "success");
-        event.target.name.value = '';
-        event.target.email.value = '';
-        event.target.message.value = '';
-       // window.reload()
-    }
+        emailjs.sendForm(`${SERVICE_ID}`, `${TEMPLATE_ID}`, form.current, `${USER_ID}`)
+        .then((result) => {
+            console.log(result.text);
+        }, (error) => {
+            console.log(error.text);
+        });
+        event.target.reset();
+        }
     {/* END POST FEEDBACK */ }
+//https://cutewallpaper.org/21/3000x3000-wallpaper/3000x3000-gradient-background-texture-square-dark-.jpg
     return (
         <>
             <section translate='no'
                 className="bg-cover 
-bg-[url('https://cutewallpaper.org/21/3000x3000-wallpaper/3000x3000-gradient-background-texture-square-dark-.jpg')] font-awesome antialiased text-gray-900 leading-normal tracking-wider">
+bg-[url('https://cutewallpaper.org/21/3000x3000-wallpaper/nature-trees-forest-Wallpapers.jpg')]
+ font-awesome antialiased text-gray-900 leading-normal tracking-wider">
+      
                 <Nav />
                 <ProfileBody />
+      
                 {/* FEEDBACK FORM */}
                 <section className="pt-0 antialiased leading-normal tracking-wider text-gray-900 sm:pt-10 font-awesome">
                     <div className="text-white opacity-95">
@@ -69,18 +86,18 @@ bg-[url('https://cutewallpaper.org/21/3000x3000-wallpaper/3000x3000-gradient-bac
                                                 className="relative flex flex-col w-full min-w-0 mb-6 break-words bg-white rounded-lg shadow-lg">
                                                 <div className="flex-auto p-5 lg:p-10">
                                                     <h4 className="mb-4 text-2xl font-semibold text-black">Suggestion, Feedback, or any Comment!!</h4>
-                                                    <form id="feedbackForm" method='post' onSubmit={handelFeedback}>
+                                                    <form id="feedbackForm" method='post' onSubmit={handelFeedback} ref={form}>
                                                         <div className="relative w-full mb-3">
                                                             <label className="block mb-2 text-xs font-bold text-gray-700 uppercase"
-                                                                for="email">Name</label><input type="text" name="name" id="name"
+for="email">Name</label><input type="text" name="name" id="name"
                                                                     class="border-0 px-3 py-3 rounded text-sm shadow w-full bg-gray-300 placeholder-black text-gray-800 outline-none focus:bg-gray-400" placeholder=" "
                                                                     required />
                                                         </div>
                                                         <div className="relative w-full mb-3">
                                                             <label className="block mb-2 text-xs font-bold text-gray-700 uppercase"
-                                                                for="email">Email</label><input type="email" name="email" id="email"
-                                                                    class="border-0 px-3 py-3 rounded text-sm shadow w-full bg-gray-300 placeholder-black text-gray-800 outline-none focus:bg-gray-400" placeholder=" "
-                                                                    required />
+for="email">Email</label><input type="email" name="email" id="email"
+class="border-0 px-3 py-3 rounded text-sm shadow w-full bg-gray-300 placeholder-black text-gray-800 outline-none focus:bg-gray-400" placeholder=" "
+required />
                                                         </div>
                                                         <div className="relative w-full mb-3">
                                                             <label className="block mb-2 text-xs font-bold text-gray-700 uppercase"

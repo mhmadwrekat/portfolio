@@ -5,7 +5,7 @@ const ProgLang = () => {
   return (
       <>
       <section translate='no' className='px-5 pt-10 text-xs sm:pt-0 sm:text-base sm:px-52'>
-                 <section className='grid grid-cols-2 gap-5 px-3 py-5 text-black bg-white shadow-2xl opacity-75 rounded-2xl sm:py-10 sm:px-12'>
+                 <section className='grid grid-cols-2 gap-5 px-3 py-5 text-black bg-white shadow-2xl opacity-80 rounded-2xl sm:py-10 sm:px-12'>
                      <Slide triggerOnce delay={1000}>
                          <div>
                              <span className='pb-0 font-semibold uppercase'>python</span>
