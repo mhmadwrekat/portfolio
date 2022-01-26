@@ -9,18 +9,17 @@ const WEATHER = process.env.NEXT_PUBLIC_BACKEND_WEATHER_API;
 const SERVICE_ID = process.env.NEXT_PUBLIC_EMAIL_SERVICE_ID;
 const USER_ID = process.env.NEXT_PUBLIC_EMAIL_USER_ID;
 const TEMPLATE_ID = process.env.NEXT_PUBLIC_EMAIL_TEMPLATE_ID;
-
-
-
-
-
+const USERNAME = process.env.NEXT_PUBLIC_USERNAME;
+const PASS = process.env.NEXT_PUBLIC_PASSWORD;
 import React, { useRef, useState, useEffect } from "react";
 import Axios from 'axios';
 import emailjs from '@emailjs/browser';
-const profile = (props) => {
+const profile = () => {
+
     const form = useRef();
     const [feedback, setFeedback] = useState([]);
     const [weather, setWeather] = useState([]);
+
     {/* WEATHER DATA */ }
     useEffect(() => {
         Axios.get(WEATHER).then(res => {
@@ -28,11 +27,17 @@ const profile = (props) => {
         })
     }, []);
     {/* END WEATHER DATA */ }
-    useEffect(() => {
-        Axios.get(FEEDBACK).then(res => {
-            setFeedback(res.data)
-        })
-    }, []);
+    {/* GET FEEDBACK*/}
+    const token = Buffer.from(`${USERNAME}:${PASS}`, 'utf8').toString('base64')
+    const url = `${FEEDBACK}`
+    Axios.get(url, {
+      headers: {
+        'Authorization': `Basic ${token}`
+      },
+    }).then(res=>{
+        setFeedback(res.data);
+    })
+    {/* END GET FEEDBACK*/}
     if (typeof window !== 'undefined') {
         localStorage.setItem('feedback' , JSON.stringify(feedback)) ;
         localStorage.setItem('weather' , JSON.stringify(weather)) ;
@@ -44,30 +49,22 @@ const profile = (props) => {
             name: event.target.name.value,
             email: event.target.email.value,
             message: event.target.message.value,
-            author: 1
+            author: 2
         }
-               createFeedback(feedback);
+              createFeedback(feedback);
         swal("Success", "Thank You For Your Feedback!!", "success");
-        emailjs.sendForm(`${SERVICE_ID}`, `${TEMPLATE_ID}`, form.current, `${USER_ID}`)
-        .then((result) => {
-            console.log(result.text);
-        }, (error) => {
-            console.log(error.text);
-        });
+        emailjs.sendForm(`${SERVICE_ID}`, `${TEMPLATE_ID}`, form.current, `${USER_ID}`);
         event.target.reset();
         }
     {/* END POST FEEDBACK */ }
-//https://cutewallpaper.org/21/3000x3000-wallpaper/3000x3000-gradient-background-texture-square-dark-.jpg
     return (
         <>
             <section translate='no'
                 className="bg-cover 
 bg-[url('https://cutewallpaper.org/21/3000x3000-wallpaper/nature-trees-forest-Wallpapers.jpg')]
  font-awesome antialiased text-gray-900 leading-normal tracking-wider">
-      
                 <Nav />
                 <ProfileBody />
-      
                 {/* FEEDBACK FORM */}
                 <section className="pt-0 antialiased leading-normal tracking-wider text-gray-900 sm:pt-10 font-awesome">
                     <div className="text-white opacity-95">
@@ -128,13 +125,3 @@ required />
     )
 }
 export default profile
-
-
-
-
-
-
-
-
-
-

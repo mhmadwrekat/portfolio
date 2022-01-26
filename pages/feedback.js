@@ -1,9 +1,6 @@
 import Footer from '../components/Footer';
 import Nav from '../components/Nav';
-import Profile from './profile';
 const feedback = () => {
-
-
 let feedbacks = [];
 let weathers = [];
 let counter = 0;    
@@ -20,8 +17,6 @@ if(localStorage.getItem('weather') === null)
 feedbacks = JSON.parse(localStorage.getItem('feedback')) ;
 weathers = JSON.parse(localStorage.getItem('weather')) ;
     }
-  
-
     return (
        <>
     <section translate='no'
@@ -44,7 +39,6 @@ weathers = JSON.parse(localStorage.getItem('weather')) ;
                                                                 src='./assest/user.png' />
                                                         </div>
                                                         <p class="text-xs text-gray-500 ">{item.name}</p>
-
                                                         <p class="text-xs text-left text-gray-500">{item.email}</p>
                                                         <p class="block p-1 text-sm font-bold sm:p-1 sm:text-base">
                                                             {item.message}                            </p>
@@ -97,7 +91,6 @@ weathers = JSON.parse(localStorage.getItem('weather')) ;
                                         </div>
                                     </div>
                                 </div>
-
                             </>)
                         }
                     })
@@ -145,6 +138,3 @@ weathers = JSON.parse(localStorage.getItem('weather')) ;
     )
 }
 export default feedback
-/*
-
-*/
