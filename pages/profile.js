@@ -51,7 +51,7 @@ const profile = () => {
             message: event.target.message.value,
             author: 2
         }
-              createFeedback(feedback);
+            //  createFeedback(feedback);
         swal("Success", "Thank You For Your Feedback!!", "success");
         emailjs.sendForm(`${SERVICE_ID}`, `${TEMPLATE_ID}`, form.current, `${USER_ID}`);
         event.target.reset();
