@@ -28,7 +28,7 @@ const profile = () => {
     }, []);
     {/* END WEATHER DATA */ }
     {/* GET FEEDBACK*/}
-   /* const token = Buffer.from(`${USERNAME}:${PASS}`, 'utf8').toString('base64')
+    const token = Buffer.from(`${USERNAME}:${PASS}`, 'utf8').toString('base64')
     const url = `${FEEDBACK}`
     Axios.get(url, {
       headers: {
@@ -36,7 +36,7 @@ const profile = () => {
       },
     }).then(res=>{
         setFeedback(res.data);
-    })*/
+    })
     {/* END GET FEEDBACK*/}
     if (typeof window !== 'undefined') {
         localStorage.setItem('feedback' , JSON.stringify(feedback)) ;
