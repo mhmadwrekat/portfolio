@@ -5,6 +5,7 @@ let feedbacks = [];
 let weathers = [];
 let counter = 0;    
 
+
     if (typeof window !== 'undefined') {
     if(localStorage.getItem('feedback') === null)
 {
