@@ -64,7 +64,7 @@ const projects = () => {
                             <div class="uppercase tracking-wide text-xs sm:text-sm text-red-700 pb-1 sm:pb-0 font-semibold">Desktop Website</div>
                             <img class="object-cover w-full sm:h-48 h-28 rounded-xl"
                                 src="./assest/worldcup.png" alt="WorldCup" />
-                            <a href="https://world-cup-22-frontend.vercel.app/" class="absolute top-9 sm:top-52 left-1 mt-1 text-xl cursor-alias uppercase leading-tight font-medium text-black hover:underline">
+                            <a href="https://fifa-world-cup-22.vercel.app/" class="absolute top-9 sm:top-52 left-1 mt-1 text-xl cursor-alias uppercase leading-tight font-medium text-black hover:underline">
                                 <svg className="inline h-4 fill-current text-violet-800" xmlns="http://www.w3.org/2000/svg"
                                     viewBox="0 0 20 20">
                                     <path
