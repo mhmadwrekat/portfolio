@@ -28,6 +28,7 @@ let weathers = [];
         <>
             <Head>
                 <title>Mhmad Wrekat</title>
+<meta name="google-site-verification" content="HDEEQ5-e6iIohsSP76gB4dymhNOG6VmNHESihFQL4Dc" />
                 <link rel="icon" href="./assest/icon.png" />
             </Head>
             <nav class="bg-black opacity-80 border-gray-200 px-2 sm:px-4 py-4 rounded" translate='no'>
