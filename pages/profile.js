@@ -30,13 +30,15 @@ const profile = () => {
     {/* GET FEEDBACK*/}
     const token = Buffer.from(`${USERNAME}:${PASS}`, 'utf8').toString('base64')
     const url = `${FEEDBACK}`
-    Axios.get(url, {
-      headers: {
-        'Authorization': `Basic ${token}`
-      },
-    }).then(res=>{
-        setFeedback(res.data);
-    })
+    useEffect(() => {
+        Axios.get(url, {
+            headers: {
+              'Authorization': `Basic ${token}`
+            },
+          }).then(res=>{
+              setFeedback(res.data);
+          })
+    }, []);   
     {/* END GET FEEDBACK*/}
     if (typeof window !== 'undefined') {
         localStorage.setItem('feedback' , JSON.stringify(feedback)) ;
@@ -65,6 +67,29 @@ bg-[url('https://cutewallpaper.org/21/3000x3000-wallpaper/nature-trees-forest-Wa
  font-awesome antialiased text-gray-900 leading-normal tracking-wider">
                 <Nav />
                 <ProfileBody />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
                 {/* FEEDBACK FORM */}
                 <section className="pt-0 antialiased leading-normal tracking-wider text-gray-900 sm:pt-10 font-awesome">
                     <div className="text-white opacity-95">
@@ -80,24 +105,24 @@ bg-[url('https://cutewallpaper.org/21/3000x3000-wallpaper/nature-trees-forest-Wa
                                     <div className="flex flex-wrap justify-center">
                                         <div className="w-full px-4 lg:w-6/12">
                                             <div
-                                                className="relative flex flex-col w-full min-w-0 mb-6 break-words bg-white rounded-lg shadow-lg">
+                                                className="relative flex flex-col w-full min-w-0 mb-6 break-words bg-black rounded-lg shadow-lg opacity-90">
                                                 <div className="flex-auto p-5 lg:p-10">
-                                                    <h4 className="mb-4 text-2xl font-semibold text-black">Suggestion, Feedback, or any Comment!!</h4>
+                                                    <h4 className="mb-4 text-2xl font-semibold text-white">Suggestion, Feedback, or any Comment!!</h4>
                                                     <form id="feedbackForm" method='post' onSubmit={handelFeedback} ref={form}>
                                                         <div className="relative w-full mb-3">
-                                                            <label className="block mb-2 text-xs font-bold text-gray-700 uppercase"
+                                                            <label className="block mb-2 text-xs font-bold text-white uppercase"
 for="email">Name</label><input type="text" name="name" id="name"
                                                                     class="border-0 px-3 py-3 rounded text-sm shadow w-full bg-gray-300 placeholder-black text-gray-800 outline-none focus:bg-gray-400" placeholder=" "
                                                                     required />
                                                         </div>
                                                         <div className="relative w-full mb-3">
-                                                            <label className="block mb-2 text-xs font-bold text-gray-700 uppercase"
+                                                            <label className="block mb-2 text-xs font-bold text-white uppercase"
 for="email">Email</label><input type="email" name="email" id="email"
 class="border-0 px-3 py-3 rounded text-sm shadow w-full bg-gray-300 placeholder-black text-gray-800 outline-none focus:bg-gray-400" placeholder=" "
 required />
                                                         </div>
                                                         <div className="relative w-full mb-3">
-                                                            <label className="block mb-2 text-xs font-bold text-gray-700 uppercase"
+                                                            <label className="block mb-2 text-xs font-bold text-white uppercase"
                                                                 for="message">Message</label><textarea maxlength="300" name="message" id="feedback" rows="4"
                                                                     cols="80"
                                                                     className="w-full px-3 py-3 text-sm text-gray-800 placeholder-black bg-gray-300 border-0 rounded shadow focus:outline-none"
@@ -105,7 +130,7 @@ required />
                                                         </div>
                                                         <div className="mt-6 text-center">
                                                             <button id="feedbackBtn" type="submit"
-                                                                className="px-6 py-3 mx-auto mb-1 mr-1 text-sm font-bold text-center text-gray-200 uppercase rounded shadow outline-none bg-violet-800 hover:bg-violet-600 cursor-alias active:bg-yellow-400 hover:shadow-lg focus:outline-none"
+className="px-6 py-3 mx-auto mb-1 mr-1 text-sm font-bold text-center text-gray-200 uppercase rounded shadow outline-none bg-lime-700 hover:bg-lime-500 cursor-alias active:bg-yellow-400 hover:shadow-lg focus:outline-none"
                                                             >Submit
                                                             </button>
                                                         </div>

@@ -40,7 +40,8 @@ let weathers = [];
                             <svg class="text-gray-500 md:hidden flex w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd"></path></svg>
                         </button>
                         <a href="./assest/wrekatt.pdf" download="wrekatt.pdf">
-                            <button type="button" class="cursor-help animate-bounce flex text-gray-200 hover:bg-violet-600 bg-violet-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center ml-4 md:mr-0">
+<button type="button" class=" cursor-help animate-bounce flex text-white 
+hover:bg-lime-500 bg-lime-700 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center ml-4 md:mr-0">
                                 <svg class="fill-current w-4 h-4 mr-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M13 8V2H7v6H2l8 8 8-8h-5zM0 18h20v2H0v-2z" /></svg>
                                 <span>Resume</span>
                             </button>
@@ -51,19 +52,19 @@ let weathers = [];
                         <ul class="flex flex-col mt-4 md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium">
                             <Link href='/'>
                                 <li>
-                                    <p class="cursor-grab hover:scale-110 block py-2 pr-4 pl-3 text-gray-200 hover:text-violet-600 rounded md:bg-transparent md:p-0">Profile</p>
+<p class="cursor-grab font-bold hover:scale-110 block py-2 pr-4 pl-3 text-lime-700 hover:text-lime-500 rounded md:bg-transparent md:p-0">Profile</p>
                                 </li>
                             </Link>
                             <Link href='/projects'>
                                 <li>
-                                    <p class="cursor-grab hover:scale-110 block py-2 pr-4 pl-3 text-gray-200 hover:text-violet-600 md:border-0 md:p-0">Project</p>
+<p class="cursor-grab hover:scale-110 font-bold block py-2 pr-4 pl-3 text-lime-700 hover:text-lime-500 md:border-0 md:p-0">Project</p>
                                 </li>
                             </Link>
                         </ul>
                     </div>
                     {
     (weathers.length > 0)?
-    <p class='md:order-2 text-sm sm:text-lg font-bold font-sans pl-3 text-gray-200 cursor-grab hover:scale-110'>⛅ {weathers[0].max_temp} °C</p>            
+    <p class='md:order-2 text-sm sm:text-lg font-bold font-sans pl-3 text-lime-700 cursor-grab hover:text-lime-500 hover:scale-110'>⛅ {weathers[0].max_temp} °C</p>            
 :<></>
 }
                 </div>
@@ -72,12 +73,12 @@ let weathers = [];
                 <ul class="flex flex-col md:flex-row md:space-x-0 md:mt-0 md:text-sm md:font-medium text-center">
                     <Link href='/'>
                         <li className='py-3'>
-                            <a class="cursor-grab hover:scale-110 py-2  text-gray-200 text-center hover:text-violet-600 rounded md:p-0">Profile</a>
+<a class="cursor-grab hover:scale-110 py-2  text-lime-700 text-center hover:text-lime-500 rounded md:p-0">Profile</a>
                         </li>
                     </Link>
                     <Link href='/projects'>
                         <li className='py-3'>
-                            <a href="" class="cursor-grab hover:scale-110 py-2  text-center text-gray-200 hover:text-violet-600 md:p-0">Project</a>
+<a href="" class="cursor-grab hover:scale-110 py-2  text-center text-lime-700 hover:text-lime-500 md:p-0">Project</a>
                         </li>
                     </Link>
                 </ul>
@@ -86,3 +87,14 @@ let weathers = [];
     )
 }
 export default Nav
+
+
+
+
+
+
+
+
+
+
+
