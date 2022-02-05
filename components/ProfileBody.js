@@ -22,7 +22,7 @@ const ProfileBody = () => {
                      className="w-full mx-6 text-white bg-black rounded-lg shadow-2xl lg:w-3/5 lg:rounded-l-lg lg:rounded-r-none opacity-90 lg:mx-0">
                      <div className="p-4 text-center md:p-12 lg:text-left">
                          <div>
-                             <img src='./assest/prfmobile.jpg'
+                             <img src='./assest/mobileprofile.jpg'
                                  className="block w-48 h-48 mx-auto -mt-16 rounded-full shadow-xl bg-fit lg:hidden" />
                          </div>
                          <div>
