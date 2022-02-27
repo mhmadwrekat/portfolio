@@ -99,6 +99,7 @@ bg-[url('https://cutewallpaper.org/21/3000x3000-wallpaper/nature-trees-forest-Wa
                                 <p className="text-3xl font-extrabold leading-relaxed md:text-5xl md:leading-snug">Leave Me a Feedback!</p>
                                 <p className="text-sm font-bold leading-snug md:text-base text-gray-50">
                                     Please provide your valuable feedback or any beautiful word for support ...
+Its secret 😊
                                 </p>
                             </div>
                             <div className="flex flex-col justify-center w-full lg:w-2/3">
