@@ -1,6 +1,5 @@
 import { Reveal, Fade, Slide } from "react-awesome-reveal";
 import React from 'react';
-import ProgLang from "./ProgLang";
 import { keyframes } from "@emotion/react";
 
 const ProfileBody = () => {
@@ -79,7 +78,6 @@ const ProfileBody = () => {
                          className="hidden rounded-none shadow-2xl lg:rounded-lg lg:block" />
                  </div>
              </div>
-             <ProgLang/>
 
 </>
   )
