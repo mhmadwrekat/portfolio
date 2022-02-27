@@ -2,6 +2,7 @@ import Nav from '../components/Nav';
 import useFeedback from '../hooks/useFeedback';
 import Footer from '../components/Footer';
 import swal from 'sweetalert';
+import ProgLang from "../components/ProgLang";
 const { createFeedback } = useFeedback();
 import ProfileBody from '../components/ProfileBody';
 const FEEDBACK = process.env.NEXT_PUBLIC_FEEDBACK_API;
@@ -144,8 +145,18 @@ className="px-6 py-3 mx-auto mb-1 mr-1 text-sm font-bold text-center text-gray-2
                         </div>
                     </div>
                 </section>
+
+
+
+<ProgLang/>
+
+
+
+
+
                 <Footer />
             </section>
+
         </>
     )
 }
