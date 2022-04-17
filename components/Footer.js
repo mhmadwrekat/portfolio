@@ -3,7 +3,7 @@ import Link from "next/link";
 const Footer = () => {
     return (
         <>
-            <section class='opacity-90 bg-black text-lime-700' id='profilefoot' translate='no'>
+            <section class='opacity-90 bg-white text-yellow-500' id='profilefoot' translate='no'>
                 <div>
                     <div class="mx-auto container xl:px-20 lg:px-12 sm:px-6 px-4 py-12">
                         <div class="flex flex-col items-center justify-center">
@@ -12,7 +12,7 @@ const Footer = () => {
                             </Link>
                             <div class="flex flex-wrap sm:gap-10 gap-8 items-center justify-center mt-8 font-bold">
                                 <Link href="/feedback">
-                                    <a href="" class="cursor-help hover:text-lime-600 hover:scale-110 focus:underline focus:outline-none text-base">FeedBacks</a>
+                                    <a href="" class="cursor-help hover:text-yellow-700 hover:scale-110 focus:underline focus:outline-none text-base">FeedBacks</a>
                                 </Link>
                             </div>
                             <div class="flex items-center gap-x-8 mt-6">
@@ -39,10 +39,10 @@ const Footer = () => {
                                         className='w-6 h-6 fill-current cursor-alias' /></a>
                             </div>
                             <div class="flex items-center mt-6">
-                                <p class="font-serif text-xs cursor-help hover:text-lime-600 hover:scale-110 leading-4">2022 <span class="font-serif">MHMAD
+                                <p class="font-serif text-xs cursor-help hover:text-yellow-700 hover:scale-110 leading-4">2022 <span class="font-serif">MHMAD
                                     WREKAT</span></p>
                                 <div class="border-l border-gray-800 pl-2 ml-2">
-                                    <p class="font-serif text-xs cursor-help hover:text-lime-600 hover:scale-110 leading-4">Inc. All Rights Reserved</p>
+                                    <p class="font-serif text-xs cursor-help hover:text-yellow-700 hover:scale-110 leading-4">Inc. All Rights Reserved</p>
                                 </div>
                             </div>
                         </div>

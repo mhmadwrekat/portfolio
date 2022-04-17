@@ -4,8 +4,6 @@ const feedback = () => {
 let feedbacks = [];
 let weathers = [];
 let counter = 0;    
-
-
     if (typeof window !== 'undefined') {
     if(localStorage.getItem('feedback') === null)
 {
@@ -67,7 +65,7 @@ weathers = JSON.parse(localStorage.getItem('weather')) ;
             <section className='grid grid-cols-2 py-10 pt-5 sm:pt-5 sm:px-0 sm:hidden'>
                 {
                     weathers && weathers.map((item) => {
-                        if (counter < 2) {
+                        
                             counter++;
                             return (<>
                                 <div class="flex flex-col items-center justify-center pt-3 pb-3 opacity-90">
@@ -93,7 +91,7 @@ weathers = JSON.parse(localStorage.getItem('weather')) ;
                                     </div>
                                 </div>
                             </>)
-                        }
+                        
                     })
                 }
             </section>
