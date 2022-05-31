@@ -18,7 +18,7 @@ const Schedule = () => {
           <p className="text-center text-white font-TSExtra text-2xl">
             {moment().format("Do / MMMM / YYYY")}
           </p>
-          <p className="text-center text-gray-800 font-TSExtra text-2xl">
+          <p className="text-center text-white font-TSExtra text-2xl">
             {moment().format("mm : h a")}
           </p>
         </header>
