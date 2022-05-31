@@ -12,13 +12,10 @@ const Schedule = () => {
       </Head>
       <div
         dir="rtl"
-        className="
-      bg-cover 
-      bg-[url('https://img5.goodfon.com/wallpaper/nbig/5/d1/vegetables-cereals-eggs-fish-healthy-food.jpg')]
-      bg-bottom"
+        className="bg-cover bg-[url('https://img5.goodfon.com/wallpaper/nbig/5/d1/vegetables-cereals-eggs-fish-healthy-food.jpg')] bg-bottom"
       >
-        <header className="py-5 lg:py-10 bg-lime-500">
-          <p className="text-center text-gray-800 font-TSExtra text-2xl">
+        <header className="py-5 lg:py-10 bg-gray-800">
+          <p className="text-center text-white font-TSExtra text-2xl">
             {moment().format("Do / MMMM / YYYY")}
           </p>
           <p className="text-center text-gray-800 font-TSExtra text-2xl">
