@@ -68,9 +68,9 @@ const ProfileBody = () => {
               <Fade triggerOnce delay={2500}>
                 <div className="pt-12 pb-8">
                   <a target="_balnk" href="https://wa.me/+962798596928">
-                    <span class=" h-0 w-0">
-                      <span class="animate-ping absolute inline h-4 w-4 rounded-full bg-blue-600 opacity-90"></span>
-                      <span class="relative rounded-full h-0 w-0 bg-blue-700"></span>
+                    <span className=" h-0 w-0">
+                      <span className="animate-ping absolute inline h-4 w-4 rounded-full bg-blue-600 opacity-90"></span>
+                      <span className="relative rounded-full h-0 w-0 bg-blue-700"></span>
                     </span>
                     <button className="px-4 py-2 font-bold text-gray-200 rounded-full cursor-alias bg-yellow-500 hover:bg-yellow-700">
                       Text Me!!
