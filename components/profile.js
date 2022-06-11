@@ -1,27 +1,32 @@
-import Nav from "../components/Nav";
-import useFeedback from "../hooks/useFeedback";
-import Footer from "../components/Footer";
+// Import Libraries
+import React, { useRef, useState, useEffect } from "react";
 import swal from "sweetalert";
-import ProgLang from "../components/ProgLang";
-const { createFeedback } = useFeedback();
-import ProfileBody from "../components/ProfileBody";
+import Axios from "axios";
+import emailjs from "@emailjs/browser";
+import dynamic from "next/dynamic";
+
+// Import Components
+const Nav = dynamic(() => import("./page/Nav"));
+const Footer = dynamic(() => import("./page/Footer"));
+const Projects = dynamic(() => import("./projects"));
+const ProfileBody = dynamic(() => import("./ProfileBody"));
+const ProgLang = dynamic(() => import("./ProgLang"));
+
+// Declare
 const FEEDBACK = process.env.NEXT_PUBLIC_FEEDBACK_API;
 const SERVICE_ID = process.env.NEXT_PUBLIC_EMAIL_SERVICE_ID;
 const USER_ID = process.env.NEXT_PUBLIC_EMAIL_USER_ID;
 const TEMPLATE_ID = process.env.NEXT_PUBLIC_EMAIL_TEMPLATE_ID;
 const USERNAME = process.env.NEXT_PUBLIC_USERNAME;
 const PASS = process.env.NEXT_PUBLIC_PASSWORD;
-import React, { useRef, useState, useEffect } from "react";
-import Projects from "./projects";
-import Axios from "axios";
-import emailjs from "@emailjs/browser";
+// const { createFeedback } = useFeedback();
+// import useFeedback from "./hooks/useFeedback";
 
 const profile = ({ weather }) => {
   const form = useRef();
   const [feedback, setFeedback] = useState([]);
-  {
-    /* GET FEEDBACK*/
-  }
+
+  // GET FEEDBACK
   const token = Buffer.from(`${USERNAME}:${PASS}`, "utf8").toString("base64");
   const url = `${FEEDBACK}`;
   useEffect(() => {
@@ -33,24 +38,16 @@ const profile = ({ weather }) => {
       setFeedback(res.data);
     });
   }, []);
-  {
-    /* END GET FEEDBACK*/
-  }
-  if (typeof window !== "undefined") {
-    localStorage.setItem("feedback", JSON.stringify(feedback));
-    localStorage.setItem("weather", JSON.stringify(weather));
-  }
-  {
-    /* POST FEEDBACK */
-  }
+
+  // POST FEEDBACK
   const handelFeedback = (event) => {
     event.preventDefault();
-    const feedback = {
-      name: event.target.name.value,
-      email: event.target.email.value,
-      message: event.target.message.value,
-      author: 2,
-    };
+    // const feedback = {
+    //   name: event.target.name.value,
+    //   email: event.target.email.value,
+    //   message: event.target.message.value,
+    //   author: 2,
+    // };
     //  createFeedback(feedback);
     swal("Success", "Thank You For Your Feedback!!", "success");
     emailjs.sendForm(
@@ -61,24 +58,13 @@ const profile = ({ weather }) => {
     );
     event.target.reset();
   };
-  {
-    /* END POST FEEDBACK */
-  }
-  /*
-    https://wallpaperaccess.com/full/6997872.jpg
-    https://wallpaperaccess.com/full/6997875.jpg
-    */
   return (
-    <>
+    <React.Fragment>
       <section
-        translate="no"
-        className="bg-cover 
-bg-[url('https://wallpaperaccess.com/full/6997872.jpg')]
- font-awesome antialiased text-gray-900 leading-normal tracking-wider"
+        className="bg-cover bg-BG font-awesome antialiased text-gray-900 leading-normal tracking-wider"
       >
         <Nav weather={weather} />
         <ProfileBody />
-
         <ProgLang />
         <div className="pt-10"></div>
         <Projects />
@@ -185,7 +171,12 @@ bg-[url('https://wallpaperaccess.com/full/6997872.jpg')]
         </section>
         <Footer />
       </section>
-    </>
+    </React.Fragment>
   );
 };
 export default profile;
+// https://wallpaperaccess.com/full/6997875.jpg
+// if (typeof window !== "undefined") {
+//   localStorage.setItem("feedback", JSON.stringify(feedback));
+//   localStorage.setItem("weather", JSON.stringify(weather));
+// }

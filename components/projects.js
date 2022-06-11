@@ -21,7 +21,7 @@ import { Slide } from "react-awesome-reveal";
 // Ckeck The Console Problem in Here
 const projects = () => {
   return (
-    <section translate="no">
+    <section>
       {/* NAV */}
       {/* TITLE */}
       <section>

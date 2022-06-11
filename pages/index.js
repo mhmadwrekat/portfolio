@@ -1,6 +1,9 @@
-import Profile from "./profile";
-const WEATHER = process.env.NEXT_PUBLIC_BACKEND_WEATHER_API;
+import dynamic from "next/dynamic";
+import React from "react";
 
+const WEATHER = process.env.NEXT_PUBLIC_BACKEND_WEATHER_API;
+const Profile = dynamic(() => import("../components/profile"));
+const Head_comp = dynamic(() => import("../components/page/Head_comp"));
 export async function getServerSideProps({ req, res }) {
   // Cache the content of this page for 12 hrs
   res.setHeader(
@@ -10,7 +13,7 @@ export async function getServerSideProps({ req, res }) {
   // Get Weather API
   const weather_res = await fetch(WEATHER);
   const weather = await weather_res.json();
-  const final_weather = weather.cache.data;
+  const final_weather = weather?.cache?.data;
   return {
     props: {
       weather: final_weather,
@@ -19,10 +22,13 @@ export async function getServerSideProps({ req, res }) {
 }
 const index = (props) => {
   return (
-    <>
+    <React.Fragment>
       {/* {console.log("SSR --> ", props.weather)} */}
-      <Profile weather={props.weather} />
-    </>
+      <section translate="no">
+        <Head_comp />
+        <Profile weather={props.weather} />
+      </section>
+    </React.Fragment>
   );
 };
 export default index;

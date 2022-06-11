@@ -3,19 +3,26 @@ import { Reveal, Fade, Slide } from "react-awesome-reveal";
 
 const ProgLang = () => {
   return (
-    <>
+    <React.Fragment>
       <section
         id="Skills"
-        translate="no"
-        className="px-5 pt-10 text-xs sm:pt-0 sm:text-base sm:px-52"
+        className="px-5 pt-10 text-xs sm:pt-0 sm:text-base sm:px-60"
       >
-        <section className="grid grid-cols-2 gap-5 px-3 py-5 text-black bg-white shadow-2xl opacity-95 rounded-2xl sm:py-10 sm:px-12">
+        <section className="grid grid-cols-2 gap-5 px-3 py-5 text-white bg-gray-800 shadow-2xl opacity-95 rounded-2xl sm:py-10 sm:px-12">
           <Slide triggerOnce delay={1000}>
             <div>
               <span className="pb-0 font-semibold uppercase">python</span>
               <section className="flex items-center">
                 <div className="w-full bg-gray-300 rounded-full h-1.5">
                   <div className="bg-yellow-500 h-1.5 w-10/12 rounded-full"></div>
+                  {/* <input
+                    type="range"
+                    id="points"
+                    name="points"
+                    min="0"
+                    max="10"
+                    className="w-full bg-gray-300 rounded-full h-1.5"
+                  /> */}
                 </div>
                 <p className="pt-2 pl-1.5 font-semibold"> 90%</p>
               </section>
@@ -192,7 +199,7 @@ const ProgLang = () => {
           </Slide>
         </section>
       </section>
-    </>
+    </React.Fragment>
   );
 };
 
