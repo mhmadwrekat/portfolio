@@ -14,13 +14,15 @@ const Footer = () => {
           <div className="mx-auto container xl:px-20 lg:px-12 sm:px-6 px-4 pb-5 pt-3">
             <div className="flex flex-col items-center justify-center">
               <Link href="/">
-                <Image
-                  className="cursor-help hover:scale-110"
-                  alt="Logo"
-                  src="/assest/project.png"
-                  width="50"
-                  height="50"
-                />
+                <div>
+                  <Image
+                    className="cursor-help hover:scale-110"
+                    alt="Logo"
+                    src="/assest/project.png"
+                    width="50"
+                    height="50"
+                  />
+                </div>
               </Link>
               <div className="flex flex-wrap sm:gap-10 gap-8 items-center justify-center mt-3 font-extrabold">
                 <Link href="/feedback">

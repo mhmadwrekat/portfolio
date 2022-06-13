@@ -60,9 +60,7 @@ const profile = ({ weather }) => {
   };
   return (
     <React.Fragment>
-      <section
-        className="bg-cover bg-BG font-awesome antialiased text-gray-900 leading-normal tracking-wider"
-      >
+      <section className="bg-cover bg-BG font-awesome antialiased text-gray-900 leading-normal tracking-wider">
         <Nav weather={weather} />
         <ProfileBody />
         <ProgLang />
@@ -70,6 +68,7 @@ const profile = ({ weather }) => {
         <Projects />
 
         {/* FEEDBACK FORM */}
+
         <section
           id="Message"
           className="pt-0 antialiased leading-normal tracking-wider text-gray-900 sm:pt-10 font-awesome"
