@@ -27,7 +27,7 @@ const ProfileBody = () => {
           <div className="p-4 text-center md:p-12 lg:text-left">
             <div className="bg-cover block w-48 h-48 mx-auto -mt-16 rounded-full shadow-xl bg-fit lg:hidden">
               <Image
-                src="/assest/mobileprofile.jpg"
+                src="/assest/mobileprofile.WebP"
                 className="rounded-full lg:rounded-lg"
                 alt="mhmad wrekat image"
                 quality={100}
@@ -102,7 +102,7 @@ const ProfileBody = () => {
         {/* DESKTOP PHOTO */}
         <div className="w-full lg:w-2/5 hidden lg:block">
           <Image
-            src="/assest/desktop_profile.jpg"
+            src="/assest/desktop_profile.WebP"
             className=" rounded-none shadow-2xl lg:rounded-lg"
             alt="mhmad wrekat image"
             quality={100}
