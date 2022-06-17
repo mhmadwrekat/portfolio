@@ -15,7 +15,10 @@ const feedback = () => {
   }
   return (
     <>
-      <section className="bg-cover bg-[url('https://wallpaperaccess.com/full/2185980.jpg')] font-awesome antialiased text-gray-900 leading-normal tracking-wider">
+      <section
+        translate="no"
+        className="bg-cover bg-[url('https://wallpaperaccess.com/full/2185980.jpg')] font-awesome antialiased text-gray-900 leading-normal tracking-wider"
+      >
         <section className="grid grid-cols-1 px-10 py-0 sm:py-32 sm:px-0 sm:grid-cols-4">
           {feedbacks.length > 0 ? (
             feedbacks.map((item) => {

@@ -35,18 +35,94 @@ const Head_comp = () => {
     ux
     ui ux
     ui-ux
-    CEO
-    ceo
-    performance
     nextjs
-    next
+    Vercel
+    cercel
+    deploy
+    Deploy
+    NextJs
+    NEXTJS
+    nextJS
+    next framework
+    React
     react
     js
+    javascript
+    Html5
+    HTML5
+    html5
+    html
+    Html
+    HTML
     django
+    Design
     design
+    designer
+    Tailwind
     tailwind
+    tailwindCSS
+    tailwind CSS
+    tailwind-Css
     tailwind css
+    tailwind Css
+    NextJs with TailwindCss
+    NextJs with tailwindCss
+    NextJs with Tailwind Css
+    NextJs with tailwind Css
+    NextJs with Tailwind css
+    NextJs with tailwind css
+    NextJs with Tailwind
+    NextJs with tailwind
+    Next with TailwindCss
+    NextJS with TailwindCss
+    NextJS with TailwindCss
+    nextJs with TailwindCss
+    Nextjs with TailwindCss
+    Mhmad Fozan
+    mhmad fozan
+    mohammad fozan
+    mohammad fozan aladwan
+    mohammad fozan alwrekat
+    mohammad fozan al-wrekat
+    mohammad fozan wrekat
+    alwrekat
+    wrekat
+    Wrekat
+    ALADWAN
+    adwan
+    Adwan
+    Adwani
+    Aladwani
+    responsive
+    design
+    SEO
+    seo
+    Seo
+    SEO performance
+    SEO web
+    SEO web development
+    performance
+    Performance
+    محمد
+    محمد فوزان
+    محمد فوزان عبدربه
+    محمد فوزان عبدربه الوريكات
+    فل ستاك
+    هندسه برمجيات
+    مهندس برمجيات
+    هندسة برمجيات
+    تطوير مواقع الكترونيه
+    تطوير مواقع الكترونية
+    برمجه
+    برمجة
+    ريسبوسنف
+    سرعه المواقع
+    سرعة
+    السرعة
 
+
+
+    
       `;
   const head_description = `
       ◉ Full-Stack Web Developer.

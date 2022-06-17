@@ -17,14 +17,35 @@ const ProfileBody = () => {
     `;
   return (
     <React.Fragment>
-      <div className=" pt-20 sm:pt-0"></div>
-      <div className="flex flex-wrap items-center h-auto max-w-4xl mx-auto lg:h-screen lg:my-0">
+      <div className=" pt-20 sm:pt-0 md:pt-16"></div>
+      <div className="flex flex-wrap items-center h-auto max-w-4xl mx-auto lg:my-20">
         <div
           id="profile"
-          className="w-full mx-6 text-white bg-gray-800 rounded-lg shadow-2xl lg:w-3/5 lg:rounded-l-lg lg:rounded-r-none opacity-95 lg:mx-0"
+          className=" mx-auto w-11/12 text-white bg-gray-800 rounded-lg shadow-2xl lg:w-7/12 lg:rounded-l-lg lg:rounded-r-none opacity-95 lg:mx-0"
         >
+          {/* bg-Mobile_profile */}
           <div className="p-4 text-center md:p-12 lg:text-left">
-            <div className="bg-cover bg-Mobile_profile block w-48 h-48 mx-auto -mt-16 rounded-full shadow-xl bg-fit lg:hidden"></div>
+            <div className="bg-cover block w-48 h-48 mx-auto -mt-16 rounded-full shadow-xl bg-fit lg:hidden">
+              <Image
+                src="/assest/mobileprofile.jpg"
+                className="rounded-full lg:rounded-lg"
+                alt="mhmad wrekat image"
+                quality={100}
+                // layout="fixed"
+                // objectFit="cover"
+                // layout="fixed"
+                width="300"
+                height="300"
+                loading="eager"
+                priority
+                placeholder="blur"
+                blurDataURL="/assest/desktop_profile.WebP"
+              />
+              {/* <img
+                src="./assest/mobileprofile.jpg"
+                className="w-full h-full rounded-full"
+              /> */}
+            </div>
             <div>
               <h1 className="pt-8 text-3xl font-bold lg:pt-0 ">
                 <Reveal keyframes={customAnimation}>
@@ -69,7 +90,7 @@ const ProfileBody = () => {
                       <span className="animate-ping absolute inline h-4 w-4 rounded-full bg-blue-500"></span>
                       <span className="relative rounded-full h-0 w-0 bg-blue-800"></span>
                     </span>
-                    <button className="px-4 py-2 font-bold text-gray-100 rounded-full cursor-alias bg-yellow-400 hover:bg-yellow-600">
+                    <button className="px-4 py-2 font-bold text-gray-700 rounded-full cursor-alias bg-yellow-400 hover:bg-yellow-600">
                       Text Me!!
                     </button>
                   </a>
@@ -85,12 +106,14 @@ const ProfileBody = () => {
             className=" rounded-none shadow-2xl lg:rounded-lg"
             alt="mhmad wrekat image"
             quality={100}
+            // layout="fixed"
+            objectFit="cover"
             width={400}
             height={450}
             loading="eager"
             priority
             placeholder="blur"
-            blurDataURL="/assest/desktop_profile.jpg"
+            blurDataURL="/assest/desktop_profile.WebP"
           />
         </div>
       </div>

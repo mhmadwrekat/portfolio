@@ -1,27 +1,27 @@
 // Cleaned
 import React, { useEffect } from "react";
 const Nav = ({ weather }) => {
-  useEffect(() => {
-    try {
-      const btn = document.querySelector("button.mobile-menu-button");
-      const menu = document.querySelector(".mobile-menu");
-      btn.addEventListener("click", () => {
-        menu.classList.toggle("hidden");
-      });
-    } catch (error) {
-      handleError(error);
-    }
-    function handleError(error) {
-      console.error(error);
-    }
-  }, []);
+  // useEffect(() => {
+  //   try {
+  //     const btn = document.querySelector("button.mobile-menu-button");
+  //     const menu = document.querySelector(".mobile-menu");
+  //     btn.addEventListener("click", () => {
+  //       menu.classList.toggle("hidden");
+  //     });
+  //   } catch (error) {
+  //     handleError(error);
+  //   }
+  //   function handleError(error) {
+  //     console.error(error);
+  //   }
+  // }, []);
 
   return (
     <React.Fragment>
       <nav className="opacity-95 bg-gray-800 border-gray-200 px-2 sm:px-4 py-4">
         <div className="container flex flex-wrap justify-between items-center mx-auto">
           <div className="flex md:order-0">
-            <button className="mobile-menu-button" type="button">
+            {/* <button className="mobile-menu-button" type="button">
               <span className="sr-only">Open main menu</span>
               <svg
                 className="text-black md:hidden flex w-6 h-6"
@@ -35,7 +35,7 @@ const Nav = ({ weather }) => {
                   clipRule="evenodd"
                 ></path>
               </svg>
-            </button>
+            </button> */}
             <a href="./assest/wrekatt.pdf" download="wrekatt.pdf">
               <button
                 type="button"
@@ -45,11 +45,11 @@ const Nav = ({ weather }) => {
                   className="w-4 h-4 mr-2"
                   xmlns="http://www.w3.org/2000/svg"
                   viewBox="0 0 20 20"
-                  fill="#FFFFFF"
+                  fill="#374151"
                 >
                   <path d="M13 8V2H7v6H2l8 8 8-8h-5zM0 18h20v2H0v-2z" />
                 </svg>
-                <span className="text-white text-sm font-extrabold">
+                <span className="text-gray-700 text-sm font-extrabold">
                   Resume
                 </span>
               </button>
@@ -93,7 +93,40 @@ const Nav = ({ weather }) => {
           ) : null}
         </div>
       </nav>
-      <div className="hidden mobile-menu md:hidden w-full bg-gray-800 border-t-1 border-gray-100">
+      <div className="opacity-95 w-full bg-gray-800 md:hidden lg:hidden sticky top-0 left-0 z-50">
+        <ul className="flex justify-center md:flex-row text-white md:space-x-0 md:mt-0 md:text-sm md:font-medium text-center">
+          <li>
+            <a
+              href="#Skills"
+              className="cursor-grab hover:scale-110 font-bold block py-2 pr-4 pl-3  hover:text-yellow-700 md:border-0 md:p-0"
+            >
+              Skills
+            </a>
+          </li>
+          <li>
+            <a
+              href="#Projects"
+              className="cursor-grab hover:scale-110 font-bold block py-2 pr-4 pl-3  hover:text-yellow-700 md:border-0 md:p-0"
+            >
+              Projects
+            </a>
+          </li>
+          <li>
+            <a
+              href="#Message"
+              className="cursor-grab hover:scale-110 font-bold block py-2 pr-4 pl-3 hover:text-yellow-700 md:border-0 md:p-0"
+            >
+              Message Me
+            </a>
+          </li>
+        </ul>
+      </div>
+    </React.Fragment>
+  );
+};
+export default Nav;
+{
+  /* <div className="hidden mobile-menu md:hidden w-full bg-gray-800 border-t-1 border-gray-100">
         <ul className="flex flex-col md:flex-row text-white md:space-x-0 md:mt-0 md:text-sm md:font-medium text-center">
           <a
             href="#Skills"
@@ -114,11 +147,9 @@ const Nav = ({ weather }) => {
             Message Me
           </a>
         </ul>
-      </div>
-    </React.Fragment>
-  );
-};
-export default Nav;
+      </div> */
+}
+
 //   let weathers = [];
 //   if (typeof window !== "undefined") {
 //     if (localStorage.getItem("weather") === null) {

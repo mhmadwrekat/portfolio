@@ -11,6 +11,7 @@ const Schedule = () => {
         <link rel="icon" href="./assest/icon.png" />
       </Head>
       <div
+        translate="no"
         dir="rtl"
         className="bg-cover bg-[url('https://img5.goodfon.com/wallpaper/nbig/5/d1/vegetables-cereals-eggs-fish-healthy-food.jpg')] bg-bottom"
       >
