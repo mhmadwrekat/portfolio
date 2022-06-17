@@ -2,7 +2,7 @@
   {
     "name": "Alzubda",
     "status": "RESPONSIVE",
-    "img": "./assest/alzubda.png",
+    "img": "/assest/alzubda.WebP",
     "link": "https://alzubda.com",
     "desc": "A special news site for Al-Zabada News Company during my work for them .",
     "id": 6
@@ -10,7 +10,7 @@
   {
     "name": "Soufatak",
     "status": "RESPONSIVE",
-    "img": "./assest/wool.jpg",
+    "img": "/assest/wool.WebP",
     "link": "https://soufatak.vercel.app/",
     "desc": "A page to display handmade woolen products with types and prices .",
     "id": 5
@@ -18,7 +18,7 @@
   {
     "name": "Cella Center",
     "status": "RESPONSIVE",
-    "img": "./assest/cella.jpg",
+    "img": "/assest/cella.WebP",
     "link": "https://cella-center.vercel.app/",
     "desc": "A project For a Beauty Center Display The Beauty Services .",
     "id": 4
@@ -26,7 +26,7 @@
   {
     "name": "World cup 2022",
     "status": "Desktop Website",
-    "img": "./assest/worldcup.png",
+    "img": "/assest/worldcup.WebP",
     "link": "https://fifa-world-cup-22.vercel.app/",
     "desc": "A project to display the Info About the World Cup 2022 in Qatar .",
     "id": 3
@@ -34,7 +34,7 @@
   {
     "name": "Yalla Bike",
     "status": "Desktop Website",
-    "img": "./assest/bikeproj.jpg",
+    "img": "/assest/bikeproj.WebP",
     "link": "https://priceless-swartz-6b6f00.netlify.app/",
     "desc": "Events to help Nature,Renting and Gatherings",
     "id": 2
@@ -42,7 +42,7 @@
   {
     "name": "Article Template",
     "status": "RESPONSIVE",
-    "img": "./assest/article.jpg",
+    "img": "/assest/article.WebP",
     "link": "https://mhmadwrekat.github.io/Article_Template/template",
     "desc": "Template Can Be Reused For Sharing Articles .",
     "id": 1

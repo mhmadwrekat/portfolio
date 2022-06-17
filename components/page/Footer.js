@@ -18,7 +18,7 @@ const Footer = () => {
                   <Image
                     className="cursor-help hover:scale-110"
                     alt="Logo"
-                    src="/assest/project.png"
+                    src="/assest/project.WebP"
                     width="50"
                     height="50"
                   />
@@ -37,7 +37,7 @@ const Footer = () => {
                   data-tippy-content="linkedin"
                 >
                   <Image
-                    src="/assest/linkedin.png"
+                    src="/assest/linkedin.WebP"
                     className="fill-current hover:scale-125 cursor-alias"
                     alt="linkedin"
                     width="25"
@@ -49,7 +49,7 @@ const Footer = () => {
                   data-tippy-content="WhatsApp"
                 >
                   <Image
-                    src="/assest/whatsapp.png"
+                    src="/assest/whatsapp.WebP"
                     className="fill-current hover:scale-125 cursor-alias"
                     alt="whatsapp"
                     width="25"
@@ -62,7 +62,7 @@ const Footer = () => {
                   data-tippy-content="Facebook"
                 >
                   <Image
-                    src="/assest/facebook.png"
+                    src="/assest/facebook.WebP"
                     className="fill-curren cursor-alias"
                     alt="facebook"
                     width="25"
@@ -75,7 +75,7 @@ const Footer = () => {
                   data-tippy-content="Instagram"
                 >
                   <Image
-                    src="/assest/instagram.png"
+                    src="/assest/instagram.WebP"
                     className="fill-current cursor-alias"
                     alt="instagram"
                     width="25"
@@ -88,7 +88,7 @@ const Footer = () => {
                   data-tippy-content="twitter"
                 >
                   <Image
-                    src="/assest/twitter.png"
+                    src="/assest/twitter.WebP"
                     className="fill-current cursor-alias"
                     alt="twitter"
                     width="25"

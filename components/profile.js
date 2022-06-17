@@ -60,7 +60,7 @@ const profile = ({ weather }) => {
   };
   return (
     <React.Fragment>
-      <section className="bg-cover bg-BG font-awesome antialiased text-gray-900 leading-normal tracking-wider">
+      <section className="bg-cover font-awesome antialiased text-gray-900 leading-normal tracking-wider">
         <Nav weather={weather} />
         <ProfileBody />
         <ProgLang />
@@ -88,11 +88,11 @@ const profile = ({ weather }) => {
                 <div className="container w-full px-4">
                   <div className="flex flex-wrap justify-center">
                     <div className="w-full px-4 lg:w-6/12">
-                      <div className="relative flex flex-col w-full min-w-0 mb-6 break-words bg-white rounded-lg shadow-lg opacity-90">
+                      <div className="relative flex flex-col w-full min-w-0 mb-6 break-words bg-white rounded-lg shadow-lg opacity-95">
                         <div className="flex-auto p-5 lg:p-10">
-                          <h4 className="mb-4 text-2xl font-semibold text-black">
+                          <p className="mb-4 text-2xl font-semibold text-black">
                             Suggestion, Feedback, or any Comment!!
-                          </h4>
+                          </p>
                           <form
                             id="feedbackForm"
                             method="post"
@@ -102,7 +102,7 @@ const profile = ({ weather }) => {
                             <div className="relative w-full mb-3">
                               <label
                                 className="block mb-2 text-xs font-bold text-black uppercase"
-                                htmlFor="email"
+                                htmlFor="name"
                               >
                                 Name
                               </label>
@@ -134,7 +134,7 @@ const profile = ({ weather }) => {
                             <div className="relative w-full mb-3">
                               <label
                                 className="block mb-2 text-xs font-bold text-black uppercase"
-                                htmlFor="message"
+                                htmlFor="feedback"
                               >
                                 Message
                               </label>
@@ -153,7 +153,7 @@ const profile = ({ weather }) => {
                               <button
                                 id="feedbackBtn"
                                 type="submit"
-                                className="px-6 py-3 mx-auto mb-1 mr-1 text-sm font-bold text-center text-gray-200 uppercase rounded shadow outline-none bg-yellow-500 hover:bg-yellow-700 active:bg-blue-500 hover:shadow-lg focus:outline-none"
+                                className="px-6 py-3 mx-auto mb-1 mr-1 text-sm font-bold text-center text-gray-700 uppercase rounded shadow outline-none bg-yellow-400 hover:bg-yellow-700 active:bg-blue-500 hover:shadow-lg focus:outline-none"
                               >
                                 Submit
                               </button>
