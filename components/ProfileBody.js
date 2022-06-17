@@ -32,10 +32,10 @@ const ProfileBody = () => {
                 alt="mhmad wrekat image"
                 quality={100}
                 // layout="fixed"
-                // objectFit="cover"
+                objectFit="cover"
                 // layout="fixed"
-                width="300"
-                height="300"
+                width={300}
+                height={300}
                 loading="eager"
                 priority
                 placeholder="blur"
@@ -106,7 +106,7 @@ const ProfileBody = () => {
             className=" rounded-none shadow-2xl lg:rounded-lg"
             alt="mhmad wrekat image"
             quality={100}
-            // layout="fixed"
+            layout="fixed"
             objectFit="cover"
             width={400}
             height={450}
