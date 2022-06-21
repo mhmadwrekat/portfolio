@@ -24,13 +24,7 @@ const Footer = () => {
                   />
                 </div>
               </Link>
-              <div className="flex flex-wrap sm:gap-10 gap-8 items-center justify-center mt-3 font-extrabold">
-                <Link href="/feedback">
-                  <p className="cursor-help hover:text-yellow-600 hover:scale-110 focus:underline focus:outline-none text-base">
-                    Feedbacks
-                  </p>
-                </Link>
-              </div>
+              <div className="flex flex-wrap sm:gap-10 gap-8 items-center justify-center mt-3 font-extrabold"></div>
               <div className="flex items-center gap-x-8 mt-5">
                 <a
                   href="https://linkedin.com/in/mohammad-alwrekat"

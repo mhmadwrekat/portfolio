@@ -18,10 +18,10 @@ const ProfileBody = () => {
   return (
     <React.Fragment>
       <div className=" pt-20 sm:pt-0 md:pt-16"></div>
-      <div className="flex flex-wrap items-center h-auto max-w-4xl mx-auto lg:my-20">
+      <div className="flex flex-wrap items-center h-auto max-w-6xl mx-auto lg:my-20">
         <div
           id="profile"
-          className=" mx-auto w-11/12 text-white bg-gray-800 rounded-lg shadow-2xl lg:w-7/12 lg:rounded-l-lg lg:rounded-r-none opacity-95 lg:mx-0"
+          className="mx-auto w-11/12 text-white bg-gray-800 rounded-lg shadow-2xl lg:w-7/12 lg:rounded-l-lg lg:rounded-r-none opacity-95 lg:mx-0"
         >
           {/* bg-Mobile_profile */}
           <div className="p-4 text-center md:p-12 lg:text-left">
@@ -47,7 +47,7 @@ const ProfileBody = () => {
               /> */}
             </div>
             <div>
-              <h1 className="pt-8 text-3xl font-bold lg:pt-0 ">
+              <h1 className="pt-8 text-4xl font-bold lg:pt-0 lg:py-3 ">
                 <Reveal keyframes={customAnimation}>
                   <p>Mhmad Wrekat</p>
                 </Reveal>
@@ -66,7 +66,7 @@ const ProfileBody = () => {
                 </p>
               </Fade>
               <Fade triggerOnce delay={1500}>
-                <p className="font-semibold	 text-left flex items-center justify-center pt-2 pr-5 text-sm text-white-600 lg:text-sm lg:justify-start">
+                <p className="font-semibold	text-left flex items-center justify-center pt-2 pr-5 text-sm text-white-600 lg:text-base lg:justify-start">
                   <svg
                     className="h-4 pr-4 fill-current text-yellow-400"
                     xmlns="http://www.w3.org/2000/svg"
@@ -78,7 +78,7 @@ const ProfileBody = () => {
                 </p>
               </Fade>
               <Fade triggerOnce delay={2000}>
-                <p className="pt-8 text-sm font-semibold">
+                <p className="mx-5 lg:mx-0 pt-8 text-base font-semibold">
                   Have a Bachelor's Degree in Software Engineering , and
                   Full-Stack Web Development course from Code Fellows .
                 </p>
@@ -103,13 +103,13 @@ const ProfileBody = () => {
         <div className="w-full lg:w-2/5 hidden lg:block">
           <Image
             src="/assest/desktop_profile.WebP"
-            className=" rounded-none shadow-2xl lg:rounded-lg"
+            className=" rounded-none shadow-2xl lg:rounded-lg hover:scale-110"
             alt="mhmad wrekat image"
             quality={100}
             layout="fixed"
             objectFit="cover"
-            width={400}
-            height={450}
+            width={500}
+            height={550}
             loading="eager"
             priority
             placeholder="blur"

@@ -6,7 +6,7 @@ const ProgLang = () => {
     <React.Fragment>
       <section
         id="Skills"
-        className=" pt-10 text-xs sm:pt-0 sm:text-base md:pt-10 w-11/12 lg:w-9/12 mx-auto"
+        className=" pt-6 text-xs sm:pt-0 sm:text-base md:pt-7 lg:pt-0 w-11/12 lg:w-9/12 mx-auto"
       >
         <section className="grid grid-cols-2 gap-5 px-3 py-5 text-white bg-gray-800 shadow-2xl opacity-95 rounded-lg sm:py-10 sm:px-12">
           <Slide triggerOnce delay={1000}>

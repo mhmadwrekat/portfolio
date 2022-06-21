@@ -27,16 +27,16 @@ const projects = () => {
     <React.Fragment>
       <section className="lg:w-10/12 mx-auto">
         <section>
-          <div id="Projects" className=" text-blue-600">
+          <div id="Projects" className="text-blue-500">
             <div>
-              <div className="lg:px-10 sm:px-0 sm:pt-10 text-base sm:text-3xl text-center font-serif font-bold self-center ...">
-                <div className="p-5 mx-6 bg-white rounded-xl shadow-2xl opacity-95 lg:mx-6">
+              <div className="mx-auto lg:w-3/6 sm:pt-10 text-base sm:text-3xl text-center font-serif font-bold self-center">
+                <div className="p-5 mx-6 bg-gray-800 rounded-xl shadow-2xl opacity-95 lg:mx-6">
                   <p>My Latest Projects</p>
                   <br></br>
                   <p>“You can do anything you set your mind to it.”</p>
 
                   <br></br>
-                  <p className="text-xs text-gray-400 sm:text-lg">
+                  <p className="text-xs text-gray-300 sm:text-lg">
                     - Benjamin Franklin
                   </p>
                 </div>
@@ -44,11 +44,11 @@ const projects = () => {
             </div>
           </div>
         </section>
-        <section className="grid grid-cols-1 justify-items-center ... gap-10 py-10 mx-5 sm:mx-0 sm:grid-cols-3 sm:gap-5">
+        <section className="grid grid-cols-1 justify-items-center gap-10 py-10 mx-5 sm:mx-0 sm:grid-cols-3 sm:gap-5">
           {project_data.map((item) => {
             return (
-              <section key={item.id}>
-                <div className="w-56 lg:w-80 bg-white opacity-95 rounded-xl shadow-2xl p-0">
+              <section key={item.id} className="lg:pt-5">
+                <div className="w-56 lg:w-80 bg-white opacity-95 rounded-xl shadow-2xl">
                   <div className="text-center overflow-hidden rounded-xl shadow-2xl">
                     <div className="block bg-gray-800 py-1 text-sm sm:text-xl uppercase leading-tight font-medium text-white">
                       {item.name}
@@ -74,7 +74,7 @@ const projects = () => {
                       <Image
                         src={item.img}
                         alt={item.name}
-                        className="object-cover w-full sm:h-48 h-28 rounded-none"
+                        className="object-cover w-full sm:h-48 h-28 rounded-none hover:scale-110"
                         width={350}
                         height={200}
                         loading="lazy"
@@ -101,7 +101,7 @@ const projects = () => {
                     </div>
 
                     <div className="pl-1">
-                      <div className="my-2 text-gray-500 text-xs sm:text-sm">
+                      <div className="my-2 text-gray-900 text-xs sm:text-sm mx-2 h-14">
                         {item.desc}
                       </div>
                     </div>

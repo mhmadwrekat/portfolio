@@ -1,10 +1,9 @@
 // Import Libraries
 import React, { useRef, useState, useEffect } from "react";
-import swal from "sweetalert";
 import Axios from "axios";
 import emailjs from "@emailjs/browser";
 import dynamic from "next/dynamic";
-
+import Swal from "sweetalert2";
 // Import Components
 const Nav = dynamic(() => import("./page/Nav"));
 const Footer = dynamic(() => import("./page/Footer"));
@@ -23,6 +22,17 @@ const PASS = process.env.NEXT_PUBLIC_PASSWORD;
 // import useFeedback from "./hooks/useFeedback";
 
 const profile = ({ weather }) => {
+  const Toast = Swal.mixin({
+    toast: true,
+    position: "bottom",
+    showConfirmButton: false,
+    timer: 2000,
+    timerProgressBar: true,
+    didOpen: (toast) => {
+      toast.addEventListener("mouseenter", Swal.stopTimer);
+      toast.addEventListener("mouseleave", Swal.resumeTimer);
+    },
+  });
   const form = useRef();
   const [feedback, setFeedback] = useState([]);
 
@@ -49,7 +59,10 @@ const profile = ({ weather }) => {
     //   author: 2,
     // };
     //  createFeedback(feedback);
-    swal("Success", "Thank You For Your Feedback!!", "success");
+    Toast.fire({
+      icon: "success",
+      title: "Thank You For Your Feedback!!",
+    });
     emailjs.sendForm(
       `${SERVICE_ID}`,
       `${TEMPLATE_ID}`,
@@ -71,26 +84,26 @@ const profile = ({ weather }) => {
 
         <section
           id="Message"
-          className="pt-0 antialiased leading-normal tracking-wider text-gray-900 sm:pt-10 font-awesome"
+          className="lg:w-10/12 mx-auto pt-0 antialiased leading-normal tracking-wider text-gray-100 sm:pt-10 font-awesome"
         >
           <div className="text-white opacity-95">
             <div className="container flex flex-col mx-auto md:flex-row">
               <div className="flex flex-col w-full p-8 lg:w-1/3">
-                <p className="text-3xl font-extrabold leading-relaxed md:text-5xl md:leading-snug">
+                <p className="text-3xl font-extrabold md:text-6xl">
                   Leave Me a Feedback!
                 </p>
-                <p className="text-sm font-bold leading-snug md:text-base text-white">
+                <p className="text-sm hover:font-bold font-extrabold md:text-lg text-white lg:pt-4">
                   Please provide your valuable feedback or any beautiful word
                   for support ...
                 </p>
               </div>
-              <div className="flex flex-col justify-center w-full lg:w-2/3">
-                <div className="container w-full px-4">
-                  <div className="flex flex-wrap justify-center">
-                    <div className="w-full px-4 lg:w-6/12">
-                      <div className="relative flex flex-col w-full min-w-0 mb-6 break-words bg-white rounded-lg shadow-lg opacity-95">
+              <div className="mx-auto">
+                <div className="container w-full px-4 mx-auto">
+                  <div className="">
+                    <div className="w-full px-4 mx-auto lg:w-8/12">
+                      <div className="relative flex flex-col w-full min-w-0 mb-6 break-words bg-gray-800 rounded-lg shadow-lg opacity-95">
                         <div className="flex-auto p-5 lg:p-10">
-                          <p className="mb-4 text-2xl font-semibold text-black">
+                          <p className="mb-4 text-2xl font-semibold">
                             Suggestion, Feedback, or any Comment!!
                           </p>
                           <form
@@ -101,7 +114,7 @@ const profile = ({ weather }) => {
                           >
                             <div className="relative w-full mb-3">
                               <label
-                                className="block mb-2 text-xs font-bold text-black uppercase"
+                                className="block mb-2 text-xs font-bold uppercase"
                                 htmlFor="name"
                               >
                                 Name
@@ -117,7 +130,7 @@ const profile = ({ weather }) => {
                             </div>
                             <div className="relative w-full mb-3">
                               <label
-                                className="block mb-2 text-xs font-bold text-black uppercase"
+                                className="block mb-2 text-xs font-bold uppercase"
                                 htmlFor="email"
                               >
                                 Email
@@ -133,7 +146,7 @@ const profile = ({ weather }) => {
                             </div>
                             <div className="relative w-full mb-3">
                               <label
-                                className="block mb-2 text-xs font-bold text-black uppercase"
+                                className="block mb-2 text-xs font-bold uppercase"
                                 htmlFor="feedback"
                               >
                                 Message

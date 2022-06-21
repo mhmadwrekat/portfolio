@@ -18,7 +18,7 @@ const Nav = ({ weather }) => {
 
   return (
     <React.Fragment>
-      <nav className="opacity-95 bg-gray-800 border-gray-200 px-2 sm:px-4 py-4">
+      <nav className="opacity-95 bg-gray-800 border-gray-200 px-2 sm:px-4 py-4 lg:fixed lg:w-full lg:z-50">
         <div className="container flex flex-wrap justify-between items-center mx-auto">
           <div className="flex md:order-0">
             {/* <button className="mobile-menu-button" type="button">
@@ -42,14 +42,14 @@ const Nav = ({ weather }) => {
                 className=" cursor-help animate-bounce flex text-white hover:bg-yellow-500 bg-yellow-400 focus:ring-4 focus:ring-blue-300 rounded-lg px-5 py-2.5 text-center ml-4 md:mr-0"
               >
                 <svg
-                  className="w-4 h-4 mr-2"
+                  className="w-4 h-4 mr-2 mt-1"
                   xmlns="http://www.w3.org/2000/svg"
                   viewBox="0 0 20 20"
                   fill="#374151"
                 >
                   <path d="M13 8V2H7v6H2l8 8 8-8h-5zM0 18h20v2H0v-2z" />
                 </svg>
-                <span className="text-gray-700 text-sm font-extrabold">
+                <span className="text-gray-700 text-base font-extrabold">
                   Resume
                 </span>
               </button>
@@ -63,7 +63,7 @@ const Nav = ({ weather }) => {
               <li>
                 <a
                   href="#Skills"
-                  className="text-base cursor-grab hover:scale-110 font-extrabold block py-2 pr-4 pl-3 hover:text-yellow-500 md:border-0 md:p-0"
+                  className="text-lg cursor-grab hover:scale-110 font-medium block py-2 pr-4 pl-3 hover:text-yellow-500 md:border-0 md:p-0"
                 >
                   Skills
                 </a>
@@ -71,7 +71,7 @@ const Nav = ({ weather }) => {
               <li>
                 <a
                   href="#Projects"
-                  className="text-base cursor-grab hover:scale-110 font-extrabold block py-2 pr-4 pl-3  hover:text-yellow-500 md:border-0 md:p-0"
+                  className="text-lg cursor-grab hover:scale-110 font-medium block py-2 pr-4 pl-3  hover:text-yellow-500 md:border-0 md:p-0"
                 >
                   Projects
                 </a>
@@ -79,15 +79,15 @@ const Nav = ({ weather }) => {
               <li>
                 <a
                   href="#Message"
-                  className="text-base cursor-grab hover:scale-110 font-extrabold block py-2 pr-4 pl-3  hover:text-yellow-500 md:border-0 md:p-0"
+                  className="text-lg cursor-grab hover:scale-110 font-medium block py-2 pr-4 pl-3  hover:text-yellow-500 md:border-0 md:p-0"
                 >
-                  Message Me
+                  Text Me
                 </a>
               </li>
             </ul>
           </div>
           {weather?.length > 0 ? (
-            <p className="md:order-2 text-base sm:text-lg font-extrabold font-sans pl-3 text-yellow-400 hover:text-yellow-600 cursor-grab hover:scale-110">
+            <p className="md:order-2 text-lg sm:text-xl font-extrabold font-sans pr-3 text-yellow-400 hover:text-yellow-600 cursor-grab hover:scale-110">
               ⛅ {weather[0]?.max_temp} °C
             </p>
           ) : null}
@@ -116,7 +116,7 @@ const Nav = ({ weather }) => {
               href="#Message"
               className="cursor-grab hover:scale-110 font-bold block py-2 pr-4 pl-3 hover:text-yellow-700 md:border-0 md:p-0"
             >
-              Message Me
+              Text Me
             </a>
           </li>
         </ul>
