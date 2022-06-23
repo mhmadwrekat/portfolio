@@ -57,7 +57,7 @@ const ProfileBody = () => {
               </h1>
               <div className="w-4/5 pt-3 mx-auto border-b-2 opacity-25 border-yellow-400 lg:mx-0"></div>
               {/* <Fade triggerOnce delay={1000}> */}
-              <div className="text-left flex items-center justify-start pt-4 text-base font-bold lg:justify-start">
+              <div className="text-left flex items-center justify-center pt-4 text-base font-bold lg:justify-start">
                 {/* <svg
                     className="h-4 pr-4 fill-current text-yellow-400"
                     xmlns="http://www.w3.org/2000/svg"
@@ -65,15 +65,15 @@ const ProfileBody = () => {
                   >
                     <path d="M9 12H1v6a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-6h-8v2H9v-2zm0-1H0V5c0-1.1.9-2 2-2h4V2a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v1h4a2 2 0 0 1 2 2v6h-9V9H9v2zm3-8V2H8v1h4z" />
                   </svg> */}
-                <div className="w-20 h-20">
+                <div className="w-16 h-16 lg:w-20 lg:h-20">
                   <Lottie animationData={work_json} loop={true} />
                 </div>
                 <p>Full Stack Developer</p>
               </div>
               {/* </Fade> */}
               {/* <Fade triggerOnce delay={1500}> */}
-              <div className="font-semibold	text-left flex items-center justify-start pt-0 pr-5 text-sm text-white-600 lg:text-base lg:justify-start">
-                <div className="w-20 h-20">
+              <div className="font-semibold	text-left flex items-center justify-center pt-0 pr-5 text-sm text-white-600 lg:text-base lg:justify-start">
+                <div className="w-16 h-16 lg:w-20 lg:h-20">
                   <Lottie animationData={location_json} loop={true} />
                 </div>
                 <p className="pl-2">Jordan - Amman</p>
