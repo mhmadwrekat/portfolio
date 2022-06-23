@@ -28,6 +28,14 @@ const index = (props) => {
         <Head_comp />
         <Profile weather={props.weather} />
       </section>
+      <noscript>
+        <iframe
+          src="https://www.googletagmanager.com/ns.html?id=GTM-NXZSBVW"
+          height="0"
+          width="0"
+          className="hidden"
+        ></iframe>
+      </noscript>
     </React.Fragment>
   );
 };
