@@ -11,7 +11,6 @@ export default function Document() {
             src={`https://www.googletagmanager.com/ns.html?id=${process.env.NEXT_PUBLIC_GOOGLE_TAG_MANAGER}`}
             height="0"
             width="0"
-            className=""
           ></iframe>
         </noscript>
         <Main />

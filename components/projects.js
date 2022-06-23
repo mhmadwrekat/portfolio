@@ -25,18 +25,19 @@ import Image from "next/image";
 const projects = () => {
   return (
     <React.Fragment>
-      <section className="lg:w-10/12 mx-auto">
+      <section className="lg:w-10/12 mx-auto font-serif">
         <section>
           <div id="Projects" className="text-blue-500">
             <div>
-              <div className="mx-auto lg:w-3/6 sm:pt-10 text-base sm:text-3xl text-center font-serif font-bold self-center">
+              <div className="mx-auto lg:w-3/6 sm:pt-10 text-base text-center font-bold self-center">
                 <div className="p-5 mx-6 bg-gray-800 rounded-xl shadow-2xl opacity-95 lg:mx-6">
-                  <p>My Latest Projects</p>
+                  <p className="text-xl lg:text-4xl">My Latest Projects</p>
                   <br></br>
-                  <p>“You can do anything you set your mind to it.”</p>
+                  <p className="text-sm lg:text-xl">
+                    “You can do anything you set your mind to it.”
+                  </p>
 
-                  <br></br>
-                  <p className="text-xs text-gray-300 sm:text-lg">
+                  <p className="text-sm text-gray-300 lg:text-lg">
                     - Benjamin Franklin
                   </p>
                 </div>
@@ -50,10 +51,10 @@ const projects = () => {
               <section key={item.id} className="lg:pt-5">
                 <div className="w-56 lg:w-80 bg-white opacity-95 rounded-xl shadow-2xl">
                   <div className="text-center overflow-hidden rounded-xl shadow-2xl">
-                    <div className="block bg-gray-800 py-1 text-sm sm:text-xl uppercase leading-tight font-medium text-white">
+                    <div className="block bg-gray-800 py-1 text-sm sm:text-xl uppercase leading-tight font-bold text-white">
                       {item.name}
                     </div>
-                    <div className="uppercase tracking-wide text-xs sm:text-sm text-red-700 py-1 sm:pb-0 font-semibold">
+                    <div className="uppercase tracking-wide text-xs sm:text-sm text-red-700 py-1 sm:pb-0 font-medium">
                       {item.status}
                     </div>
                     {/* <Image
@@ -94,7 +95,7 @@ const projects = () => {
                       <button
                         className="text-gray-700
   absolute bottom-3 lg:bottom-4 right-16 lg:right-24 lg:px-8 lg:py-1.5
-  bg-yellow-400 hover:bg-yellow-600 text-white font-bold py-0.5 px-5 rounded-full "
+  bg-yellow-400 hover:bg-yellow-600 text-white font-medium py-0.5 px-5 rounded-full "
                       >
                         <a href={item.link}>live url</a>
                       </button>

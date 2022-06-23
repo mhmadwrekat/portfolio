@@ -84,7 +84,7 @@ const profile = ({ weather }) => {
 
         <section
           id="Message"
-          className="lg:w-10/12 mx-auto pt-0 antialiased leading-normal tracking-wider text-gray-100 sm:pt-10 font-awesome"
+          className="lg:w-10/12 mx-auto pt-0 antialiased leading-normal tracking-wider text-gray-100 sm:pt-10 font-serif"
         >
           <div className="text-white opacity-95">
             <div className="container flex flex-col mx-auto md:flex-row">

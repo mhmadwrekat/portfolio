@@ -2,26 +2,19 @@
 import React from "react";
 import Link from "next/link";
 import Image from "next/image";
+import Lottie from "lottie-react";
+import footer_json from "../../public/assest/emoji/footer.json";
 
 const Footer = () => {
   return (
     <React.Fragment>
-      <section
-        className="opacity-95 bg-gray-800 text-yellow-400"
-        id="profilefoot"
-      >
+      <section className="bg-gray-800 text-yellow-400" id="profilefoot">
         <div>
           <div className="mx-auto container xl:px-20 lg:px-12 sm:px-6 px-4 pb-5 pt-3">
             <div className="flex flex-col items-center justify-center">
               <Link href="/">
-                <div>
-                  <Image
-                    className="cursor-help hover:scale-110"
-                    alt="Logo"
-                    src="/assest/project.WebP"
-                    width="50"
-                    height="50"
-                  />
+                <div className="w-24 h-24 lg:w-28 lg:h-28">
+                  <Lottie animationData={footer_json} loop={false} />
                 </div>
               </Link>
               <div className="flex flex-wrap sm:gap-10 gap-8 items-center justify-center mt-3 font-extrabold"></div>
