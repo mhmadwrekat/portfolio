@@ -1,9 +1,9 @@
 import dynamic from "next/dynamic";
 import React from "react";
-
 const WEATHER = process.env.NEXT_PUBLIC_BACKEND_WEATHER_API;
 const Profile = dynamic(() => import("../components/profile"));
 const Head_comp = dynamic(() => import("../components/page/Head_comp"));
+
 export async function getServerSideProps({ req, res }) {
   // Cache the content of this page for 12 hrs
   res.setHeader(

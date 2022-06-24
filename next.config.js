@@ -35,7 +35,7 @@ module.exports = {
   async headers() {
     return [
       {
-        source: "/:all*(svg|jpg|png)",
+        source: "/:all*(svg|jpg|png|webp)",
         locale: false,
         headers: [
           {
@@ -48,7 +48,7 @@ module.exports = {
   },
 
   images: {
-    minimumCacheTTL: 99999999,
+    minimumCacheTTL: 9999999999,
     formats: ["image/avif", "image/webp"],
   },
 };

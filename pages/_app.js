@@ -16,7 +16,6 @@ function MyApp({ Component, pageProps }) {
       <NextSeo
         title="Mhmad Wrekat"
         description={head_description}
-        keywords={["website", "blog", "portfolio"]}
         twitter={{
           image: "/twitter.png",
           handle: "@handle",

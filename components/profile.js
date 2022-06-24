@@ -88,11 +88,11 @@ const profile = ({ weather }) => {
         >
           <div className="text-white opacity-95">
             <div className="container flex flex-col mx-auto md:flex-row">
-              <div className="flex flex-col w-full p-8 lg:w-1/3">
+              <div className="flex flex-col w-full p-8 lg:w-1/3 text-white">
                 <p className="text-3xl font-extrabold md:text-6xl">
                   Leave Me a Feedback!
                 </p>
-                <p className="text-sm hover:font-bold font-extrabold md:text-lg text-white lg:pt-4">
+                <p className="text-sm hover:font-bold font-extrabold md:text-xl lg:pt-4">
                   Please provide your valuable feedback or any beautiful word
                   for support ...
                 </p>
@@ -101,7 +101,7 @@ const profile = ({ weather }) => {
                 <div className="container w-full px-4 mx-auto">
                   <div className="">
                     <div className="w-full px-4 mx-auto lg:w-8/12">
-                      <div className="relative flex flex-col w-full min-w-0 mb-6 break-words bg-gray-800 rounded-lg shadow-lg opacity-95">
+                      <div className="relative flex flex-col w-full min-w-0 mb-6 break-words bg-gray-800 rounded-lg shadow-2xl">
                         <div className="flex-auto p-5 lg:p-10">
                           <p className="mb-4 text-2xl font-semibold">
                             Suggestion, Feedback, or any Comment!!
