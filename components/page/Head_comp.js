@@ -163,7 +163,6 @@ const Head_comp = () => {
       },
     });
   });`}
-          `
         </script>
 
         <Script
