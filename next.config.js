@@ -1,16 +1,37 @@
-module.exports = {
-  webpack(config, options) {
-    config.module.rules.push({
-      test: /\.worker\.js$/,
-      loader: "worker-loader",
-      // options: { inline: true }, // also works
-      options: {
-        name: "static/[hash].worker.js",
-        publicPath: "/_next/",
+const withServiceWorker = require("next-service-worker");
+module.exports = withServiceWorker({
+  // next config here...
+
+  serviceWorker: {
+    webpack(config, options) {
+      config.module.rules.push({
+        test: /\.OneSignalSDKUpdaterWorker\.js$/,
+        loader: "worker-loader",
+        // options: { inline: true }, // also works
+        options: {
+          name: "static/[hash].OneSignalSDKUpdaterWorker.js",
+          publicPath: "/_next/",
+        },
+      });
+      return config;
+    },
+    workbox: {
+      webpack(config, options) {
+        config.module.rules.push({
+          test: /\.OneSignalSDKWorker\.js$/,
+          loader: "worker-loader",
+          // options: { inline: true }, // also works
+          options: {
+            name: "static/[hash].OneSignalSDKWorker.js",
+            publicPath: "/_next/",
+          },
+        });
+        return config;
       },
-    });
-    return config;
+    },
   },
+});
+module.exports = {
   i18n: {
     locales: ["en"],
     defaultLocale: "en",
