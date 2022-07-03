@@ -153,7 +153,11 @@ const Head_comp = () => {
           async=""
         ></script>
         <script>
-          {`window.OneSignal = window.OneSignal || [];
+          {`
+          navigator.serviceWorkerContainer
+          .register('service-worker.js')
+          .then(function(reg){
+          window.OneSignal = window.OneSignal || [];
   OneSignal.push(function() {
     OneSignal.init({
       appId: "994262cd-5c6e-4de8-ad3f-90cf3fd04369",
@@ -162,7 +166,7 @@ const Head_comp = () => {
         enable: true,
       },
     });
-  });`}
+  });}`}
         </script>
         <Script
           strategy="afterInteractive"
