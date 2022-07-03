@@ -148,6 +148,21 @@ const Head_comp = () => {
           `,
           }}
         />
+        <script
+          src="https://cdn.onesignal.com/sdks/OneSignalSDK.js"
+          async=""
+        ></script>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+        window.OneSignal = window.OneSignal || [];
+        OneSignal.push(function() {
+          OneSignal.init({
+            appId: "77731724-8ce0-4b47-aad9-8add0056e47e",
+          });
+        });`,
+          }}
+        />
         <Script
           strategy="afterInteractive"
           dangerouslySetInnerHTML={{
