@@ -157,14 +157,13 @@ const Head_comp = () => {
   OneSignal.push(function() {
     OneSignal.init({
       appId: "994262cd-5c6e-4de8-ad3f-90cf3fd04369",
-      safari_web_id: "",
+      safari_web_id: "web.onesignal.auto.528b6caf-1e6b-4608-b4e6-faa03f146a9c",
       notifyButton: {
         enable: true,
       },
     });
   });`}
         </script>
-
         <Script
           strategy="afterInteractive"
           dangerouslySetInnerHTML={{
