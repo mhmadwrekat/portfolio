@@ -28,7 +28,7 @@ function MyApp({ Component, pageProps }) {
           type: "website",
         }}
       />
-      <script src="https://www.googleoptimize.com/optimize.js?id=OPT-M9ZDDNK"></script>
+      <script src="https://www.googleoptimize.com/optimize.js?id=OPT-TGB62G7"></script>
       <Script
         strategy="lazyOnload"
         src={`https://www.googletagmanager.com/gtag/js?id=${ANALYTICS}`}
