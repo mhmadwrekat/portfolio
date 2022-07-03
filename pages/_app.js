@@ -13,6 +13,19 @@ function MyApp({ Component, pageProps }) {
     `;
 
   useEffect(() => {
+    navigator.serviceWorker
+      .register("/myproject/scripts/common/pushNotifications/sw.js")
+      .then(
+        function (registration) {
+          console.log(
+            "ServiceWorker registration successful with scope: ",
+            registration.scope
+          );
+        },
+        function (err) {
+          console.log("ServiceWorker registration failed: ", err);
+        }
+      );
     window.OneSignal = window.OneSignal || [];
     OneSignal.push(function () {
       OneSignal.init({

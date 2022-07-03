@@ -152,13 +152,7 @@ const Head_comp = () => {
           src="https://cdn.onesignal.com/sdks/OneSignalSDK.js"
           async=""
         ></script>
-        <script type="text/javascript">
-          {`navigator.serviceWorker.register('/myproject/scripts/common/pushNotifications/sw.js').then(function(registration) {
-console.log('ServiceWorker registration successful with scope: ', registration.scope);
-     }, function(err) {
-console.log('ServiceWorker registration failed: ', err);
-});`}
-        </script>
+
         <Script
           strategy="afterInteractive"
           dangerouslySetInnerHTML={{
