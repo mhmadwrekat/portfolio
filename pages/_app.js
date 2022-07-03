@@ -28,17 +28,18 @@ function MyApp({ Component, pageProps }) {
           type: "website",
         }}
       />
+      {/* L6uzByobzaeXDxTEp4EKyDXuK0LW8yTa */}
       <script src="https://www.googleoptimize.com/optimize.js?id=OPT-TGB62G7"></script>
       <Script
         strategy="lazyOnload"
-        src={`https://www.googletagmanager.com/gtag/js?id=${ANALYTICS}`}
+        src={`https://www.googletagmanager.com/gtag/js?id=L6uzByobzaeXDxTEp4EKyDXuK0LW8yTa`}
       />
       <Script strategy="lazyOnload">
         {`
         window.dataLayer = window.dataLayer || [];
         function gtag(){dataLayer.push(arguments);}
         gtag('js', new Date());
-        gtag('config', '${ANALYTICS}');
+        gtag('config', 'L6uzByobzaeXDxTEp4EKyDXuK0LW8yTa');
       `}
       </Script>
       <Component {...pageProps} />
