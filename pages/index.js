@@ -21,20 +21,6 @@ export async function getServerSideProps({ req, res }) {
   };
 }
 const index = (props) => {
-  const workerRef = useRef();
-  useEffect(() => {
-    workerRef.current = new Worker(new URL("../worker.js", import.meta.url));
-    workerRef.current.onmessage = (evt) =>
-      alert(`WebWorker Response => ${evt.data}`);
-    return () => {
-      workerRef.current.terminate();
-    };
-  }, []);
-
-  const handleWork = useCallback(async () => {
-    workerRef.current.postMessage(100000);
-  }, []);
-  handleWork();
   return (
     <React.Fragment>
       {/* {console.log("SSR --> ", props.weather)} */}
