@@ -29,8 +29,8 @@ function MyApp({ Component, pageProps }) {
         }}
       />
       {/* L6uzByobzaeXDxTEp4EKyDXuK0LW8yTa */}
-      <script>
-        {
+      <Script>
+        {`
           !(function () {
             var analytics = (window.analytics = window.analytics || []);
             if (!analytics.initialize)
@@ -92,8 +92,8 @@ function MyApp({ Component, pageProps }) {
                 analytics.page();
               }
           })()
-        }
-      </script>
+          `}
+      </Script>
       <script src="https://www.googleoptimize.com/optimize.js?id=OPT-TGB62G7"></script>
       <Script
         strategy="lazyOnload"

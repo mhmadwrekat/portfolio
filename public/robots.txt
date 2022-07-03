@@ -11,5 +11,3 @@ Host: https://www.wrekat.com
 
 # Sitemaps
 Sitemap: https://www.wrekat.com/sitemap.xml
-
-google-site-verification=p3Szff4yqlrIqWbfjtd9IKTQ1z1rqMK1MjaGLfOi4L0
