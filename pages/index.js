@@ -1,5 +1,5 @@
 import dynamic from "next/dynamic";
-import React from "react";
+import React, { useEffect, useRef, useCallback } from "react";
 const WEATHER = process.env.NEXT_PUBLIC_BACKEND_WEATHER_API;
 const Profile = dynamic(() => import("../components/profile"));
 const Head_comp = dynamic(() => import("../components/page/Head_comp"));
@@ -21,6 +21,20 @@ export async function getServerSideProps({ req, res }) {
   };
 }
 const index = (props) => {
+  const workerRef = useRef();
+  useEffect(() => {
+    workerRef.current = new Worker(new URL("../worker.js", import.meta.url));
+    workerRef.current.onmessage = (evt) =>
+      alert(`WebWorker Response => ${evt.data}`);
+    return () => {
+      workerRef.current.terminate();
+    };
+  }, []);
+
+  const handleWork = useCallback(async () => {
+    workerRef.current.postMessage(100000);
+  }, []);
+  handleWork();
   return (
     <React.Fragment>
       {/* {console.log("SSR --> ", props.weather)} */}
