@@ -62,12 +62,8 @@ const index = (props) => {
     contents: {
       en: "😊 اهلا وسهلا بك في موقعي الشخصي, لا تتردد في اعطاء رأيك 😊",
     },
-    // include_player_ids: [
-    //   "6392d91a-b206-4b7b-a620-cd68e32c3a76",
-    //   "76ece62b-bcfe-468c-8a78-839aeaa8c5fa",
-    //   "8e0f21fa-9a5a-4ae7-a9a6-ca1f24294b86",
-    // ],
-    included_segments: ["Subscribed Users"],
+    include_player_ids: ["2225210d-fce2-4074-b9bd-f9943516ae71"],
+    // included_segments: ["Subscribed Users"],
   };
 
   sendNotification(message);
