@@ -152,7 +152,7 @@ const Head_comp = () => {
           src="https://cdn.onesignal.com/sdks/OneSignalSDK.js"
           async=""
         ></script>
-        <script>
+        {/* <script>
           {`window.OneSignal = window.OneSignal || [];
   OneSignal.push(function() {
     OneSignal.init({
@@ -163,7 +163,7 @@ const Head_comp = () => {
       },
     });
   });`}
-        </script>
+        </script> */}
         <Script
           strategy="afterInteractive"
           dangerouslySetInnerHTML={{
