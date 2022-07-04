@@ -79,7 +79,6 @@ function MyApp({ Component, pageProps }) {
         notifyButton: {
           enable: true,
         },
-        subdomainName: "wrekat",
       });
     });
     return () => {
