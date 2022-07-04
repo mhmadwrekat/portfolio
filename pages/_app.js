@@ -86,7 +86,7 @@ function MyApp({ Component, pageProps }) {
     return () => {
       window.OneSignal = undefined;
     };
-  }, []); // <-- run this effect once on mount
+  }, []);
   return (
     <React.Fragment>
       <NextSeo
