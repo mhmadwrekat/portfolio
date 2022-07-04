@@ -138,10 +138,10 @@ const index = (props) => {
     app_id: "77731724-8ce0-4b47-aad9-8add0056e47e",
     contents: { en: "English Message" },
     channel_for_external_user_ids: "push",
-    include_external_user_ids: [externalUserId],
+    included_segments: ["Subscribed Users"],
   };
 
-  externalUserId && sendNotification(message);
+  sendNotification(message);
   return (
     <React.Fragment>
       {/* {console.log("SSR --> ", props.weather)} */}
