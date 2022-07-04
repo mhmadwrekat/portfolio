@@ -20,7 +20,61 @@ export async function getServerSideProps({ req, res }) {
     },
   };
 }
+
 const index = (props) => {
+  /************************************************************************************** */
+  /************************************************************************************** */
+  /************************************************************************************** */
+  /************************************************************************************** */
+  /************************************************************************************** */
+  /************************************************************************************** */
+  var sendNotification = function (data) {
+    var headers = {
+      "Content-Type": "application/json; charset=utf-8",
+      Authorization: "Basic OGZjOTgwYzAtYzJjMi00ZTMyLWIxOGEtN2RmNGNlZmMyYTYz",
+    };
+
+    var options = {
+      host: "onesignal.com",
+      port: 443,
+      path: "/api/v1/notifications",
+      method: "POST",
+      headers: headers,
+    };
+
+    var https = require("https");
+    var req = https.request(options, function (res) {
+      res.on("data", function (data) {
+        console.log("Response:");
+        console.log(JSON.parse(data));
+      });
+    });
+
+    req.on("error", function (e) {
+      console.log("ERROR:");
+      console.log(e);
+    });
+
+    req.write(JSON.stringify(data));
+    req.end();
+  };
+
+  var message = {
+    app_id: "77731724-8ce0-4b47-aad9-8add0056e47e",
+    title: "محمد الوريكات",
+    contents: {
+      en: "😊 اهلا وسهلا بك في موقعي الشخصي, لا تتردد في اعطاء رأيك 😊",
+    },
+    included_segments: ["Subscribed Users"],
+  };
+
+  sendNotification(message);
+  /************************************************************************************** */
+  /************************************************************************************** */
+  /************************************************************************************** */
+  /************************************************************************************** */
+  /************************************************************************************** */
+
   return (
     <React.Fragment>
       {/* {console.log("SSR --> ", props.weather)} */}
