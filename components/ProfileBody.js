@@ -20,7 +20,7 @@ const ProfileBody = () => {
     `;
   return (
     <React.Fragment>
-      <div className=" pt-20 sm:pt-0 md:pt-16"></div>
+      <div className=" pt-20 sm:pt-16 md:pt-20"></div>
       <div className="flex flex-wrap items-center h-auto max-w-6xl mx-auto lg:my-20">
         <div
           id="profile"
@@ -66,10 +66,7 @@ const ProfileBody = () => {
                     <path d="M9 12H1v6a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-6h-8v2H9v-2zm0-1H0V5c0-1.1.9-2 2-2h4V2a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v1h4a2 2 0 0 1 2 2v6h-9V9H9v2zm3-8V2H8v1h4z" />
                   </svg> */}
                 <div className="w-16 h-16 lg:w-20 lg:h-20">
-                  <Lottie
-                    animationData={work_json}
-                    loop={true}
-                  />
+                  <Lottie animationData={work_json} loop={true} />
                 </div>
                 <p>Full Stack Developer</p>
               </div>
@@ -77,10 +74,7 @@ const ProfileBody = () => {
               {/* <Fade triggerOnce delay={1500}> */}
               <div className="font-semibold	text-left flex items-center justify-center pt-0 pr-5 text-sm text-white-600 lg:text-base lg:justify-start">
                 <div className="w-16 h-16 lg:w-20 lg:h-20">
-                  <Lottie
-                    animationData={location_json}
-                    loop={true}
-                  />
+                  <Lottie animationData={location_json} loop={true} />
                 </div>
                 <p className="pl-2">Jordan - Amman</p>
               </div>
