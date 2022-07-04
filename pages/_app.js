@@ -11,7 +11,6 @@ function MyApp({ Component, pageProps }) {
     ◉ Jordan - Amman.
     ◉ Have a Bachelor's Degree in Software Engineering.
     `;
-
   const workerRef = useRef();
   useEffect(() => {
     workerRef.current = new Worker(
