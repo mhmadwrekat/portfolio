@@ -79,8 +79,7 @@ function MyApp({ Component, pageProps }) {
         notifyButton: {
           enable: true,
         },
-        allowLocalhostAsSecureOrigin: true,
-        subdomainName: "mhmadwrekat",
+        subdomainName: "wrekat",
       });
     });
     return () => {
