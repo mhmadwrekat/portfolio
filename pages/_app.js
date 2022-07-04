@@ -27,25 +27,25 @@ function MyApp({ Component, pageProps }) {
   //   workerRef.current.postMessage(100000);
   // }, []);
   // handleWork();
-  useEffect(() => {
-    navigator.serviceWorker.getRegistrations();
+  // useEffect(() => {
+  //   navigator.serviceWorker.getRegistrations();
 
-    window.OneSignal = window.OneSignal || [];
-    OneSignal.push(function () {
-      OneSignal.init({
-        appId: "994262cd-5c6e-4de8-ad3f-90cf3fd04369",
-        notifyButton: {
-          enable: true,
-        },
+  //   window.OneSignal = window.OneSignal || [];
+  //   OneSignal.push(function () {
+  //     OneSignal.init({
+  //       appId: "994262cd-5c6e-4de8-ad3f-90cf3fd04369",
+  //       notifyButton: {
+  //         enable: true,
+  //       },
 
-        allowLocalhostAsSecureOrigin: true,
-      });
-    });
+  //       allowLocalhostAsSecureOrigin: true,
+  //     });
+  //   });
 
-    return () => {
-      window.OneSignal = undefined;
-    };
-  }, []); // <-- run this effect once on mount
+  //   return () => {
+  //     window.OneSignal = undefined;
+  //   };
+  // }, []); // <-- run this effect once on mount
   return (
     <React.Fragment>
       <NextSeo
