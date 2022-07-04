@@ -36,7 +36,10 @@ const Track = () => {
     contents: {
       en: "😊 هناك زائر في موقعك 😊",
     },
-    include_player_ids: ["f04889a5-d06b-4949-9765-296b333357ae"],
+    include_player_ids: [
+      "9f0b161b-62d5-4cb9-be4a-ba6e80cbfdc6",
+      "acb0bc3a-0371-4c86-9dbf-2c0ae5f57137",
+    ],
   };
   sendNotification(message);
   return <React.Fragment></React.Fragment>;
