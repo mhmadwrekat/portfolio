@@ -15,7 +15,7 @@ function MyApp({ Component, pageProps }) {
   const workerRef = useRef();
   useEffect(() => {
     workerRef.current = new Worker(
-      new URL("../public/OneSignalSDKUpdaterWorker.js", import.meta.url)
+      new URL("../public/OneSignalSDKWorker.js", import.meta.url)
     );
     workerRef.current.onmessage = (evt) =>
       alert(`WebWorker Response => ${evt.data}`);
