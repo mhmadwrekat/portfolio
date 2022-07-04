@@ -11,21 +11,21 @@ function MyApp({ Component, pageProps }) {
     ◉ Jordan - Amman.
     ◉ Have a Bachelor's Degree in Software Engineering.
     `;
-  // const workerRef = useRef();
-  // useEffect(() => {
-  //   workerRef.current = new Worker(
-  //     new URL("../public/OneSignalSDKWorker.js", import.meta.url)
-  //   );
-  //   workerRef.current.onmessage = (evt) =>
-  //     alert(`WebWorker Response => ${evt.data}`);
-  //   return () => {
-  //     workerRef.current.terminate();
-  //   };
-  // }, []);
+  const workerRef = useRef();
+  useEffect(() => {
+    workerRef.current = new Worker(
+      new URL("../public/OneSignalSDKWorker.js", import.meta.url)
+    );
+    workerRef.current.onmessage = (evt) =>
+      alert(`WebWorker Response => ${evt.data}`);
+    return () => {
+      workerRef.current.terminate();
+    };
+  }, []);
 
-  // const handleWork = useCallback(async () => {
-  //   workerRef.current.postMessage(100000);
-  // }, []);
+  const handleWork = useCallback(async () => {
+    workerRef.current.postMessage(100000);
+  }, []);
   // handleWork();
   // useEffect(() => {
   //   navigator.serviceWorker.getRegistrations();

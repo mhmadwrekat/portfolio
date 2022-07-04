@@ -148,10 +148,10 @@ const Head_comp = () => {
           `,
           }}
         />
-        <script
+        {/* <script
           src="https://cdn.onesignal.com/sdks/OneSignalSDK.js"
           async=""
-        ></script>
+        ></script> */}
         <script>
           {`window.OneSignal = window.OneSignal || [];
   OneSignal.push(function() {
