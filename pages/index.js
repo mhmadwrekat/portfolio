@@ -22,12 +22,14 @@ export async function getServerSideProps({ req, res }) {
 }
 
 const index = (props) => {
+  const [id, setID] = useState();
+
   /************************************************************************************** */
   /************************************************************************************** */
   /************************************************************************************** */
   /************************************************************************************** */
   /************************************************************************************** */
-  var sendNotification = function (data) {
+  const sendNotification = (data) => {
     var headers = {
       "Content-Type": "application/json; charset=utf-8",
       Authorization: "Basic MGIwYzdhZGMtZmU2ZC00M2ZkLTliNjEtMDRkNTE2ZmE3OGE0",
@@ -54,6 +56,7 @@ const index = (props) => {
     });
 
     req.write(JSON.stringify(data));
+    // setID(data);
     req.end();
   };
 
@@ -62,7 +65,10 @@ const index = (props) => {
     contents: {
       en: "😊 اهلا وسهلا بك في موقعي الشخصي, لا تتردد في اعطاء رأيك 😊",
     },
-    include_player_ids: ["2225210d-fce2-4074-b9bd-f9943516ae71"],
+    include_player_ids: [
+      "2225210d-fce2-4074-b9bd-f9943516ae71",
+      "8fbfc53a-b3e7-4933-aa90-8ed77a2bb84b",
+    ],
     // included_segments: ["Subscribed Users"],
   };
 
@@ -73,12 +79,13 @@ const index = (props) => {
   /************************************************************************************** */
   /************************************************************************************** */
   /************************************************************************************** */
-
+  // id && console.log("--->", id.id);
   return (
     <React.Fragment>
       {/* {console.log("SSR --> ", props.weather)} */}
       <section translate="no">
         <Head_comp />
+        {/* {id ? <p>{id.id}</p> : null} */}
         <Profile weather={props.weather} />
       </section>
     </React.Fragment>
