@@ -17,41 +17,41 @@ function MyApp({ Component, pageProps }) {
   const [deviceId, setDeviceIs] = useState();
   const [userToken, setUserToken] = useState();
 
-  // Function Get User Info From LocalStorage else From API
-  const register_user = async () => {
-    try {
-      let device_id = null;
-      if ("device_id" in localStorage) {
-        device_id = localStorage.getItem("device_id");
-        setDeviceIs(localStorage.getItem("device_id"));
-      } else {
-        device_id = uuidv4();
-        localStorage.setItem("device_id", device_id);
-        localStorage.setItem("user_token", response.data.data.user_token);
-        localStorage.setItem("user_id", response.data.data._id);
-      }
-    } catch (err) {}
-  };
-  // Function Get Country Code From LocalStorage else From API
-  const get_country = async () => {
-    localStorage.getItem("country_code")
-      ? setCountryCode(localStorage.getItem("country_code"))
-      : axios.get("https://geolocation-db.com/json/").then((res) => {
-          localStorage.setItem("country_code", res.data.country_code);
-          setCountryCode(res.data.country_code);
-        });
-  };
+  // // Function Get User Info From LocalStorage else From API
+  // const register_user = async () => {
+  //   try {
+  //     let device_id = null;
+  //     if ("device_id" in localStorage) {
+  //       device_id = localStorage.getItem("device_id");
+  //       setDeviceIs(localStorage.getItem("device_id"));
+  //     } else {
+  //       device_id = uuidv4();
+  //       localStorage.setItem("device_id", device_id);
+  //       localStorage.setItem("user_token", response.data.data.user_token);
+  //       localStorage.setItem("user_id", response.data.data._id);
+  //     }
+  //   } catch (err) {}
+  // };
+  // // Function Get Country Code From LocalStorage else From API
+  // const get_country = async () => {
+  //   localStorage.getItem("country_code")
+  //     ? setCountryCode(localStorage.getItem("country_code"))
+  //     : axios.get("https://geolocation-db.com/json/").then((res) => {
+  //         localStorage.setItem("country_code", res.data.country_code);
+  //         setCountryCode(res.data.country_code);
+  //       });
+  // };
 
-  useEffect(() => {
-    register_user();
-    get_country();
-    typeof window !== "undefined"
-      ? setDeviceIs(localStorage.getItem("device_id"))
-      : "";
-    typeof window !== "undefined"
-      ? setUserToken(localStorage.getItem("user_token"))
-      : "";
-  }, []);
+  // useEffect(() => {
+  //   register_user();
+  //   get_country();
+  //   typeof window !== "undefined"
+  //     ? setDeviceIs(localStorage.getItem("device_id"))
+  //     : "";
+  //   typeof window !== "undefined"
+  //     ? setUserToken(localStorage.getItem("user_token"))
+  //     : "";
+  // }, []);
   const workerRef = useRef();
   useEffect(() => {
     workerRef.current = new Worker(
@@ -117,9 +117,9 @@ function MyApp({ Component, pageProps }) {
         gtag('config', '${ANALYTICS}');
       `}
       </Script>
-      <Component {...pageProps} deviceId={deviceId} />
+      <Component {...pageProps} />
     </React.Fragment>
   );
 }
-
+// deviceId={deviceId}
 export default MyApp;
