@@ -1,22 +1,3 @@
-const withServiceWorker = require("next-service-worker");
-module.exports = withServiceWorker({
-  // next config here...
-
-  serviceWorker: {
-    webpack(config, options) {
-      config.module.rules.push({
-        test: /\.OneSignalSDKUpdaterWorker\.js$/,
-        loader: "worker-loader",
-        // options: { inline: true }, // also works
-        options: {
-          name: "static/[hash].OneSignalSDKUpdaterWorker.js",
-          publicPath: "/_next/",
-        },
-      });
-      return config;
-    },
-  },
-});
 module.exports = {
   i18n: {
     locales: ["en"],
