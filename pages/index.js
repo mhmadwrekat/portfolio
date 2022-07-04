@@ -66,7 +66,7 @@ const index = (props) => {
     contents: {
       en: "😊 اهلا وسهلا بك في موقعي الشخصي, لا تتردد في اعطاء رأيك 😊",
     },
-    include_player_ids: ["8fbfc53a-b3e7-4933-aa90-8ed77a2bb84b"],
+    include_player_ids: ["f04889a5-d06b-4949-9765-296b333357ae"],
     // included_segments: ["Subscribed Users"],
   };
 
