@@ -27,7 +27,6 @@ function MyApp({ Component, pageProps }) {
     workerRef.current.postMessage(100000);
   }, []);
 
-  handleWork();
   useEffect(() => {
     navigator.serviceWorker.getRegistrations();
     window.OneSignal = window.OneSignal || [];
