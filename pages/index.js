@@ -31,7 +31,7 @@ const index = (props) => {
   var sendNotification = function (data) {
     var headers = {
       "Content-Type": "application/json; charset=utf-8",
-      Authorization: "Basic OGZjOTgwYzAtYzJjMi00ZTMyLWIxOGEtN2RmNGNlZmMyYTYz",
+      Authorization: "Basic MGIwYzdhZGMtZmU2ZC00M2ZkLTliNjEtMDRkNTE2ZmE3OGE0",
     };
 
     var options = {
