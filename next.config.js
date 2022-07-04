@@ -15,20 +15,6 @@ module.exports = withServiceWorker({
       });
       return config;
     },
-    workbox: {
-      webpack(config, options) {
-        config.module.rules.push({
-          test: /\.OneSignalSDKWorker\.js$/,
-          loader: "worker-loader",
-          // options: { inline: true }, // also works
-          options: {
-            name: "static/[hash].OneSignalSDKWorker.js",
-            publicPath: "/_next/",
-          },
-        });
-        return config;
-      },
-    },
   },
 });
 module.exports = {
