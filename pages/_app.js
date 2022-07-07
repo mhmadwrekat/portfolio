@@ -1,9 +1,8 @@
-import { Html, Head, Main, NextScript } from "next/document";
 import Script from "next/script";
 import "../styles/globals.css";
-import { v4 as uuidv4 } from "uuid";
 const ANALYTICS = process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS;
-import React, { useState, useEffect, useRef, useCallback } from "react";
+// import React, { useState, useEffect, useRef, useCallback } from "react";
+import React from "react";
 import { NextSeo } from "next-seo";
 import axios from "axios";
 
@@ -13,9 +12,6 @@ function MyApp({ Component, pageProps }) {
     ◉ Jordan - Amman.
     ◉ Have a Bachelor's Degree in Software Engineering.
     `;
-  const [country_code, setCountryCode] = useState();
-  const [deviceId, setDeviceIs] = useState();
-  const [userToken, setUserToken] = useState();
 
   // // Function Get User Info From LocalStorage else From API
   // const register_user = async () => {
@@ -52,39 +48,39 @@ function MyApp({ Component, pageProps }) {
   //     ? setUserToken(localStorage.getItem("user_token"))
   //     : "";
   // }, []);
-  const workerRef = useRef();
-  useEffect(() => {
-    workerRef.current = new Worker(
-      new URL("../public/OneSignalSDKWorker.js", import.meta.url)
-    );
-    workerRef.current.onmessage = (evt) =>
-      alert(`WebWorker Response => ${evt.data}`);
-    return () => {
-      workerRef.current.terminate();
-    };
-  }, []);
+  // const workerRef = useRef();
+  // useEffect(() => {
+  //   workerRef.current = new Worker(
+  //     new URL("../public/OneSignalSDKWorker.js", import.meta.url)
+  //   );
+  //   workerRef.current.onmessage = (evt) =>
+  //     alert(`WebWorker Response => ${evt.data}`);
+  //   return () => {
+  //     workerRef.current.terminate();
+  //   };
+  // }, []);
 
-  const handleWork = useCallback(async () => {
-    workerRef.current.postMessage(100000);
-  }, []);
+  // const handleWork = useCallback(async () => {
+  //   workerRef.current.postMessage(100000);
+  // }, []);
 
-  useEffect(() => {
-    navigator.serviceWorker.getRegistrations();
-    window.OneSignal = window.OneSignal || [];
-    OneSignal.push(function () {
-      OneSignal.init({
-        appId: "77731724-8ce0-4b47-aad9-8add0056e47e",
-        safari_web_id:
-          "web.onesignal.auto.67813ec5-45a5-4c64-95fb-a167cd7c4d3a",
-        notifyButton: {
-          enable: true,
-        },
-      });
-    });
-    return () => {
-      window.OneSignal = undefined;
-    };
-  }, []);
+  // useEffect(() => {
+  //   navigator.serviceWorker.getRegistrations();
+  //   window.OneSignal = window.OneSignal || [];
+  //   OneSignal.push(function () {
+  //     OneSignal.init({
+  //       appId: "77731724-8ce0-4b47-aad9-8add0056e47e",
+  //       safari_web_id:
+  //         "web.onesignal.auto.67813ec5-45a5-4c64-95fb-a167cd7c4d3a",
+  //       notifyButton: {
+  //         enable: true,
+  //       },
+  //     });
+  //   });
+  //   return () => {
+  //     window.OneSignal = undefined;
+  //   };
+  // }, []);
   return (
     <React.Fragment>
       <NextSeo

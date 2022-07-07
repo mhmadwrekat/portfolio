@@ -1,4 +1,5 @@
 // Import Libraries
+// #FF651D
 import React, { useRef, useState, useEffect } from "react";
 import Axios from "axios";
 import emailjs from "@emailjs/browser";
@@ -21,7 +22,16 @@ const PASS = process.env.NEXT_PUBLIC_PASSWORD;
 // const { createFeedback } = useFeedback();
 // import useFeedback from "./hooks/useFeedback";
 
-const profile = ({ weather }) => {
+const profile = ({
+  weather,
+  buttonText,
+  buttonBg,
+  screenBg,
+  mostText,
+  fewBg,
+  mostBg,
+  fewText,
+}) => {
   const Toast = Swal.mixin({
     toast: true,
     position: "bottom",
@@ -73,22 +83,47 @@ const profile = ({ weather }) => {
   };
   return (
     <React.Fragment>
-      <section className="bg-BG bg-cover font-awesome antialiased text-gray-900 leading-normal tracking-wider">
-        <Nav weather={weather} />
-        <ProfileBody />
-        <ProgLang />
+      <section className={`${screenBg}`}>
+        <Nav
+          fewText={fewText}
+          mostBg={mostBg}
+          weather={weather}
+          buttonText={buttonText}
+          buttonBg={buttonBg}
+          mostText={mostText}
+        />
+        <ProfileBody
+          mostBg={mostBg}
+          buttonText={buttonText}
+          buttonBg={buttonBg}
+          mostText={mostText}
+        />
+        <ProgLang
+          mostBg={mostBg}
+          buttonText={buttonText}
+          buttonBg={buttonBg}
+          mostText={mostText}
+          fewBg={fewBg}
+        />
         <div className="pt-10"></div>
-        <Projects />
+        <Projects
+          fewText={fewText}
+          mostBg={mostBg}
+          buttonText={buttonText}
+          fewBg={fewBg}
+          buttonBg={buttonBg}
+          mostText={mostText}
+        />
 
         {/* FEEDBACK FORM */}
 
         <section
           id="Message"
-          className="lg:w-10/12 mx-auto pt-0 antialiased leading-normal tracking-wider text-gray-100 sm:pt-10 font-serif"
+          className={`lg:w-10/12 mx-auto pt-0 antialiased leading-normal tracking-wider ${fewText} sm:pt-10 font-serif`}
         >
-          <div className="text-white opacity-95">
+          <div className={`${mostText}`}>
             <div className="container flex flex-col mx-auto md:flex-row">
-              <div className="flex flex-col w-full p-8 lg:w-1/3 text-white">
+              <div className="flex flex-col w-full p-8 lg:w-1/3">
                 <p className="text-3xl font-extrabold md:text-6xl">
                   Leave Me a Feedback!
                 </p>
@@ -101,7 +136,9 @@ const profile = ({ weather }) => {
                 <div className="container w-full px-4 mx-auto">
                   <div className="">
                     <div className="w-full px-4 mx-auto lg:w-8/12">
-                      <div className="relative flex flex-col w-full min-w-0 mb-6 break-words bg-gray-800 rounded-lg shadow-2xl">
+                      <div
+                        className={`relative flex flex-col w-full min-w-0 mb-6 break-words ${mostBg} rounded-lg shadow-2xl`}
+                      >
                         <div className="flex-auto p-5 lg:p-10">
                           <p className="mb-4 text-2xl font-semibold">
                             Suggestion, Feedback, or any Comment!!
@@ -123,7 +160,7 @@ const profile = ({ weather }) => {
                                 type="text"
                                 name="name"
                                 id="name"
-                                className="border-0 px-3 py-3 rounded text-sm shadow w-full bg-gray-300 placeholder-black text-gray-800 outline-none focus:bg-gray-400"
+                                className="border-0 px-3 py-3 rounded text-sm shadow w-full placeholder-black outline-none"
                                 placeholder=" "
                                 required
                               />
@@ -139,7 +176,7 @@ const profile = ({ weather }) => {
                                 type="email"
                                 name="email"
                                 id="email"
-                                className="border-0 px-3 py-3 rounded text-sm shadow w-full bg-gray-300 placeholder-black text-gray-800 outline-none focus:bg-gray-400"
+                                className="border-0 px-3 py-3 rounded text-sm shadow w-full placeholder-black outline-none"
                                 placeholder=" "
                                 required
                               />
@@ -157,7 +194,7 @@ const profile = ({ weather }) => {
                                 id="feedback"
                                 rows="4"
                                 cols="80"
-                                className="w-full px-3 py-3 text-sm text-gray-800 placeholder-black bg-gray-300 border-0 rounded shadow focus:outline-none"
+                                className="w-full px-3 py-3 text-sm placeholder-black border-0 rounded shadow focus:outline-none"
                                 placeholder=""
                                 required
                               ></textarea>
@@ -166,7 +203,7 @@ const profile = ({ weather }) => {
                               <button
                                 id="feedbackBtn"
                                 type="submit"
-                                className="px-6 py-3 mx-auto mb-1 mr-1 text-sm font-bold text-center text-gray-700 uppercase rounded shadow outline-none bg-yellow-400 hover:bg-yellow-700 active:bg-blue-500 hover:shadow-lg focus:outline-none"
+                                className={`px-6 py-3 mx-auto mb-1 mr-1 text-sm font-bold text-center ${buttonText} uppercase rounded shadow outline-none ${buttonBg} hover:shadow-lg focus:outline-none`}
                               >
                                 Submit
                               </button>
@@ -181,7 +218,7 @@ const profile = ({ weather }) => {
             </div>
           </div>
         </section>
-        <Footer />
+        <Footer buttonText={buttonText} fewBg={fewBg} />
       </section>
     </React.Fragment>
   );

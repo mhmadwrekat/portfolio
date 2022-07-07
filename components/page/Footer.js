@@ -5,10 +5,10 @@ import Image from "next/image";
 import Lottie from "lottie-react";
 import footer_json from "../../public/assest/emoji/footer.json";
 
-const Footer = () => {
+const Footer = ({ buttonText, fewBg }) => {
   return (
     <React.Fragment>
-      <section className="bg-gray-800 text-yellow-400" id="profilefoot">
+      <section className={`${fewBg} ${buttonText}`} id="profilefoot">
         <div>
           <div className="mx-auto container xl:px-20 lg:px-12 sm:px-6 px-4 pb-5 pt-3">
             <div className="flex flex-col items-center justify-center">

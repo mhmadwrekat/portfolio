@@ -3,7 +3,7 @@ import React, { useEffect } from "react";
 import Lottie from "lottie-react";
 import weather_json from "../../public/assest/emoji/weather.json";
 
-const Nav = ({ weather }) => {
+const Nav = ({ weather, buttonText, buttonBg, mostBg, fewText }) => {
   // useEffect(() => {
   //   try {
   //     const btn = document.querySelector("button.mobile-menu-button");
@@ -21,7 +21,9 @@ const Nav = ({ weather }) => {
 
   return (
     <React.Fragment>
-      <nav className="bg-gray-800 border-gray-200 px-2 sm:px-4 py-0 lg:fixed lg:w-full lg:z-50">
+      <nav
+        className={`${mostBg} border-gray-200 px-2 sm:px-4 py-0 lg:fixed lg:w-full lg:z-50`}
+      >
         <div className="container flex flex-wrap justify-between items-center mx-auto">
           <div className="flex md:order-0">
             {/* <button className="mobile-menu-button" type="button">
@@ -42,17 +44,19 @@ const Nav = ({ weather }) => {
             <a href="./assest/wrekatt.pdf" download="wrekatt.pdf">
               <button
                 type="button"
-                className="cursor-help animate-bounce flex text-white hover:bg-yellow-500 bg-yellow-400 focus:ring-4 focus:ring-blue-300 rounded-lg px-5 py-2.5 text-center ml-4 md:mr-0"
+                className={`${buttonText}cursor-help animate-bounce flex ${buttonBg} focus:ring-4 focus:ring-blue-300 rounded-lg px-5 py-2 text-center ml-4 md:mr-0`}
               >
                 <svg
                   className="h-3 w-3 lg:w-4 lg:h-4 mr-2 mt-1"
                   xmlns="http://www.w3.org/2000/svg"
                   viewBox="0 0 20 20"
-                  fill="#374151"
+                  fill="#F0FFF0"
                 >
                   <path d="M13 8V2H7v6H2l8 8 8-8h-5zM0 18h20v2H0v-2z" />
                 </svg>
-                <span className="text-gray-700 text-sm lg:text-base font-extrabold">
+                <span
+                  className={`${buttonText} text-sm lg:text-base font-extrabold`}
+                >
                   Resume
                 </span>
               </button>
@@ -62,7 +66,9 @@ const Nav = ({ weather }) => {
             className="hidden justify-between items-center w-full md:flex md:w-auto md:order-2"
             id="mobile-menu-4"
           >
-            <ul className="text-white flex flex-col mt-4 md:flex-row md:space-x-8 md:mt-0">
+            <ul
+              className={`${fewText} flex flex-col mt-4 md:flex-row md:space-x-8 md:mt-0`}
+            >
               <li>
                 <a
                   href="#Skills"
@@ -95,7 +101,9 @@ const Nav = ({ weather }) => {
                 <Lottie animationData={weather_json} loop={true} />
               </div>
 
-              <div className="pt-6 text-base lg:text-xl font-extrabold font-sans pr-2 text-yellow-400 hover:text-yellow-600 cursor-grab hover:scale-110">
+              <div
+                className={`pt-6 text-base lg:text-xl font-extrabold font-sans pr-2 ${fewText} hover:text-yellow-600 cursor-grab hover:scale-110`}
+              >
                 {/* ⛅ */}
                 {weather[0]?.max_temp} °C
               </div>
@@ -103,8 +111,12 @@ const Nav = ({ weather }) => {
           ) : null}
         </div>
       </nav>
-      <div className=" w-full bg-gray-800 md:hidden lg:hidden sticky top-0 left-0 z-50">
-        <ul className="flex justify-between mx-3 md:flex-row text-white md:space-x-0 md:mt-0 md:text-sm md:font-medium text-center">
+      <div
+        className={`w-full ${mostBg} md:hidden lg:hidden sticky top-0 left-0 z-50`}
+      >
+        <ul
+          className={`flex justify-between mx-3 md:flex-row ${fewText} md:space-x-0 md:mt-0 md:text-sm md:font-medium text-center`}
+        >
           <li>
             <a
               href="#Skills"

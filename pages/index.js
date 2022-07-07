@@ -1,9 +1,9 @@
 import dynamic from "next/dynamic";
-import React, { useState, useEffect, useRef, useCallback } from "react";
+import React from "react";
 const WEATHER = process.env.NEXT_PUBLIC_BACKEND_WEATHER_API;
 const Profile = dynamic(() => import("../components/profile"));
 const Head_comp = dynamic(() => import("../components/page/Head_comp"));
-const Track = dynamic(() => import("../components/Track"));
+const TrackEmail = dynamic(() => import("../components/TrackEmail"));
 export async function getServerSideProps({ req, res }) {
   // Cache the content of this page for 12 hrs
   res.setHeader(
@@ -12,7 +12,7 @@ export async function getServerSideProps({ req, res }) {
   );
   // Get Weather API
   const weather_res = await fetch(WEATHER);
-  const weather = await weather_res.json();
+  const weather = weather_res && (await weather_res.json());
   const final_weather = weather?.cache?.data;
   return {
     props: {
@@ -154,13 +154,29 @@ const index = (props) => {
   // };
 
   // sendNotification(message);
+  let screenBg = "bg-Snow1";
+  let mostBg = "bg-Snow2";
+  let fewBg = "bg-Green1";
+  let buttonBg = "bg-Orange";
+  let buttonText = "text-Snow2";
+  let mostText = "text-Green1";
+  let fewText = "text-Orange";
   return (
     <React.Fragment>
       {/* {console.log("SSR --> ", props.weather)} */}
-      <Track />
+      {/* <TrackEmail /> */}
       <section translate="no">
         <Head_comp />
-        <Profile weather={props.weather} />
+        <Profile
+          weather={props.weather}
+          buttonText={buttonText}
+          buttonBg={buttonBg}
+          screenBg={screenBg}
+          mostText={mostText}
+          fewBg={fewBg}
+          mostBg={mostBg}
+          fewText={fewText}
+        />
       </section>
     </React.Fragment>
   );
