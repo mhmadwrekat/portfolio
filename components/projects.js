@@ -108,9 +108,9 @@ const projects = ({
                       alt={item.name}
                     /> */}
                       <button
-                        className={`text-gray-700
+                        className={`
   absolute bottom-3 lg:bottom-4 right-16 lg:right-24 lg:px-8 lg:py-1.5
-${buttonText} font-medium py-0.5 px-5 rounded-full${buttonBg}`}
+${buttonText} font-medium py-0.5 px-5 rounded-full ${buttonBg}`}
                       >
                         <a href={item.link}>live url</a>
                       </button>
