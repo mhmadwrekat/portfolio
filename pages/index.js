@@ -154,8 +154,8 @@ const index = (props) => {
   // };
 
   // sendNotification(message);
-  let screenBg = "bg-White";
-  let mostBg = "bg-Snow1";
+  let screenBg = "bg-Snow1";
+  let mostBg = "bg-White";
   let fewBg = "bg-Green1";
   let buttonBg = "bg-Orange";
   let buttonText = "text-Snow2";
