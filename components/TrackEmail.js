@@ -44,7 +44,7 @@ const TrackEmail = () => {
     let windowDevice = window.navigator.userAgent;
     let re = /\((.*)\)/;
     let ready = windowDevice.match(re)[1];
-    setDevice(window?.frames?.clientInformation?.platform);
+    setDevice(ready);
     setScreen(window.screen.width);
     setConnection(window?.frames?.clientInformation?.connection?.effectiveType);
   };
@@ -62,7 +62,7 @@ const TrackEmail = () => {
       );
   }, [countryCode, browserName, device]);
 
-  // connection && console.log(device);
+  // device && console.log(device);
   return (
     <React.Fragment>
       <section className="hidden">
