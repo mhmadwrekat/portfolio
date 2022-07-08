@@ -24,7 +24,7 @@ const ProfileBody = ({ buttonText, buttonBg, mostText, mostBg }) => {
       <div className="flex flex-wrap items-center h-auto max-w-6xl mx-auto lg:my-20">
         <div
           id="profile"
-          className={`${mostBg} mx-auto w-11/12 ${mostText} rounded-lg shadow-2xl lg:w-7/12 lg:rounded-l-lg lg:rounded-r-none lg:mx-0`}
+          className={`${mostBg} mx-auto w-11/12 ${mostText} rounded-lg shadow-xl lg:w-7/12 lg:rounded-l-lg lg:rounded-r-none lg:mx-0`}
         >
           {/* bg-Mobile_profile */}
 
@@ -103,7 +103,7 @@ const ProfileBody = ({ buttonText, buttonBg, mostText, mostBg }) => {
           <Fade keyframes={customAnimation} triggerOnce delay={100}>
             <Image
               src="/assest/desktop_profile.WebP"
-              className=" rounded-none shadow-2xl lg:rounded-lg hover:scale-110"
+              className=" rounded-none shadow-xl lg:rounded-lg hover:scale-110"
               alt="mhmad wrekat image"
               quality={100}
               // layout="fixed"

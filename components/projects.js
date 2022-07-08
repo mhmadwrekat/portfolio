@@ -38,7 +38,7 @@ const projects = ({
             <div>
               <div className="mx-auto lg:w-3/6 sm:pt-10 text-base text-center font-bold self-center">
                 <div
-                  className={`p-5 mx-6 ${mostBg} rounded-xl shadow-2xl opacity-95 lg:mx-6`}
+                  className={`p-5 mx-6 ${mostBg} rounded-xl shadow-xl opacity-95 lg:mx-6`}
                 >
                   <p className="text-xl lg:text-4xl">My Latest Projects</p>
                   <br></br>
@@ -59,9 +59,9 @@ const projects = ({
             return (
               <section key={item.id} className="lg:pt-5">
                 <div
-                  className={`w-56 lg:w-80 ${mostBg} opacity-95 rounded-xl shadow-2xl`}
+                  className={`w-56 lg:w-80 ${mostBg} opacity-95 rounded-xl shadow-xl`}
                 >
-                  <div className="text-center overflow-hidden rounded-xl shadow-2xl">
+                  <div className="text-center overflow-hidden rounded-xl shadow-xl">
                     <div
                       className={`block ${fewBg} py-1 text-sm sm:text-xl uppercase leading-tight font-bold ${buttonText}`}
                     >

@@ -137,7 +137,7 @@ const profile = ({
                   <div className="">
                     <div className="w-full px-4 mx-auto lg:w-8/12">
                       <div
-                        className={`relative flex flex-col w-full min-w-0 mb-6 break-words ${mostBg} rounded-lg shadow-2xl`}
+                        className={`relative flex flex-col w-full min-w-0 mb-6 break-words ${mostBg} rounded-lg shadow-xl`}
                       >
                         <div className="flex-auto p-5 lg:p-10">
                           <p className="mb-4 text-2xl font-semibold">
@@ -160,7 +160,7 @@ const profile = ({
                                 type="text"
                                 name="name"
                                 id="name"
-                                className="border-0 px-3 py-3 rounded text-sm shadow w-full placeholder-black outline-none"
+                                className={`${screenBg} border-1 border-Green1 px-3 py-3 rounded text-sm shadow-lg w-full placeholder-black outline-none`}
                                 placeholder=" "
                                 required
                               />
@@ -176,7 +176,7 @@ const profile = ({
                                 type="email"
                                 name="email"
                                 id="email"
-                                className="border-0 px-3 py-3 rounded text-sm shadow w-full placeholder-black outline-none"
+                                className={`${screenBg} border-1 border-Green1 px-3 py-3 rounded text-sm  shadow-lg w-full placeholder-black outline-none`}
                                 placeholder=" "
                                 required
                               />
@@ -194,7 +194,7 @@ const profile = ({
                                 id="feedback"
                                 rows="4"
                                 cols="80"
-                                className="w-full px-3 py-3 text-sm placeholder-black border-0 rounded shadow focus:outline-none"
+                                className={`${screenBg} w-full px-3 py-3 text-sm placeholder-black border-1 border-Green1 rounded  shadow-lg focus:outline-none`}
                                 placeholder=""
                                 required
                               ></textarea>
@@ -203,7 +203,7 @@ const profile = ({
                               <button
                                 id="feedbackBtn"
                                 type="submit"
-                                className={`px-6 py-3 mx-auto mb-1 mr-1 text-sm font-bold text-center ${buttonText} uppercase rounded shadow outline-none ${buttonBg} hover:shadow-lg focus:outline-none`}
+                                className={`px-6 py-3 mx-auto mb-1 mr-1 text-sm font-bold text-center ${buttonText} uppercase rounded shadow-lg outline-none ${buttonBg} focus:outline-none`}
                               >
                                 Submit
                               </button>

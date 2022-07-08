@@ -12,7 +12,7 @@ export async function getServerSideProps({ req, res }) {
   );
   // Get Weather API
   const weather_res = await fetch(WEATHER);
-  const weather = weather_res && (await weather_res.json());
+  const weather = weather_res ? await weather_res.json() : null;
   const final_weather = weather?.cache?.data;
   return {
     props: {
@@ -164,7 +164,7 @@ const index = (props) => {
   return (
     <React.Fragment>
       {/* {console.log("SSR --> ", props.weather)} */}
-      {/* <TrackEmail /> */}
+      <TrackEmail />
       <section translate="no">
         <Head_comp />
         <Profile

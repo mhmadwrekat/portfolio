@@ -9,7 +9,7 @@ const ProgLang = ({ buttonText, buttonBg, fewBg, mostBg }) => {
         className="font-serif pt-6 text-xs lg:text-lg sm:pt-0 sm:text-base md:pt-7 lg:pt-0 w-11/12 lg:w-9/12 mx-auto"
       >
         <section
-          className={`${fewBg} grid grid-cols-2 gap-6 lg:gap-10 px-3 py-5 ${buttonText} shadow-2xl opacity-95 rounded-lg sm:py-10 sm:px-12`}
+          className={`${fewBg} grid grid-cols-2 gap-6 lg:gap-10 px-3 py-5 ${buttonText} shadow-xl opacity-95 rounded-lg sm:py-10 sm:px-12`}
         >
           <Slide triggerOnce delay={1000}>
             <div>
