@@ -130,8 +130,9 @@ const Head_comp = () => {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta
           name="google-site-verification"
-          content="HDEEQ5-e6iIohsSP76gB4dymhNOG6VmNHESihFQL4Dc"
+          content="p3Szff4yqlrIqWbfjtd9IKTQ1z1rqMK1MjaGLfOi4L0"
         />
+       
         <script
           async
           src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS}`}
