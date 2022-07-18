@@ -23,6 +23,7 @@ module.exports = {
       Orange1: "#FDA136",
       Green1: "#397754",
       Green2: "#36AE7C",
+      FatherWhite: "#ebf5f0",
       White: "#FFFFFF",
       Snow1: "#FFFAFA",
       Snow2: "#F0FFF0",

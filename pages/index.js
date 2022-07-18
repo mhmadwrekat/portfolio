@@ -12,7 +12,7 @@ export async function getServerSideProps({ req, res }) {
   );
   // Get Weather API
   const weather_res = await fetch(WEATHER);
-  const weather = weather_res ? await weather_res.json() : null;
+  const weather = weather_res ? await weather_res?.json() : null;
   const final_weather = weather?.cache?.data;
   return {
     props: {
@@ -155,20 +155,20 @@ const index = (props) => {
 
   // sendNotification(message);
   let screenBg = "bg-Snow1";
-  let mostBg = "bg-White";
-  let fewBg = "bg-Green1";
+  let mostBg = "bg-FatherWhite";
+  let fewBg = "bg-BLUE";
   let buttonBg = "bg-Orange";
   let buttonText = "text-Snow2";
-  let mostText = "text-Green1";
+  let mostText = "text-BLUE";
   let fewText = "text-Orange";
   return (
     <React.Fragment>
       {/* {console.log("SSR --> ", props.weather)} */}
-      <TrackEmail />
+      {/* <TrackEmail /> */}
       <section translate="no">
         <Head_comp />
         <Profile
-          weather={props.weather}
+          weather={props?.weather}
           buttonText={buttonText}
           buttonBg={buttonBg}
           screenBg={screenBg}
