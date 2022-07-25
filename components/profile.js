@@ -46,18 +46,18 @@ const profile = ({
   const form = useRef();
   const [feedback, setFeedback] = useState([]);
 
-  // GET FEEDBACK
-  const token = Buffer.from(`${USERNAME}:${PASS}`, "utf8").toString("base64");
-  const url = `${FEEDBACK}`;
-  useEffect(() => {
-    Axios.get(url, {
-      headers: {
-        Authorization: `Basic ${token}`,
-      },
-    }).then((res) => {
-      setFeedback(res.data);
-    });
-  }, []);
+  // // GET FEEDBACK
+  // const token = Buffer.from(`${USERNAME}:${PASS}`, "utf8").toString("base64");
+  // const url = `${FEEDBACK}`;
+  // useEffect(() => {
+  //   Axios.get(url, {
+  //     headers: {
+  //       Authorization: `Basic ${token}`,
+  //     },
+  //   }).then((res) => {
+  //     setFeedback(res.data);
+  //   });
+  // }, []);
 
   // POST FEEDBACK
   const handelFeedback = (event) => {
