@@ -18,7 +18,7 @@ export async function getServerSideProps({ req, res }) {
 
   return {
     props: {
-      weather: null,
+      weather: "  ",
     },
   };
 }

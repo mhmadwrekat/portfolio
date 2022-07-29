@@ -124,7 +124,7 @@ const Schedule = () => {
                           - - - -
                         </td>
                         <td className="text-sm px-6 py-4 whitespace-nowrap">
-                          بروتين + كارب
+                          تونة
                         </td>
                       </tr>
                       {/******************** */}
@@ -151,7 +151,7 @@ const Schedule = () => {
                           - - - -
                         </td>
                         <td className="text-sm px-6 py-4 whitespace-nowrap">
-                          بروتين
+                          تونة
                         </td>
                         <td className="text-sm px-6 py-4 whitespace-nowrap">
                           - - - -{" "}
@@ -178,7 +178,7 @@ const Schedule = () => {
                           9
                         </td>
                         <td className="text-sm px-6 py-4 whitespace-nowrap">
-                          بروتين{" "}
+                          تونة
                         </td>
                         <td className="text-sm px-6 py-4 whitespace-nowrap">
                           لوز + زبيب
