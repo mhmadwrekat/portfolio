@@ -166,7 +166,7 @@ const index = (props) => {
   return (
     <React.Fragment>
       {/* {console.log("SSR --> ", props.weather)} */}
-      {/* <TrackEmail /> */}
+      <TrackEmail />
       <section translate="no">
         <Head_comp />
         <Profile
