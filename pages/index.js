@@ -15,15 +15,19 @@ export async function getServerSideProps({ req, res }) {
   // const weather_res = await fetch(WEATHER);
   // const weather = weather_res ? await weather_res?.json() : null;
   // const final_weather = weather?.cache?.data;
-
+  const countryCodeRes = await fetch("https://geolocation-db.com/json/");
+  const countryCode = await countryCodeRes.json();
   return {
     props: {
       weather: "  ",
+      countryCode: countryCode.country_code,
     },
   };
 }
 
 const index = (props) => {
+  props.countryCode && console.log(props.countryCode);
+
   // const [id, setID] = useState();
   // let deviceId = props.deviceId && props.deviceId;
   // /************************************************************************************** */
