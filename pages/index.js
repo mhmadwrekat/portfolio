@@ -15,7 +15,7 @@ export async function getServerSideProps({ req, res }) {
   // const weather_res = await fetch(WEATHER);
   // const weather = weather_res ? await weather_res?.json() : null;
   // const final_weather = weather?.cache?.data;
-  const countryCodeRes = axios({
+  const countryCodeRes = await axios({
     method: "GET",
     url: `https://geolocation-db.com/json/`,
   });
