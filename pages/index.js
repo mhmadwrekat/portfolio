@@ -15,16 +15,12 @@ export async function getServerSideProps({ req, res }) {
   // const weather_res = await fetch(WEATHER);
   // const weather = weather_res ? await weather_res?.json() : null;
   // const final_weather = weather?.cache?.data;
-  const countryCodeRes = await axios({
-    method: "GET",
-    url: `https://geolocation-db.com/json/`,
-  });
-  const countryCode = await countryCodeRes;
-  console.log(countryCode.data.country_code);
+  const countryRes = await fetch(`https://geolocation-db.com/json/`);
+  const countryCode = await countryRes.json();
   return {
     props: {
       weather: "  ",
-      countryCode: countryCode.data.country_code,
+      countryCode,
     },
   };
 }
