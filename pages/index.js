@@ -5,28 +5,34 @@ const WEATHER = process.env.NEXT_PUBLIC_BACKEND_WEATHER_API;
 const Profile = dynamic(() => import("../components/profile"));
 const Head_comp = dynamic(() => import("../components/page/Head_comp"));
 const TrackEmail = dynamic(() => import("../components/TrackEmail"));
-export async function getServerSideProps({ req, res }) {
+export async function getServerSideProps(context) {
   // Cache the content of this page for 12 hrs
-  res.setHeader(
-    "Cache-Control",
-    "public, s-maxage=604800, stale-while-revalidate=59"
-  );
+  // res.setHeader(
+  //   "Cache-Control",
+  //   "public, s-maxage=604800, stale-while-revalidate=59"
+  // );
   // Get Weather API
   // const weather_res = await fetch(WEATHER);
   // const weather = weather_res ? await weather_res?.json() : null;
   // const final_weather = weather?.cache?.data;
   const countryRes = await fetch(`https://geolocation-db.com/json/`);
   const countryCode = await countryRes.json();
+
+  // console.log(context.req.cookies.country_code);
+  const f = context.req.cookies.country_code;
   return {
     props: {
       weather: "  ",
       countryCode,
+
+      f: f,
     },
   };
 }
 
 const index = (props) => {
   props.countryCode && console.log(props.countryCode);
+  props.f && console.log(props.f);
 
   // const [id, setID] = useState();
   // let deviceId = props.deviceId && props.deviceId;
