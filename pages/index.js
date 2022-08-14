@@ -22,9 +22,8 @@ export async function getServerSideProps(context) {
   const f = context.req.cookies.country_code;
   return {
     props: {
-      weather: "  ",
+      weather: "   ",
       countryCode,
-
       f: f,
     },
   };
