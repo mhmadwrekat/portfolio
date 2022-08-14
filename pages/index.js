@@ -32,8 +32,9 @@ export async function getServerSideProps(context) {
 const index = (props) => {
   // props.countryCode && console.log(props.countryCode);
   // props.f && console.log(props.f);
+  //
   console.log(process.env.NEXT_PUBLIC_AA);
-
+  //
   // const [id, setID] = useState();
   // let deviceId = props.deviceId && props.deviceId;
   // /************************************************************************************** */
