@@ -191,23 +191,6 @@ const index = (props) => {
           fewText={fewText}
         />
       </section>
-      <div dir="rtl" className="my-40">
-        <form className="mx-auto mt-3 flex w-10/12 md:w-6/12 lg:w-5/12 2xl:w-4/12">
-          <input
-            type="text"
-            id="search"
-            placeholder="بحث"
-            className="w-full rounded-r-lg bg-GRAY50 py-2.5 pr-5 font-TSbold text-base lg:text-lg"
-            required
-          />
-          <button
-            type="submit"
-            className="flex rounded-l-lg bg-Orange py-2 px-4 pt-3 font-TSbold text-base text-white lg:px-7"
-          >
-            بحث
-          </button>
-        </form>
-      </div>
     </React.Fragment>
   );
 };
