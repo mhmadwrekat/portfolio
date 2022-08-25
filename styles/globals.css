@@ -48,3 +48,6 @@ img {
     font-display: swap;
   }
 }
+input {
+  border-radius: 0;
+}
