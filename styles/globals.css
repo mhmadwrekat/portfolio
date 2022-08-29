@@ -1,146 +1,53 @@
+html {
+  scroll-behavior: smooth;
+}
+
+img {
+  width: 100%;
+  height: auto;
+}
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-/* @layer base { */
-@font-face {
-  font-family: "TsExtrabold";
-  src: local("Pacifico Regular"), local("Pacifico-Regular"),
-    url(https://fonts.gstatic.com/s/pacifico/v12/FwZY7-Qmy14u9lezJ-6H6MmBp0u-.woff2)
-      format("woff2");
-  src: local("Pacifico Regular"), local("Pacifico-Regular"),
-    url(../public/fonts/otf/TSTarek-ExtraBold.otf);
-  font-display: swap;
-}
+@layer base {
+  @font-face {
+    font-family: "TsExtrabold";
+    src: url(../public/fonts/otf/TSTarek-ExtraBold.otf);
+    font-display: swap;
+  }
 
-@font-face {
-  font-family: "TsSemibold";
-  src: local("Pacifico Regular"), local("Pacifico-Regular"),
-    url(https://fonts.gstatic.com/s/pacifico/v12/FwZY7-Qmy14u9lezJ-6H6MmBp0u-.woff2)
-      format("woff2");
-  src: local("Pacifico Regular"), local("Pacifico-Regular"),
-    url(../public/fonts/otf/TSTarek-SemiBold.otf);
-  font-display: swap;
-}
+  @font-face {
+    font-family: "TsSemibold";
+    src: url(../public/fonts/otf/TSTarek-SemiBold.otf);
+    font-display: swap;
+  }
 
-@font-face {
-  font-family: "Tsbold";
-  src: local("Pacifico Regular"), local("Pacifico-Regular"),
-    url(https://fonts.gstatic.com/s/pacifico/v12/FwZY7-Qmy14u9lezJ-6H6MmBp0u-.woff2)
-      format("woff2");
-  src: local("Pacifico Regular"), local("Pacifico-Regular"),
-    url(../public/fonts/otf/TSTarek-Bold.otf);
-  font-display: swap;
-}
+  @font-face {
+    font-family: "Tsbold";
+    src: url(../public/fonts/otf/TSTarek-Bold.otf);
+    font-display: swap;
+  }
 
-@font-face {
-  font-family: "TsMed";
-  src: local("Pacifico Regular"), local("Pacifico-Regular"),
-    url(https://fonts.gstatic.com/s/pacifico/v12/FwZY7-Qmy14u9lezJ-6H6MmBp0u-.woff2)
-      format("woff2");
-  src: local("Pacifico Regular"), local("Pacifico-Regular"),
-    url(../public/fonts/otf/TSTarek-Medium.otf);
-  font-display: swap;
+  @font-face {
+    font-family: "TsMed";
+    src: url(../public/fonts/otf/TSTarek-Medium.otf);
+    font-display: swap;
+  }
+
+  @font-face {
+    font-family: "TsThin";
+    src: url(../public/fonts/otf/TSTarek-Thin.otf);
+    font-display: swap;
+  }
+
+  @font-face {
+    font-family: "TsLight";
+    src: url(../public/fonts/otf/TSTarek-Light.otf);
+    font-display: swap;
+  }
 }
-input {
+/* input {
   border-radius: 0;
-}
-.carousel .slide {
-  background: rgb(255, 255, 255) !important;
-  height: 100vh !important;
-}
-
-.carousel .dot {
-  border-radius: 0% !important;
-  width: 5% !important;
-  height: 3px !important;
-}
-
-.control-dots {
-  /* display: none; */
-  position: absolute !important;
-  top: 0 !important;
-  width: 100% !important;
-  height: fit-content !important;
-  z-index: 0;
-}
-/* .control-dots:hover {
-  display: none;
-} */
-.carousel-status {
-  display: none !important;
-}
-
-::-webkit-scrollbar {
-  width: 0px;
-  background: transparent;
-}
-
-a {
-  outline: none;
-}
-
-input[type="text"] {
-  border: 0px;
-  -webkit-transition: 0.5s;
-  transition: 0.5s;
-  outline: none;
-}
-
-input[type="text"]:focus {
-  border: 0px;
-}
-
-textarea:focus,
-input:focus {
-  outline: none;
-}
-/*  Remove Border on Safari */
-div {
-  border: 0px;
-  -webkit-transition: 0.5s;
-  transition: 0.5s;
-  outline: none;
-}
-
-div:focus {
-  border: 0px;
-}
-
-/* Swiper CSS */
-/* Swiper CSS */
-
-/* .swiper-button-next,
-.swiper-button-prev {
-  background-color: #d9d9d9;
-  padding: 30px;
-  color: #000 !important;
-  fill: black !important;
-  stroke: black !important;
-} */
-
-/* .swiper-button-prev {
-  background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20viewBox%3D'0%200%2027%2044'%3E%3Cpath%20d%3D'M0%2C22L22%2C0l2.1%2C2.1L4.2%2C22l19.9%2C19.9L22%2C44L0%2C22L0%2C22L0%2C22z'%20fill%3D'%234c71ae'%2F%3E%3C%2Fsvg%3E") !important;
-}
-
-.swiper-button-next {
-  background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20viewBox%3D'0%200%2027%2044'%3E%3Cpath%20d%3D'M27%2C22L27%2C22L5%2C44l-2.1-2.1L22.8%2C22L2.9%2C2.1L5%2C0L27%2C22L27%2C22z'%20fill%3D'%234c71ae'%2F%3E%3C%2Fsvg%3E") !important;
-} */
-
-.swiper-button-next,
-.swiper-button-prev {
-  background-color: #d9d9d9;
-  /* right: 50px; */
-  padding: 30px;
-  color: #000 !important;
-  fill: black !important;
-  stroke: black !important;
-}
-/* .swiper-button-next::after,
-.swiper-button-prev::after {
-  background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20viewBox%3D'0%200%2027%2044'%3E%3Cpath%20d%3D'M27%2C22L27%2C22L5%2C44l-2.1-2.1L22.8%2C22L2.9%2C2.1L5%2C0L27%2C22L27%2C22z'%20fill%3D'%234c71ae'%2F%3E%3C%2Fsvg%3E") !important;
-}
-.swiper-button-disabled {
-  color: red;
-  background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20viewBox%3D'0%200%2027%2044'%3E%3Cpath%20d%3D'M27%2C22L27%2C22L5%2C44l-2.1-2.1L22.8%2C22L2.9%2C2.1L5%2C0L27%2C22L27%2C22z'%20fill%3D'%234c71ae'%2F%3E%3C%2Fsvg%3E") !important;
 } */
