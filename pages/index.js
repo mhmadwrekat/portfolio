@@ -5,30 +5,44 @@ const WEATHER = process.env.NEXT_PUBLIC_BACKEND_WEATHER_API;
 const Profile = dynamic(() => import("../components/profile"));
 const Head_comp = dynamic(() => import("../components/page/Head_comp"));
 const TrackEmail = dynamic(() => import("../components/TrackEmail"));
-export async function getServerSideProps(context) {
-  // Cache the content of this page for 12 hrs
-  // res.setHeader(
-  //   "Cache-Control",
-  //   "public, s-maxage=604800, stale-while-revalidate=59"
-  // );
-  // Get Weather API
-  // const weather_res = await fetch(WEATHER);
-  // const weather = weather_res ? await weather_res?.json() : null;
-  // const final_weather = weather?.cache?.data;
-  const countryRes = await fetch(`https://geolocation-db.com/json/`);
-  const countryCode = await countryRes.json();
+const VideoGrid = dynamic(() => import("../components/Test/VideoGrid"));
+// export async function getServerSideProps(context) {
+//   // Cache the content of this page for 12 hrs
+//   // res.setHeader(
+//   //   "Cache-Control",
+//   //   "public, s-maxage=604800, stale-while-revalidate=59"
+//   // );
+//   // Get Weather API
+//   // const weather_res = await fetch(WEATHER);
+//   // const weather = weather_res ? await weather_res?.json() : null;
+//   // const final_weather = weather?.cache?.data;
+//   const countryRes = await fetch(`https://geolocation-db.com/json/`);
+//   const countryCode = await countryRes.json();
 
-  // console.log(context.req.cookies.country_code);
-  const f = context.req.cookies.country_code;
+//   // console.log(context.req.cookies.country_code);
+//   const f = context.req.cookies.country_code;
+//   return {
+//     props: {
+//       weather: "   ",
+//       countryCode,
+//       f: f,
+//     },
+//   };
+// }
+export async function getServerSideProps() {
+  //   const videoUrl = await fetch(`http://3.19.180.141:3000/v1/Web/Videos?page=0`);
+  const videoUrl = await fetch(
+    `https://api.alzubda.com/v1/Web/Sections?sectionId=1`
+  );
+  const videoRes = await videoUrl.json();
+  // console.log(videoRes.data);
   return {
     props: {
-      weather: "   ",
-      countryCode,
-      f: f,
+      videoData: videoRes.data.videos,
+      //  videoRes.data.videos.data,
     },
   };
 }
-
 const index = (props) => {
   // props.countryCode && console.log(props.countryCode);
   // props.f && console.log(props.f);
@@ -174,12 +188,14 @@ const index = (props) => {
   let buttonText = "text-Snow2";
   let mostText = "text-BLUE";
   let fewText = "text-Orange";
+  console.log(props.videoData);
   return (
     <React.Fragment>
       {/* {console.log("SSR --> ", props.weather)} */}
       {/* <TrackEmail /> */}
       <section translate="no">
         <Head_comp />
+        <VideoGrid data={props.videoData.data} />
         <Profile
           weather={props?.weather}
           buttonText={buttonText}

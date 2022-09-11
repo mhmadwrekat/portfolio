@@ -49,6 +49,7 @@ module.exports = {
 
   images: {
     // minimumCacheTTL: 9999999999,
+    domains: ["img.youtube.com"],
     formats: ["image/avif", "image/webp"],
   },
 };
