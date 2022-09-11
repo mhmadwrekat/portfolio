@@ -11,6 +11,8 @@ import { useInView } from "react-cool-inview";
 
 //component imports
 // import Navigation from "../../../components/Templates/Navigation";
+import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
+import { Carousel } from "react-responsive-carousel";
 import VideoFeed from "../../components/Test/VideoFeed";
 
 function index() {
@@ -69,11 +71,33 @@ function index() {
     if (videoId !== undefined && videoId !== "undefined") get_video_by_id();
   }, [videoId]);
 
+  let a = [1, 2, 3, 4, 5, 6];
   return (
     <div dir="rtl">
-      {/* <div className="fixed top-0 z-50 w-full bg-white  ">
-        <Navigation />
-      </div> */}
+      <div className="flex h-screen">
+        <div className="grow">
+          <Carousel axis="vertical" useKeyboardArrows={true}>
+            {videoData.map((item, idx) => {
+              return (
+                // <div className="w-40 h-60 bg-Orange mx-auto">{item}</div>
+                <div
+                  key={idx}
+                  ref={idx === videoData.length - 1 ? observe : null}
+                >
+                  <VideoFeed item={item} idx={idx} />
+                </div>
+              );
+            })}
+          </Carousel>
+        </div>
+        <div className="static relative hidden w-14 flex-none md:block lg:block"></div>
+      </div>
+    </div>
+  );
+}
+export default index;
+/*
+ <div dir="rtl">
       <div className="flex h-screen">
         <div className="grow">
           {videoData.map((item, idx) => {
@@ -87,120 +111,7 @@ function index() {
             );
           })}
         </div>
-        <div className="static relative hidden w-14 flex-none md:block lg:block">
-          {/* <TopIcon onClick={() => scrollToSection(-950)} />
-
-          <DownIcon
-            className="absolute bottom-0"
-            onClick={() => scrollToSection(950)}
-          /> */}
-        </div>
+        <div className="static relative hidden w-14 flex-none md:block lg:block"></div>
       </div>
     </div>
-  );
-}
-export default index;
-
-// import React, { useState, useEffect, useRef } from "react";
-// import axios from "axios";
-// import { BASE_URL } from "../../../config/config";
-// import { useRouter } from "next/router";
-// import { TopIcon, DownIcon } from "../../../config/icon";
-// import { animateScroll as scroll } from "react-scroll";
-
-// // import Component
-// import Navigation from "../../../components/Templates/Navigation";
-// import VideoFeed from "../../../components/Common/VideoFeed";
-
-// const index = (props) => {
-// const router = useRouter();
-// const videoId = router.query.id;
-//   const [showTopButton, setShowTopButton] = useState(false);
-// const [data, setData] = useState();
-//   const [mostData] = useState(props?.videoData);
-
-//   // Function to Handle Scrolling Top and Button
-// const scrollToSection = (scrollSpace) => {
-//   scroll.scrollMore(scrollSpace);
-// };
-
-//   return (
-//     <div dir="rtl">
-// <section className="fixed top-0 z-30 w-full bg-white">
-//   <Navigation />
-// </section>
-//       <div className="mt-16 lg:mt-24" />
-//       {/******** TOP & DOWN BUTTON ********/}
-//       {/******** TOP & DOWN BUTTON ********/}
-//       <section className="hidden lg:grid">
-//         {showTopButton ? (
-//           <div className="fixed top-24 left-3">
-//             <TopIcon
-//               className="cursor-pointer opacity-50 hover:opacity-75 lg:h-12 lg:w-12 2xl:h-16 2xl:w-16"
-//               onClick={() => scrollToSection(-950)}
-//             />
-//           </div>
-//         ) : null}
-
-//         <div className="fixed bottom-5 left-3">
-// <DownIcon
-//   className="cursor-pointer opacity-50 hover:opacity-75 lg:h-12 lg:w-12 2xl:h-16 2xl:w-16"
-//   onClick={() => scrollToSection(950)}
-// />
-//         </div>
-//       </section>
-//       {/* OPENING VIDEO */}
-//       {/* OPENING VIDEO */}
-//       {data ? (
-//         <div>
-//           <VideoFeed
-//             data={data}
-//             setShowTopButton={setShowTopButton}
-//             playVideo={"1"}
-//           />
-//           {/** OTHER VIDEOES **/}
-//           {/** OTHER VIDEOES **/}
-//           {mostData.map((item, idx) => {
-//             return (
-//               <>
-//                 {/* {console.log(item)} */}
-//                 <VideoFeed
-//                   key={idx}
-//                   setShowTopButton={setShowTopButton}
-//                   data={item}
-//                 />
-//               </>
-//             );
-//           })}
-//         </div>
-//       ) : //  (
-//       //   mostData.map((item, idx) => {
-//       //     return (
-//       //       <VideoFeed
-//       //         key={idx}
-//       //         playVideo={"0"}
-//       //         setShowTopButton={setShowTopButton}
-//       //         data={item}
-//       //       />
-//       //     );
-//       //   })
-//       // )
-//       null}
-//     </div>
-//   );
-// };
-
-// export default index;
-
-// // // Get Server Side Function
-// // export async function getServerSideProps() {
-// //   const videoUrl = await fetch(`http://3.19.180.141:3000/v1/Web/Videos?page=0`);
-// //   const videoRes = await videoUrl.json();
-// //   // console.log(videoRes.data);
-// //   return {
-// //     props: {
-// //       videoData: videoRes.data.videos,
-// //       //  videoRes.data.videos.data,
-// //     },
-// //   };
-// // }
+*/
