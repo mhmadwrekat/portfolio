@@ -76,7 +76,13 @@ function index() {
     <div dir="rtl">
       <div className="flex h-screen">
         <div className="grow">
-          <Carousel axis="vertical" useKeyboardArrows={true}>
+          <Carousel
+            axis="vertical"
+            infiniteLoop={true}
+            useKeyboardArrows={true}
+            showThumbs={false}
+            swipeable={false}
+          >
             {videoData.map((item, idx) => {
               return (
                 // <div className="w-40 h-60 bg-Orange mx-auto">{item}</div>

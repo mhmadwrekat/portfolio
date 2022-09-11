@@ -23,7 +23,6 @@ const VideoGrid = dynamic(() => import("../components/Test/VideoGrid"));
 //   const f = context.req.cookies.country_code;
 //   return {
 //     props: {
-//       weather: "   ",
 //       countryCode,
 //       f: f,
 //     },
@@ -39,6 +38,7 @@ export async function getServerSideProps() {
   return {
     props: {
       videoData: videoRes.data.videos,
+      weather: "   ",
       //  videoRes.data.videos.data,
     },
   };
@@ -188,14 +188,14 @@ const index = (props) => {
   let buttonText = "text-Snow2";
   let mostText = "text-BLUE";
   let fewText = "text-Orange";
-  console.log(props.videoData);
+  // console.log(props.videoData);
   return (
     <React.Fragment>
       {/* {console.log("SSR --> ", props.weather)} */}
       {/* <TrackEmail /> */}
       <section translate="no">
         <Head_comp />
-        <VideoGrid data={props.videoData.data} />
+        {/* <VideoGrid data={props.videoData.data} /> */}
         <Profile
           weather={props?.weather}
           buttonText={buttonText}
