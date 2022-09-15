@@ -5,7 +5,6 @@ const WEATHER = process.env.NEXT_PUBLIC_BACKEND_WEATHER_API;
 const Profile = dynamic(() => import("../components/profile"));
 const Head_comp = dynamic(() => import("../components/page/Head_comp"));
 const TrackEmail = dynamic(() => import("../components/TrackEmail"));
-const VideoGrid = dynamic(() => import("../components/Test/VideoGrid"));
 // export async function getServerSideProps(context) {
 //   // Cache the content of this page for 12 hrs
 //   // res.setHeader(
@@ -192,7 +191,7 @@ const index = (props) => {
   return (
     <React.Fragment>
       {/* {console.log("SSR --> ", props.weather)} */}
-      {/* <TrackEmail /> */}
+      <TrackEmail />
       <section translate="no">
         <Head_comp />
         {/* <VideoGrid data={props.videoData.data} /> */}

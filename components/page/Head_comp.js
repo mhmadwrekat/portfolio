@@ -128,11 +128,11 @@ const Head_comp = () => {
         <link rel="canonical" href="https://www.wrekat.com" />
         <meta name="keywords" content={head_keywords} />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <meta
+        {/* <meta
           name="google-site-verification"
           content="p3Szff4yqlrIqWbfjtd9IKTQ1z1rqMK1MjaGLfOi4L0"
-        />
-       
+        /> */}
+
         <script
           async
           src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS}`}
@@ -149,10 +149,6 @@ const Head_comp = () => {
           `,
           }}
         />
-        <script
-          src="https://cdn.onesignal.com/sdks/OneSignalSDK.js"
-          async=""
-        ></script>
         {/* <script>
           {`window.OneSignal = window.OneSignal || [];
   OneSignal.push(function() {
