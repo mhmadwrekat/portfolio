@@ -39,7 +39,7 @@ const Footer = ({ buttonText, fewBg }) => {
                   target="_blank"
                 >
                   <Image
-                    src="/assest/github.webp"
+                    src="/assest/github.svg"
                     className="fill-current hover:scale-125 cursor-alias"
                     alt="github"
                     width="30"
