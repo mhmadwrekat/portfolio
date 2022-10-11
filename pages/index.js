@@ -5,48 +5,42 @@ const WEATHER = process.env.NEXT_PUBLIC_BACKEND_WEATHER_API;
 const Profile = dynamic(() => import("../components/profile"));
 const Head_comp = dynamic(() => import("../components/page/Head_comp"));
 const TrackEmail = dynamic(() => import("../components/TrackEmail"));
-// export async function getServerSideProps(context) {
-//   // Cache the content of this page for 12 hrs
-//   // res.setHeader(
-//   //   "Cache-Control",
-//   //   "public, s-maxage=604800, stale-while-revalidate=59"
-//   // );
-//   // Get Weather API
-//   // const weather_res = await fetch(WEATHER);
-//   // const weather = weather_res ? await weather_res?.json() : null;
-//   // const final_weather = weather?.cache?.data;
-//   const countryRes = await fetch(`https://geolocation-db.com/json/`);
-//   const countryCode = await countryRes.json();
+export async function getServerSideProps(context) {
+  // Cache the content of this page for 12 hrs
+  // res.setHeader(
+  //   "Cache-Control",
+  //   "public, s-maxage=604800, stale-while-revalidate=59"
+  // );
+  // const countryRes = await fetch(`https://geolocation-db.com/json/`);
+  // const countryCode = await countryRes.json();
+  // console.log(context.req.cookies.country_code);
+  // const f = context.req.cookies.country_code;
 
-//   // console.log(context.req.cookies.country_code);
-//   const f = context.req.cookies.country_code;
-//   return {
-//     props: {
-//       countryCode,
-//       f: f,
-//     },
-//   };
-// }
-export async function getServerSideProps() {
-  //   const videoUrl = await fetch(`http://3.19.180.141:3000/v1/Web/Videos?page=0`);
-  const videoUrl = await fetch(
-    `https://api.alzubda.com/v1/Web/Sections?sectionId=1`
-  );
-  const videoRes = await videoUrl.json();
-  // console.log(videoRes.data);
+  // Get Weather API
+  const weather_res = await fetch(WEATHER);
+  const weather = weather_res ? await weather_res?.json() : null;
+  const final_weather = weather?.cache?.data;
   return {
     props: {
-      videoData: videoRes.data.videos,
-      weather: "   ",
-      //  videoRes.data.videos.data,
+      weather: final_weather,
+
+      // countryCode,
+      // f: f,
     },
   };
 }
+// export async function getServerSideProps() {
+
+//   return {
+//     props: {
+//     },
+//   };
+// }
 const index = (props) => {
   // props.countryCode && console.log(props.countryCode);
   // props.f && console.log(props.f);
   //
-  console.log(process.env.NEXT_PUBLIC_TEST_ENV);
+  // console.log(process.env.NEXT_PUBLIC_TEST_ENV);
   //
   // const [id, setID] = useState();
   // let deviceId = props.deviceId && props.deviceId;
@@ -203,7 +197,17 @@ const index = (props) => {
       <TrackEmail />
       <section translate="no">
         <Head_comp />
-        {/* <VideoGrid data={props.videoData.data} /> */}
+        {/* Message on console For Developer */}
+        {/* Message on console For Developer */}
+        {console.log(
+          "\n ____________________________ \n|                            |\n|                            |\n|        !! HIRE ME !!       |\n|  mhmmadwreekkat@gmail.com  |\n|        !! HIRE ME !!       |\n|                            |\n|____________________________|"
+        )}
+
+        {/* ------------------------------
+--       !! HIRE ME !!      --
+-- mhmmadwreekkat@gmail.com --
+--       !! HIRE ME !!      --
+------------------------------ */}
         <Profile
           weather={props?.weather}
           buttonText={buttonText}
