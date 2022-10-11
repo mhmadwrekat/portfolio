@@ -22,28 +22,31 @@ const Footer = ({ buttonText, fewBg }) => {
                 <a
                   href="https://linkedin.com/in/mohammad-alwrekat"
                   data-tippy-content="linkedin"
+                  target="_blank"
                 >
                   <Image
                     src="/assest/linkedin.WebP"
                     className="fill-current hover:scale-125 cursor-alias"
                     alt="linkedin"
-                    width="25"
-                    height="25"
+                    width="30"
+                    height="30"
                   />
                 </a>
                 <a
-                  href="https://wa.me/+962788818125"
+                  // href="https://wa.me/+962788818125"
+                  href="https://github.com/mhmadwrekat"
                   data-tippy-content="WhatsApp"
+                  target="_blank"
                 >
                   <Image
-                    src="/assest/whatsapp.WebP"
+                    src="/assest/github.webp"
                     className="fill-current hover:scale-125 cursor-alias"
-                    alt="whatsapp"
-                    width="25"
-                    height="25"
+                    alt="github"
+                    width="30"
+                    height="30"
                   />
                 </a>
-                <a
+                {/*  <a
                   className="pb-0.5 rounded-full hover:scale-125"
                   href="https://www.facebook.com/profile.php?id=100010107875359"
                   data-tippy-content="Facebook"
@@ -81,7 +84,7 @@ const Footer = ({ buttonText, fewBg }) => {
                     width="25"
                     height="25"
                   />
-                </a>
+                </a> */}
               </div>
               <div className="flex items-center mt-4">
                 <p className="font-serif text-xs cursor-help hover:text-yellow-600  hover:scale-110 leading-4 mt-1">

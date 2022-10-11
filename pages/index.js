@@ -180,14 +180,23 @@ const index = (props) => {
   // };
 
   // sendNotification(message);
-  let screenBg = "bg-Snow1";
-  let mostBg = "bg-FatherWhite";
-  let fewBg = "bg-BLUE";
-  let buttonBg = "bg-Orange";
-  let buttonText = "text-Snow2";
-  let mostText = "text-BLUE";
-  let fewText = "text-Orange";
-  // console.log(props.videoData);
+  //
+  // Theme Colors
+  let screenBg = "bg-white";
+  let mostBg = "bg-two";
+  let fewBg = "bg-three";
+  let buttonBg = "bg-four";
+  let buttonText = "text-one";
+  let mostText = "text-four";
+  let fewText = "text-four";
+  // // Theme Colors
+  // let screenBg = "bg-Snow1";
+  // let mostBg = "bg-FatherWhite";
+  // let fewBg = "bg-BLUE";
+  // let buttonBg = "bg-Orange";
+  // let buttonText = "text-Snow2";
+  // let mostText = "text-BLUE";
+  // let fewText = "text-Orange";
   return (
     <React.Fragment>
       {/* {console.log("SSR --> ", props.weather)} */}
