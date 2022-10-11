@@ -55,7 +55,7 @@ module.exports = {
         GRAY200: "#DDDDDD",
         GRAY300: "#7F7F7F",
         GRAY400: "#686767",
-        one: "#EBC7E8",
+        one: "#FFFAFA",
         two: "#BFACE0",
         three: "#A084CA",
         four: "#645CAA",
