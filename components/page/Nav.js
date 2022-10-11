@@ -102,7 +102,7 @@ const Nav = ({ weather, buttonText, buttonBg, mostBg, fewText }) => {
               </div>
 
               <div
-                className={`pt-7 text-base lg:text-xl font-extrabold font-sans pr-2 ${fewText} hover:text-yellow-600 cursor-grab hover:scale-110`}
+                className={`pt-6 text-base lg:text-xl font-extrabold font-sans pr-2 ${fewText} hover:text-yellow-600 cursor-grab hover:scale-110`}
               >
                 {/* ⛅ */}
                 {weather[0]?.max_temp + "°C" || " "}
