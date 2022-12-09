@@ -2,6 +2,8 @@
 import React, { useEffect } from "react";
 import Lottie from "lottie-react";
 import weather_json from "../../public/assest/emoji/weather.json";
+import clock_json from "../../public/assest/emoji/clock.json";
+import moment from "moment";
 
 const Nav = ({ weather, buttonText, buttonBg, mostBg, fewText }) => {
   // useEffect(() => {
@@ -98,14 +100,17 @@ const Nav = ({ weather, buttonText, buttonBg, mostBg, fewText }) => {
           {weather?.length > 0 ? (
             <section className="flex md:order-2">
               <div className="w-16 h-16 lg:w-20 lg:h-20 ">
-                <Lottie animationData={weather_json} loop={true} />
+                <Lottie animationData={clock_json} loop={true} />
               </div>
 
               <div
-                className={`pt-6 text-base lg:text-xl font-extrabold font-sans pr-2 ${fewText} hover:text-yellow-600 cursor-grab hover:scale-110`}
+                className={`pt-6 lg:pt-8 text-base lg:text-xl font-sans pl-4 pr-1 ${fewText} cursor-grab hover:scale-110`}
               >
                 {/* ⛅ */}
-                {weather[0]?.max_temp + "°C" || " "}
+                {/* {weather[0]?.max_temp + "°C" || " "} */}
+                <p className="text-center font-TSExtra text-base lg:text-xl">
+                  {moment().format("h : mm a")}
+                </p>
               </div>
             </section>
           ) : null}

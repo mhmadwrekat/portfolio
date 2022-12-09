@@ -17,12 +17,13 @@ export async function getServerSideProps(context) {
   // const f = context.req.cookies.country_code;
 
   // Get Weather API
-  const weather_res = await fetch(WEATHER);
-  const weather = weather_res ? await weather_res?.json() : null;
-  const final_weather = weather?.cache?.data;
+  // const weather_res = await fetch(WEATHER);
+  // const weather = weather_res ? await weather_res?.json() : null;
+  // const final_weather = weather?.cache?.data;
   return {
     props: {
-      weather: final_weather,
+      // weather: final_weather,
+      weather: [11],
 
       // countryCode,
       // f: f,
