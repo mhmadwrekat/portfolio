@@ -88,7 +88,7 @@ const Footer = ({ buttonText, fewBg }) => {
               </div>
               <div className="flex items-center mt-4">
                 <p className="font-serif text-xs cursor-help hover:text-yellow-600  hover:scale-110 leading-4 mt-1">
-                  2022 <span className="font-serif">MHMAD WREKAT</span>
+                  2023 <span className="font-serif">MHMAD WREKAT</span>
                 </p>
                 <div className="border-l-2 border-yellow-500 pl-2 ml-2">
                   <p className="font-serif text-xs cursor-help hover:text-yellow-600 hover:scale-110 leading-4">
