@@ -186,7 +186,6 @@ const index = (props) => {
   let fewText = "text-four";
 
 
-  
   // // Theme Colors
   // let screenBg = "bg-Snow1";
   // let mostBg = "bg-FatherWhite";
@@ -200,7 +199,7 @@ const index = (props) => {
 
 <React.Fragment>
       {/* {console.log("SSR --> ", props.weather)} */}
-      <TrackEmail />
+      {/* <TrackEmail /> */}
       <section translate="no">
         <Head_comp />
         {/* Message on console For Developer */}
