@@ -184,6 +184,9 @@ const index = (props) => {
   let buttonText = "text-one";
   let mostText = "text-four";
   let fewText = "text-four";
+
+
+  
   // // Theme Colors
   // let screenBg = "bg-Snow1";
   // let mostBg = "bg-FatherWhite";
@@ -193,7 +196,9 @@ const index = (props) => {
   // let mostText = "text-BLUE";
   // let fewText = "text-Orange";
   return (
-    <React.Fragment>
+
+
+<React.Fragment>
       {/* {console.log("SSR --> ", props.weather)} */}
       <TrackEmail />
       <section translate="no">
