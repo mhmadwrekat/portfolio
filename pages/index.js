@@ -184,15 +184,15 @@ const index = (props) => {
   // Header Background + Form Background + Cards Background + Card File Information Background.
   let mostBg = "bg-a4";
   // Footer Background + Header of Cards Background + Skills Background Background.
-  let fewBg = "bg-a4";
+  let fewBg = "bg-a1";
   // Buttons Background + Language Rate Background.
-  let buttonBg = "bg-a1";
+  let buttonBg = "bg-a2";
   // Button Text + Language Text + Head of Cards Text
   let buttonText = "text-one";
   // Most Of Text
   let mostText = "text-a2";
   // Header + few On Cards text
-  let fewText = "text-a1";
+  let fewText = "text-a2";
   ///////////////////////////////////////////////////////////////////
 
   // // Theme Colors

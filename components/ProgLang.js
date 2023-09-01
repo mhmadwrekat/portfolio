@@ -9,7 +9,7 @@ const ProgLang = ({ buttonText, buttonBg, fewBg, mostBg }) => {
         className="font-serif pt-6 text-xs lg:text-lg sm:pt-0 sm:text-base md:pt-7 lg:pt-0 w-11/12 lg:w-9/12 mx-auto"
       >
         <section
-          className={`${fewBg} grid grid-cols-2 gap-6 lg:gap-10 px-3 py-5 ${buttonText} shadow-xl opacity-95 rounded-lg sm:py-10 sm:px-12`}
+          className={`${mostBg} grid grid-cols-2 gap-6 lg:gap-10 px-3 py-5 ${buttonText} shadow-xl opacity-95 rounded-lg sm:py-10 sm:px-12`}
         >
           {/* <Slide triggerOnce delay={1000}>
             <div>
@@ -68,7 +68,7 @@ const ProgLang = ({ buttonText, buttonBg, fewBg, mostBg }) => {
             <div>
               <span className="pb-0 font-semibold uppercase">javascript</span>
               <section className="flex items-center">
-                <div className={`w-full ${mostBg} rounded-full h-1.5`}>
+                <div className={`w-full ${fewBg} rounded-full h-1.5`}>
                   <div
                     className={`${buttonBg} h-1.5 w-10/12 rounded-full`}
                   ></div>
@@ -81,7 +81,7 @@ const ProgLang = ({ buttonText, buttonBg, fewBg, mostBg }) => {
             <div>
               <span className="pb-0 font-semibold uppercase">nodejs</span>
               <section className="flex items-center">
-                <div className={`w-full ${mostBg} rounded-full h-1.5`}>
+                <div className={`w-full ${fewBg} rounded-full h-1.5`}>
                   <div
                     className={`${buttonBg} h-1.5 w-10/12 rounded-full`}
                   ></div>
@@ -94,7 +94,7 @@ const ProgLang = ({ buttonText, buttonBg, fewBg, mostBg }) => {
             <div>
               <span className="pb-0 font-semibold uppercase">nextjs</span>
               <section className="flex items-center">
-                <div className={`w-full ${mostBg} rounded-full h-1.5`}>
+                <div className={`w-full ${fewBg} rounded-full h-1.5`}>
                   <div
                     className={`${buttonBg} h-1.5 w-10/12 rounded-full`}
                   ></div>
@@ -107,7 +107,7 @@ const ProgLang = ({ buttonText, buttonBg, fewBg, mostBg }) => {
             <div>
               <span className="pb-0 font-semibold uppercase">React</span>
               <section className="flex items-center">
-                <div className={`w-full ${mostBg} rounded-full h-1.5`}>
+                <div className={`w-full ${fewBg} rounded-full h-1.5`}>
                   <div
                     className={`${buttonBg} h-1.5 w-10/12 rounded-full`}
                   ></div>
@@ -122,7 +122,7 @@ const ProgLang = ({ buttonText, buttonBg, fewBg, mostBg }) => {
                 React Bootstrap
               </span>
               <section className="flex items-center">
-                <div className={`w-full ${mostBg} rounded-full h-1.5`}>
+                <div className={`w-full ${fewBg} rounded-full h-1.5`}>
                   <div
                     className={`${buttonBg} h-1.5 w-10/12 rounded-full`}
                   ></div>
@@ -135,7 +135,7 @@ const ProgLang = ({ buttonText, buttonBg, fewBg, mostBg }) => {
             <div>
               <span className="pb-0 font-semibold uppercase">Tailwindcss</span>
               <section className="flex items-center">
-                <div className={`w-full ${mostBg} rounded-full h-1.5`}>
+                <div className={`w-full ${fewBg} rounded-full h-1.5`}>
                   <div
                     className={`${buttonBg} h-1.5 w-10/12 rounded-full`}
                   ></div>
@@ -148,7 +148,7 @@ const ProgLang = ({ buttonText, buttonBg, fewBg, mostBg }) => {
             <div>
               <span className="pb-0 font-semibold uppercase">Html5</span>
               <section className="flex items-center">
-                <div className={`w-full ${mostBg} rounded-full h-1.5`}>
+                <div className={`w-full ${fewBg} rounded-full h-1.5`}>
                   <div
                     className={`${buttonBg} h-1.5 w-10/12 rounded-full`}
                   ></div>
@@ -161,7 +161,7 @@ const ProgLang = ({ buttonText, buttonBg, fewBg, mostBg }) => {
             <div>
               <span className="pb-0 font-semibold uppercase">Css3</span>
               <section className="flex items-center">
-                <div className={`w-full ${mostBg} rounded-full h-1.5`}>
+                <div className={`w-full ${fewBg} rounded-full h-1.5`}>
                   <div
                     className={`${buttonBg} h-1.5 w-10/12 rounded-full`}
                   ></div>
@@ -174,7 +174,7 @@ const ProgLang = ({ buttonText, buttonBg, fewBg, mostBg }) => {
             <div>
               <span className="pb-0 font-semibold uppercase">markdown</span>
               <section className="flex items-center">
-                <div className={`w-full ${mostBg} rounded-full h-1.5`}>
+                <div className={`w-full ${fewBg} rounded-full h-1.5`}>
                   <div
                     className={`${buttonBg} h-1.5 w-10/12 rounded-full`}
                   ></div>
@@ -187,7 +187,7 @@ const ProgLang = ({ buttonText, buttonBg, fewBg, mostBg }) => {
             <div>
               <span className="pb-0 font-semibold uppercase">Github</span>
               <section className="flex items-center">
-                <div className={`w-full ${mostBg} rounded-full h-1.5`}>
+                <div className={`w-full ${fewBg} rounded-full h-1.5`}>
                   <div
                     className={`${buttonBg} h-1.5 w-10/12 rounded-full`}
                   ></div>
@@ -202,7 +202,7 @@ const ProgLang = ({ buttonText, buttonBg, fewBg, mostBg }) => {
                 restframework
               </span>
               <section className="flex items-center">
-                <div className={`w-full ${mostBg} rounded-full h-1.5`}>
+                <div className={`w-full ${fewBg} rounded-full h-1.5`}>
                   <div
                     className={`${buttonBg} h-1.5 w-10/12 rounded-full`}
                   ></div>
@@ -215,7 +215,7 @@ const ProgLang = ({ buttonText, buttonBg, fewBg, mostBg }) => {
             <div>
               <span className="pb-0 font-semibold uppercase">deploy</span>
               <section className="flex items-center">
-                <div className={`w-full ${mostBg} rounded-full h-1.5`}>
+                <div className={`w-full ${fewBg} rounded-full h-1.5`}>
                   <div
                     className={`${buttonBg} h-1.5 w-10/12 rounded-full`}
                   ></div>
