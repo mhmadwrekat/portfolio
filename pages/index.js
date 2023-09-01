@@ -176,15 +176,24 @@ const index = (props) => {
 
   // sendNotification(message);
   //
+  ///////////////////////////////////////////////////////////////////
   // Theme Colors
+  ///////////////////////////////////////////////////////////////////
+  // All Screen Background Color.
   let screenBg = "bg-white";
-  let mostBg = "bg-two";
-  let fewBg = "bg-three";
-  let buttonBg = "bg-four";
+  // Header Background + Form Background + Cards Background + Card File Information Background.
+  let mostBg = "bg-a4";
+  // Footer Background + Header of Cards Background + Skills Background Background.
+  let fewBg = "bg-a4";
+  // Buttons Background + Language Rate Background.
+  let buttonBg = "bg-a1";
+  // Button Text + Language Text + Head of Cards Text
   let buttonText = "text-one";
-  let mostText = "text-four";
-  let fewText = "text-four";
-
+  // Most Of Text
+  let mostText = "text-a2";
+  // Header + few On Cards text
+  let fewText = "text-a1";
+  ///////////////////////////////////////////////////////////////////
 
   // // Theme Colors
   // let screenBg = "bg-Snow1";
@@ -195,15 +204,14 @@ const index = (props) => {
   // let mostText = "text-BLUE";
   // let fewText = "text-Orange";
   return (
-
-
-<React.Fragment>
+    <React.Fragment>
       {/* {console.log("SSR --> ", props.weather)} */}
       {/* <TrackEmail /> */}
       <section translate="no">
         <Head_comp />
         {/* Message on console For Developer */}
         {/* Message on console For Developer */}
+        {console.log("You are here!! So you are smart \nso am i ")}
         {console.log(
           "\n ____________________________ \n|                            |\n|                            |\n|        !! HIRE ME !!       |\n|  mhmmadwreekkat@gmail.com  |\n|        !! HIRE ME !!       |\n|                            |\n|____________________________|"
         )}

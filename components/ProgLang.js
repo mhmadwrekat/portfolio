@@ -11,7 +11,7 @@ const ProgLang = ({ buttonText, buttonBg, fewBg, mostBg }) => {
         <section
           className={`${fewBg} grid grid-cols-2 gap-6 lg:gap-10 px-3 py-5 ${buttonText} shadow-xl opacity-95 rounded-lg sm:py-10 sm:px-12`}
         >
-          <Slide triggerOnce delay={1000}>
+          {/* <Slide triggerOnce delay={1000}>
             <div>
               <span className="pb-0 font-semibold uppercase">python</span>
               <section className="flex items-center">
@@ -20,14 +20,6 @@ const ProgLang = ({ buttonText, buttonBg, fewBg, mostBg }) => {
                     className={`${buttonBg} h-1.5 w-10/12 rounded-full`}
                   ></div>
 
-                  {/* <input
-                    type="range"
-                    id="points"
-                    name="points"
-                    min="0"
-                    max="10"
-                    className="w-full bg-gray-300 rounded-full h-1.5"
-                  /> */}
                 </div>
                 <p className="pt-2 pl-1.5 font-semibold"> 90%</p>
               </section>
@@ -45,8 +37,8 @@ const ProgLang = ({ buttonText, buttonBg, fewBg, mostBg }) => {
                 <p className="pt-2 pl-1.5 font-semibold"> 90%</p>
               </section>
             </div>
-          </Slide>
-          <Slide triggerOnce delay={1000}>
+          </Slide> */}
+          {/* <Slide triggerOnce delay={1000}>
             <div>
               <span className="pb-0 font-semibold uppercase">postgress db</span>
               <section className="flex items-center">
@@ -71,7 +63,7 @@ const ProgLang = ({ buttonText, buttonBg, fewBg, mostBg }) => {
                 <p className="pt-2 pl-1.5 font-semibold"> 92%</p>
               </section>
             </div>
-          </Slide>
+          </Slide> */}
           <Slide triggerOnce delay={1000}>
             <div>
               <span className="pb-0 font-semibold uppercase">javascript</span>
