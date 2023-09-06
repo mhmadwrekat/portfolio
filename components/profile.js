@@ -119,7 +119,7 @@ const profile = ({
 
         <section
           id="Message"
-          className={`lg:w-10/12 mx-auto pt-0 antialiased leading-normal tracking-wider ${fewText} sm:pt-10 font-serif`}
+          className={`lg:w-10/12 mx-auto pt-0 antialiased leading-normal tracking-wider ${fewText} sm:pt-10 `}
         >
           <div className={`${mostText}`}>
             <div className="container flex flex-col mx-auto md:flex-row">

@@ -30,6 +30,7 @@ module.exports = {
         NTsemibold: ["NotoSemiBold"],
         NTmedium: ["NotoMedium"],
         NTregular: ["NotoRegular"],
+        Acme: ["acme"],
       },
       colors: {
         Orange: "#ff5200",
@@ -63,6 +64,7 @@ module.exports = {
         a2: "#D2DE32",
         a3: "#FFFFDD",
         a4: "#016A70",
+        newBlack: "#202020",
       },
     },
   },

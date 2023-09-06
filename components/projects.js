@@ -32,7 +32,7 @@ const projects = ({
 }) => {
   return (
     <React.Fragment>
-      <section className="lg:w-10/12 mx-auto font-serif">
+      <section className="lg:w-10/12 mx-auto">
         <section>
           <div id="Projects" className={`${mostText}`}>
             <div>

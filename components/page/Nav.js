@@ -74,7 +74,9 @@ const Nav = ({ weather, buttonText, buttonBg, mostBg, fewText }) => {
               <li>
                 <a
                   href="#Skills"
-                  className="text-lg cursor-grab hover:scale-110 font-medium block py-2 pr-4 pl-3 hover:text-yellow-500 md:border-0 md:p-0"
+                  className="
+                  hover:underline
+                  text-lg cursor-grab hover:scale-110 font-medium block py-2 pr-4 pl-3 lg:mx-3 md:border-0 md:p-0"
                 >
                   Skills
                 </a>
@@ -82,7 +84,7 @@ const Nav = ({ weather, buttonText, buttonBg, mostBg, fewText }) => {
               <li>
                 <a
                   href="#Projects"
-                  className="text-lg cursor-grab hover:scale-110 font-medium block py-2 pr-4 pl-3  hover:text-yellow-500 md:border-0 md:p-0"
+                  className="hover:underline text-lg cursor-grab hover:scale-110 font-medium block py-2 lg:mx-3 pr-4 pl-3 md:border-0 md:p-0"
                 >
                   Projects
                 </a>
@@ -90,7 +92,7 @@ const Nav = ({ weather, buttonText, buttonBg, mostBg, fewText }) => {
               <li>
                 <a
                   href="#Message"
-                  className="text-lg cursor-grab hover:scale-110 font-medium block py-2 pr-4 pl-3  hover:text-yellow-500 md:border-0 md:p-0"
+                  className="hover:underline text-lg cursor-grab hover:scale-110 font-medium block py-2 lg:mx-3 pr-4 pl-3 md:border-0 md:p-0"
                 >
                   Text Me
                 </a>
@@ -99,7 +101,7 @@ const Nav = ({ weather, buttonText, buttonBg, mostBg, fewText }) => {
           </div>
           {weather?.length > 0 ? (
             <section className="flex md:order-2">
-              <div className="w-16 h-16 lg:w-20 lg:h-20 ">
+              <div className="w-14 h-14 lg:my-2.5">
                 <Lottie animationData={clock_json} loop={true} />
               </div>
 
@@ -125,7 +127,7 @@ const Nav = ({ weather, buttonText, buttonBg, mostBg, fewText }) => {
           <li>
             <a
               href="#Skills"
-              className="cursor-grab hover:scale-110 font-bold block py-2 pr-4 pl-3  hover:text-yellow-700 md:border-0 md:p-0"
+              className="cursor-grab hover:scale-110 font-bold block py-2 pr-4 pl-3 md:border-0 md:p-0"
             >
               Skills
             </a>
@@ -133,7 +135,7 @@ const Nav = ({ weather, buttonText, buttonBg, mostBg, fewText }) => {
           <li>
             <a
               href="#Projects"
-              className="cursor-grab hover:scale-110 font-bold block py-2 pr-4 pl-3  hover:text-yellow-700 md:border-0 md:p-0"
+              className="cursor-grab hover:scale-110 font-bold block py-2 pr-4 pl-3 md:border-0 md:p-0"
             >
               Projects
             </a>
@@ -141,7 +143,7 @@ const Nav = ({ weather, buttonText, buttonBg, mostBg, fewText }) => {
           <li>
             <a
               href="#Message"
-              className="cursor-grab hover:scale-110 font-bold block py-2 pr-4 pl-3 hover:text-yellow-700 md:border-0 md:p-0"
+              className="cursor-grab hover:scale-110 font-bold block py-2 pr-4 pl-3 md:border-0 md:p-0"
             >
               Text Me
             </a>

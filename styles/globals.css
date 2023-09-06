@@ -47,6 +47,11 @@ img {
     src: url(../public/fonts/otf/TSTarek-Light.otf);
     font-display: swap;
   }
+  @font-face {
+    font-family: "acme";
+    src: url(../public/fonts/acme.ttf);
+    font-display: swap;
+  }
 }
 /* input {
   border-radius: 0;

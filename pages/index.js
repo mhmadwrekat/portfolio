@@ -180,7 +180,7 @@ const index = (props) => {
   // Theme Colors
   ///////////////////////////////////////////////////////////////////
   // All Screen Background Color.
-  let screenBg = "bg-white";
+  let screenBg = "bg-newBlack";
   // Header Background + Form Background + Cards Background + Card File Information Background.
   let mostBg = "bg-a4";
   // Footer Background + Header of Cards Background + Skills Background Background.
@@ -207,7 +207,7 @@ const index = (props) => {
     <React.Fragment>
       {/* {console.log("SSR --> ", props.weather)} */}
       {/* <TrackEmail /> */}
-      <section translate="no">
+      <section translate="no" className="font-Acme">
         <Head_comp />
         {/* Message on console For Developer */}
         {/* Message on console For Developer */}
