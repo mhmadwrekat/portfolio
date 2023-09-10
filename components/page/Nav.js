@@ -43,7 +43,7 @@ const Nav = ({ weather, buttonText, buttonBg, mostBg, fewText }) => {
                 ></path>
               </svg>
             </button> */}
-            <a href="./assest/mwrekatt.pdf" download="mwrekattt.pdf">
+            <a href="./assest/wrekat2023.pdf" download="wrekat2023.pdf">
               <button
                 type="button"
                 className={`${buttonText}cursor-help animate-bounce flex ${buttonBg} focus:ring-4 focus:ring-blue-300 rounded-lg px-5 py-2 text-center ml-4 md:mr-0`}
