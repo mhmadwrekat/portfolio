@@ -49,7 +49,7 @@ module.exports = {
 
   images: {
     // minimumCacheTTL: 9999999999,
-    domains: ["img.youtube.com"],
+    domains: ["img.youtube.com", "practice-templates.vercel.app"],
     formats: ["image/avif", "image/webp"],
   },
 };
