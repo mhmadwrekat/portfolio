@@ -73,12 +73,12 @@ const Nav = ({ weather, buttonText, buttonBg, mostBg, fewText }) => {
             >
               <li>
                 <a
-                  href="#Skills"
+                  href="#Headline"
                   className="
                   hover:underline
                   text-lg cursor-grab hover:scale-110 font-medium block py-2 pr-4 pl-3 lg:mx-3 md:border-0 md:p-0"
                 >
-                  Skills
+                  Headline
                 </a>
               </li>
               <li>
@@ -126,10 +126,10 @@ const Nav = ({ weather, buttonText, buttonBg, mostBg, fewText }) => {
         >
           <li>
             <a
-              href="#Skills"
+              href="#Headline"
               className="cursor-grab hover:scale-110 font-bold block py-2 pr-4 pl-3 md:border-0 md:p-0"
             >
-              Skills
+              Headline
             </a>
           </li>
           <li>

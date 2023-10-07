@@ -125,7 +125,7 @@ const Head_comp = () => {
       <Head>
         <link rel="icon" href="./assest/icon.png" />
         <link rel="apple-touch-icon" href="./assest/icon.png" />
-        <link rel="canonical" href="https://www.wrekat.com" />
+        <link rel="canonical" href="https://wrekat.vercel.app" />
         <meta name="keywords" content={head_keywords} />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         {/* <meta

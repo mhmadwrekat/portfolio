@@ -5,7 +5,7 @@ const ProgLang = ({ buttonText, buttonBg, fewBg, mostBg }) => {
   return (
     <React.Fragment>
       <section
-        id="Skills"
+        id="Skills"        
         className="pt-6 text-xs lg:text-lg sm:pt-0 sm:text-base md:pt-7 lg:pt-0 w-11/12 lg:w-9/12 mx-auto"
       >
         <section

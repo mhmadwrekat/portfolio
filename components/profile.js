@@ -98,13 +98,13 @@ const profile = ({
           buttonBg={buttonBg}
           mostText={mostText}
         />
-        <ProgLang
+        {/* <ProgLang
           mostBg={mostBg}
           buttonText={buttonText}
           buttonBg={buttonBg}
           mostText={mostText}
           fewBg={fewBg}
-        />
+        /> */}
         <div className="pt-10"></div>
         <Projects
           fewText={fewText}
