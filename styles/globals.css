@@ -1,58 +1,59 @@
-html {
-  scroll-behavior: smooth;
-}
-
-img {
-  width: 100%;
-  height: auto;
-}
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
+html {
+  scroll-behavior: smooth;
+}
+
+/* Custom Scroll Bar  */
+::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+::-webkit-scrollbar-track {
+  background: #ffffff;
+}
+::-webkit-scrollbar-thumb {
+  background: #646161;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #fff000;
+}
+/* Fonts Config */
 @layer base {
   @font-face {
     font-family: "TsExtrabold";
-    src: url(../public/fonts/otf/TSTarek-ExtraBold.otf);
+    src: url(../public/assest/fonts/otf/TSTarek-ExtraBold.otf);
     font-display: swap;
   }
 
   @font-face {
     font-family: "TsSemibold";
-    src: url(../public/fonts/otf/TSTarek-SemiBold.otf);
+    src: url(../public/assest/fonts/otf/TSTarek-SemiBold.otf);
     font-display: swap;
   }
 
   @font-face {
     font-family: "Tsbold";
-    src: url(../public/fonts/otf/TSTarek-Bold.otf);
+    src: url(../public/assest/fonts/otf/TSTarek-Bold.otf);
     font-display: swap;
   }
 
   @font-face {
     font-family: "TsMed";
-    src: url(../public/fonts/otf/TSTarek-Medium.otf);
-    font-display: swap;
-  }
-
-  @font-face {
-    font-family: "TsThin";
-    src: url(../public/fonts/otf/TSTarek-Thin.otf);
+    src: url(../public/assest/fonts/otf/TSTarek-Medium.otf);
     font-display: swap;
   }
 
   @font-face {
     font-family: "TsLight";
-    src: url(../public/fonts/otf/TSTarek-Light.otf);
+    src: url(../public/assest/fonts/otf/TSTarek-Light.otf);
     font-display: swap;
   }
   @font-face {
     font-family: "acme";
-    src: url(../public/fonts/acme.ttf);
+    src: url(../public/assest/fonts/acme.ttf);
     font-display: swap;
   }
 }
-/* input {
-  border-radius: 0;
-} */
