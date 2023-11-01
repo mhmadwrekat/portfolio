@@ -13,6 +13,7 @@ const nextConfig = {
         hostname: "practice-templates.vercel.app",
       },
     ],
+    formats: ["image/avif", "image/webp"],
   },
 };
 

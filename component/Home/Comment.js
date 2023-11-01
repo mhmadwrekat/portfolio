@@ -142,7 +142,7 @@ const Comment = ({ theme }) => {
           </p>
           {commentsData.map((item, idx) => {
             return (
-              <Fade key={idx} direction="right" cascade damping={0.1}>
+              <Fade key={idx} direction="up" cascade damping={0.1}>
                 <div
                   className={`${theme.mode.secondBG} hover:-translate-x-2 duration-700 my-4 overflow-hidden relative max-w-sm ring-1 rounded-xl flex items-center gap-6`}
                 >

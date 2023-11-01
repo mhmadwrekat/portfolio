@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import Aside from "./Aside";
-
+import dynamic from "next/dynamic";
+const Aside = dynamic(() => import("./Aside"));
 const AsideMobile = ({ theme, handle_mode, new_tab }) => {
   const [open, setOpen] = useState(false);
   const handle_drawer = () => setOpen(!open);

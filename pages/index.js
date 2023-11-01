@@ -1,6 +1,5 @@
 import React from "react";
 import Home from "../component/Home/Home";
-
 const index = () => {
   return (
     <section translate="no">

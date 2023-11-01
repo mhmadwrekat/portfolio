@@ -1,13 +1,14 @@
 import React, { useState } from "react";
-import AboutMe from "./AboutMe";
+import dynamic from "next/dynamic";
 import Aside from "../Aside/Aside";
-import Skills from "./Skills";
-import Projects from "./Projects";
-import Experience from "./Experience";
-import Comment from "./Comment";
-import Footer from "../Page/Footer";
 import AsideMobile from "../Aside/AsideMobile";
-// import Head from "next/head";
+import AboutMe from "./AboutMe";
+const Skills = dynamic(() => import("./Skills"));
+const Projects = dynamic(() => import("./Projects"));
+const Experience = dynamic(() => import("./Experience"));
+const Comment = dynamic(() => import("./Comment"));
+const Footer = dynamic(() => import("../Page/Footer"));
+
 const Home = () => {
   let [mode, setMode] = useState({
     button: "🌙",
@@ -54,32 +55,32 @@ const Home = () => {
         <title>Mhmad</title>
       </Head> */}
 
-        <section className={`lg:flex ${mode.firstBG}`}>
-          <div className="mr-auto 2xl:flex lg:flex hidden">
-            <Aside
-              theme={{ mode: mode, color: color }}
-              handle_mode={handle_mode}
-              new_tab={new_tab}
-            />
-          </div>
-          <div className="grid lg:hidden">
-            <AsideMobile
-              theme={{ mode: mode, color: color }}
-              handle_mode={handle_mode}
-              new_tab={new_tab}
-            />
-          </div>
-          <div className="2xl:flex lg:flex hidden 2xl:px-44 lg:px-32" />
+      <section className={`lg:flex ${mode.firstBG}`}>
+        <div className="mr-auto 2xl:flex lg:flex hidden">
+          <Aside
+            theme={{ mode: mode, color: color }}
+            handle_mode={handle_mode}
+            new_tab={new_tab}
+          />
+        </div>
+        <div className="grid lg:hidden">
+          <AsideMobile
+            theme={{ mode: mode, color: color }}
+            handle_mode={handle_mode}
+            new_tab={new_tab}
+          />
+        </div>
+        <div className="2xl:flex lg:flex hidden 2xl:px-44 lg:px-32" />
 
-          <div className="lg:py-4 py-0 md:w-11/12 lg:w-10/12 2xl:w-11/12 md:m-auto lg:ml-auto 2xl:ml-auto">
-            <AboutMe theme={{ mode: mode, color: color }} />
-            <Skills theme={{ mode: mode, color: color }} />
-            <Projects theme={{ mode: mode, color: color }} new_tab={new_tab} />
-            <Experience theme={{ mode: mode, color: color }} />
-            <Comment theme={{ mode: mode, color: color }} />
-            <Footer theme={{ mode: mode, color: color }} />
-          </div>
-        </section>
+        <div className="lg:py-4 py-0 md:w-11/12 lg:w-10/12 2xl:w-11/12 md:m-auto lg:ml-auto 2xl:ml-auto">
+          <AboutMe rel="preload" theme={{ mode: mode, color: color }} />
+          <Skills theme={{ mode: mode, color: color }} />
+          <Projects theme={{ mode: mode, color: color }} new_tab={new_tab} />
+          <Experience theme={{ mode: mode, color: color }} />
+          <Comment theme={{ mode: mode, color: color }} />
+          <Footer theme={{ mode: mode, color: color }} />
+        </div>
+      </section>
     </React.Fragment>
   );
 };
