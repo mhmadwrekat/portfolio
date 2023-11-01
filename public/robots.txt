@@ -1,0 +1,13 @@
+# *
+User-agent: *
+Disallow: /404
+
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://wrekat.vercel.app
+
+# Sitemaps
+Sitemap: https://wrekat.vercel.app/sitemap.xml
