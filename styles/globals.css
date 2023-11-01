@@ -5,7 +5,10 @@
 html {
   scroll-behavior: smooth;
 }
-
+body {
+  padding: 0px;
+  margin: 0px;
+}
 /* Custom Scroll Bar  */
 ::-webkit-scrollbar {
   width: 5px;

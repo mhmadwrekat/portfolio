@@ -5,7 +5,7 @@ export default function App({ Component, pageProps }) {
   return (
     <React.Fragment>
       <HeadComp />
-      <Component {...pageProps} />;
+      <Component {...pageProps} />
     </React.Fragment>
   );
 }
