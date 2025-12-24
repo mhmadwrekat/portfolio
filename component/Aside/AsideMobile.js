@@ -35,7 +35,7 @@ const AsideMobile = ({ theme, handle_mode, new_tab }) => {
         day = "Saturday";
         break;
     }
-    const fullDate = `${day} | ${date.getDate()} - ${date.getMonth()} - ${date.getFullYear()}`;
+    const fullDate = `${day} | ${date.getDate()} - ${date.getMonth()+1} - ${date.getFullYear()}`;
     return fullDate;
   };
   return (
